@@ -14,7 +14,7 @@ Este desafio deve ser feito por você em sua casa. Gaste o tempo que você quise
 
 1. Faça um clone deste repositório.
 1. Em seguida, implemente o projeto tal qual descrito abaixo, em seu clone local.
-1. Por fim, envie via email um arquivo patch para seu contato na Myfreecomm.
+1. Por fim, envie via email um arquivo patch para seu contato na Companhia.
 
 ## Descrição do projeto
 

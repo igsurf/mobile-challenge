@@ -8,7 +8,7 @@ Este desafio deve ser feito por você em sua casa. Gaste o tempo que você quise
 
 1. Primeiro, faça um fork deste projeto para sua conta no GitHub (crie uma se você não possuir).
 1. Em seguida, implemente o projeto tal qual descrito abaixo, em seu próprio fork.
-1. Por fim, empurre todas as suas alterações para o seu fork no GitHub e envie um pull request para este repositório original. Se você já entrou em contato com alguém da Myfreecomm sobre uma vaga, avise também essa pessoa por email, incluindo no email o seu usuário no GitHub.
+1. Por fim, empurre todas as suas alterações para o seu fork no GitHub e envie um pull request para este repositório original. Se você já entrou em contato com alguém da companhia sobre uma vaga, avise também essa pessoa por email, incluindo no email o seu usuário no GitHub.
 
 ### Instruções alternativas (caso você não queira que sua submissão seja pública)
 

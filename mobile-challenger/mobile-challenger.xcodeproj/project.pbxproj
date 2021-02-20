@@ -25,6 +25,9 @@
 		E37D7BAC25E0AA8200A5042C /* DetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BAB25E0AA8200A5042C /* DetailHeaderTableViewCell.swift */; };
 		E37D7BB725E0CCCF00A5042C /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BB625E0CCCF00A5042C /* NetworkingManager.swift */; };
 		E37D7BC525E0F21E00A5042C /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BC425E0F21E00A5042C /* RepositoriesModel.swift */; };
+		E37D7BCA25E197A700A5042C /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BC925E197A700A5042C /* Loader.swift */; };
+		E37D7BCF25E19DFE00A5042C /* PullRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BCE25E19DFE00A5042C /* PullRequestModel.swift */; };
+		E37D7BE725E1B7E100A5042C /* MutableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BE625E1B7E100A5042C /* MutableString.swift */; };
 		E3FCDBFE25DF58DE00C9F419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDBFD25DF58DE00C9F419 /* AppDelegate.swift */; };
 		E3FCDC0825DF58DE00C9F419 /* mobile_challenger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDC0625DF58DE00C9F419 /* mobile_challenger.xcdatamodeld */; };
 		E3FCDC0A25DF58DF00C9F419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FCDC0925DF58DF00C9F419 /* Assets.xcassets */; };
@@ -75,6 +78,9 @@
 		E37D7BAB25E0AA8200A5042C /* DetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E37D7BB625E0CCCF00A5042C /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		E37D7BC425E0F21E00A5042C /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
+		E37D7BC925E197A700A5042C /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		E37D7BCE25E19DFE00A5042C /* PullRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestModel.swift; sourceTree = "<group>"; };
+		E37D7BE625E1B7E100A5042C /* MutableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableString.swift; sourceTree = "<group>"; };
 		E3FCDBFA25DF58DE00C9F419 /* mobile-challenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-challenger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FCDBFD25DF58DE00C9F419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3FCDC0725DF58DE00C9F419 /* mobile_challenger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mobile_challenger.xcdatamodel; sourceTree = "<group>"; };
@@ -204,6 +210,8 @@
 				E360CA1125E0503D006E7F20 /* StatusBar.swift */,
 				E360CA3825E05ACC006E7F20 /* Localizable.strings */,
 				E360CA3925E05B27006E7F20 /* Strings.swift */,
+				E37D7BC925E197A700A5042C /* Loader.swift */,
+				E37D7BE625E1B7E100A5042C /* MutableString.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -212,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				E37D7BC425E0F21E00A5042C /* RepositoriesModel.swift */,
+				E37D7BCE25E19DFE00A5042C /* PullRequestModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -596,6 +605,8 @@
 				E37D7B9F25E082DC00A5042C /* DetailViewController.swift in Sources */,
 				E360C9F625E035C6006E7F20 /* RoundedImageView.swift in Sources */,
 				E360CA3A25E05B27006E7F20 /* Strings.swift in Sources */,
+				E37D7BCF25E19DFE00A5042C /* PullRequestModel.swift in Sources */,
+				E37D7BE725E1B7E100A5042C /* MutableString.swift in Sources */,
 				E3FCDBFE25DF58DE00C9F419 /* AppDelegate.swift in Sources */,
 				E37D7B9A25E082C900A5042C /* DetailPresenter.swift in Sources */,
 				E360CA1225E0503D006E7F20 /* StatusBar.swift in Sources */,
@@ -606,6 +617,7 @@
 				E3FCDC0825DF58DE00C9F419 /* mobile_challenger.xcdatamodeld in Sources */,
 				E360CA1C25E05645006E7F20 /* HomePresenter.swift in Sources */,
 				E37D7BB725E0CCCF00A5042C /* NetworkingManager.swift in Sources */,
+				E37D7BCA25E197A700A5042C /* Loader.swift in Sources */,
 				E37D7BC525E0F21E00A5042C /* RepositoriesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

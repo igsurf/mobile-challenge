@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIScrollView_InfiniteScroll
 
 class HomeViewController: UIViewController {
 
@@ -30,7 +31,7 @@ class HomeViewController: UIViewController {
     private func setup() {
         self.setupNavigation()
         self.setupTableView()
-        self.presenter.getRositories(refresh: false)
+        self.presenter.getRositories(refresh: false, pagination: false)
     }
     
     private func setupNavigation() {
@@ -52,7 +53,13 @@ class HomeViewController: UIViewController {
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
         self.tableView?.tableFooterView = UIView()
-
+        self.tableView?.addInfiniteScroll(handler: { [weak self] (tableview) in
+            if let self = self {
+                self.presenter.incrementPage()
+                self.presenter.getRositories(refresh: false, pagination: true)
+            }
+        })
+        
         refreshControl.addTarget(self, action: #selector(getRepository), for: .valueChanged)
         
         if #available(iOS 10.0, *) {
@@ -64,15 +71,15 @@ class HomeViewController: UIViewController {
     
     //MARK: - API
     @objc private func getRepository() {
-        self.presenter.getRositories(refresh: true)
+        self.presenter.getRositories(refresh: true, pagination: false)
     }
     
     
     //MARK: - Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueIdentifier {
-            if let viewController = segue.destination as? DetailViewController {
-                
+            if let viewController = segue.destination as? DetailViewController, let senderRequest = sender as? RepositoriesModel {
+                viewController.presenter = DetailPresenter(with: viewController, repository: senderRequest)
             }
         }
     }
@@ -86,11 +93,17 @@ extension HomeViewController: UITableViewDelegate {
 }
 
 extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.presenter.getSizeRepositories()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
         }
@@ -99,17 +112,17 @@ extension HomeViewController: UITableViewDataSource {
         cell.setupCellWithRepositoriesDatas(response: self.presenter.getRepositorie(at: indexPath))
         return cell
     }
-    
-    
 }
 
 extension HomeViewController: HomePresenterProtocol {
-    func showLoader(refresh: Bool) {
-        
+    func showLoader() {
+        self.view.showLoader()
     }
     
     func endLoader() {
+        self.view.removeLoader()
         self.refreshControl.endRefreshing()
+        self.tableView?.finishInfiniteScroll()
     }
     
     func showError(error: String) {
@@ -120,8 +133,8 @@ extension HomeViewController: HomePresenterProtocol {
         self.tableView?.reloadData()
     }
     
-    func performForSegueCall() {
-        performSegue(withIdentifier: segueIdentifier, sender: nil)
+    func performForSegueCall(repository: RepositoriesModel) {
+        performSegue(withIdentifier: segueIdentifier, sender: repository)
     }
     
     func errorData() {

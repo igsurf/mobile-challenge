@@ -8,12 +8,12 @@
 import Foundation
 
 protocol HomePresenterProtocol: class {
-    func showLoader(refresh: Bool)
+    func showLoader()
     func endLoader()
     func showError(error: String)
     func successData()
     func errorData()
-    func performForSegueCall() //passar o objeto
+    func performForSegueCall(repository: RepositoriesModel)
 }
 
 class HomePresenter {
@@ -24,7 +24,7 @@ class HomePresenter {
     //MARK: - Vars
     weak var view: HomePresenterProtocol?
     var response : [RepositoriesModel] = []
-    var page: Int = 0
+    var page: Int = 1
     
     //MARK: - Life cycle
     init(with view: HomePresenterProtocol) {
@@ -33,7 +33,7 @@ class HomePresenter {
     
     //MARK: - PerformForSegue
     func didSelectTableViewSegue(at index: IndexPath) {
-        self.view?.performForSegueCall()
+        self.view?.performForSegueCall(repository: self.getRepositorie(at: index))
     }
     
     //MARK: - Getters
@@ -51,15 +51,19 @@ class HomePresenter {
     
     func refreshValues() {
         self.response = []
-        self.page = 0
+        self.page = 1
     }
     
     //MARK: - Setters
     
     //MARK: - API
-    func getRositories(refresh: Bool) {
+    func getRositories(refresh: Bool, pagination: Bool) {
         if refresh {
             self.refreshValues()
+        }
+        
+        if !pagination && !refresh {
+            self.view?.showLoader()
         }
         
         manager.getRepositories(page: page) { [weak self] (response) in
@@ -75,8 +79,5 @@ class HomePresenter {
             }
         }
     }
-    
-    
-    
 }
 

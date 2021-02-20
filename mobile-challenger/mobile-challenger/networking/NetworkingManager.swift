@@ -15,18 +15,17 @@ class NetworkingManager {
     //MARK: - Lets
     let manager = AFHTTPSessionManager()
     let repositoriesURL = "https://api.github.com/search/repositories"
-    
+    let apiBasePullRequest = "https://api.github.com/repos/"
+
     //MARK: - Functions
-    func getRepositories(page: Int, success:@escaping (_ success:[RepositoriesModel]) -> Void, error:(_ error: String) -> Void) {
+    func getRepositories(page: Int, success:@escaping (_ success:[RepositoriesModel]) -> Void, error:@escaping(_ error: String) -> Void) {
         let parameters: [String : Any]  = [
             "q" : "language:Java",
             "sort" : "stars",
             "page" : page
         ]
         
-        manager.get(repositoriesURL, parameters: parameters) { (inProgress) in
-                
-        } success: { (operation, responseObject) in
+        manager.get(repositoriesURL, parameters: parameters, progress: nil) { (operation, responseObject) in
             
             if let response = responseObject as? [String:Any], let responseDict = response["items"] as? NSArray {
                 let responseArray: NSMutableArray = []
@@ -38,23 +37,44 @@ class NetworkingManager {
                     responseArray.add(model)
                 }
                 
-                //funcionou a parte do array responder, vitoria cantou, parte 1
                 if let successResponse = responseArray as? [RepositoriesModel] {
                     success(successResponse)
                 }
             }
-            
-
-        } failure: { (operation, error) in
-            print(error)
+        } failure: { (operation, errorMessage) in
+            //Ajustes do erro de API
+            error(errorMessage.localizedDescription)
         }
-        
-        
-
-
     }
     
-    func getPullRequest() {
+    
+    func getPullRequest(page: Int, nameUrl: String, success:@escaping (_ success:[PullRequestModel]) -> Void, error:@escaping(_ error: String) -> Void) {
         
+        let parameters: [String : Any]  = [
+            "state" : "all",
+            "page" : page
+        ]
+        
+        let url = String(format: "%@%@/pulls", apiBasePullRequest, nameUrl)
+        
+        manager.get(url, parameters: parameters, progress: nil) { (operation, responseObject) in
+            if let response = responseObject as? NSArray {
+                let responseArray: NSMutableArray = []
+                
+                for item in response {
+                    guard let model = try? MTLJSONAdapter.model(of: PullRequestModel.self, fromJSONDictionary: item as? [AnyHashable : Any]) else {
+                        return success([])
+                    }
+                    responseArray.add(model)
+                }
+                
+                if let successResponse = responseArray as? [PullRequestModel] {
+                    success(successResponse)
+                }
+            }
+            
+        } failure: { (operation, errorMessage) in
+            error(errorMessage.localizedDescription)
+        }
     }
 }

@@ -50,7 +50,6 @@ class HomePresenter {
     }
     
     func refreshValues() {
-        self.response = []
         self.page = 1
     }
     
@@ -69,7 +68,14 @@ class HomePresenter {
         manager.getRepositories(page: page) { [weak self] (response) in
             if let self = self {
                 self.view?.endLoader()
-                self.response.append(contentsOf: response)
+                if refresh {
+                    self.response = response
+
+                } else {
+                    self.response.append(contentsOf: response)
+
+                }
+                
                 self.view?.successData()
             }
         } error: { [weak self] (errorMessage) in

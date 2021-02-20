@@ -70,7 +70,6 @@ class DetailPresenter {
     }
     
     func refreshValues() {
-        self.response = []
         self.actualResponse = []
         self.page = 1
         self.closed = 0
@@ -90,7 +89,13 @@ class DetailPresenter {
         manager.getPullRequest(page: page, nameUrl: repository?.fullName ?? "") { [weak self] (response) in
             if let self = self {
                 self.view?.endLoader()
-                self.response.append(contentsOf: response)
+                
+                if refresh {
+                    self.response = response
+                } else {
+                    self.response.append(contentsOf: response)
+                }
+                
                 self.actualResponse = response
                 self.setOpenAndClose()
                 self.view?.successData()

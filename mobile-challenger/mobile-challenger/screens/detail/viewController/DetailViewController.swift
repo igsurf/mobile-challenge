@@ -11,12 +11,12 @@ class DetailViewController: UIViewController {
 
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView?
-    @IBOutlet weak var headerView: UIView?
-    @IBOutlet weak var headerLabel: UILabel?
     
     //MARK: - Lets
     private let cellIdentifier = "DetailTableViewCell"
+    private let headerCellIdentifier = "DetailHeaderTableViewCell"
     private let refreshControl = UIRefreshControl()
+    private let headerHeight: CGFloat = 24
 
     //MARK: - Vars
     lazy var presenter = DetailPresenter(with: self)
@@ -56,17 +56,27 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        presenter.openUrl(at: indexPath)
+        if indexPath.row > 0 {
+            tableView.deselectRow(at: indexPath, animated: true)
+            presenter.openUrl(at: indexPath)
+        }
     }
 }
 
 extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == .zero {
+            guard let headerCell = tableView.dequeueReusableCell(withIdentifier: headerCellIdentifier, for: indexPath) as? DetailHeaderTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            return headerCell
+        }
+                
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? DetailTableViewCell else {
             return UITableViewCell()
         }
@@ -74,10 +84,6 @@ extension DetailViewController: UITableViewDataSource {
         cell.setupColors()
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 32
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

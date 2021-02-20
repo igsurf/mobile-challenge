@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-        
     }
     
     //MARK: - Setup
@@ -35,6 +34,17 @@ class HomeViewController: UIViewController {
     
     private func setupNavigation() {
         self.title = "home_title".localized()
+        
+        let menuBtn = UIButton(type: .custom)
+        menuBtn.frame = CGRect(x: 0.0, y: 0.0, width: 20, height: 20)
+        menuBtn.setImage(UIImage(named:"img-menu"), for: .normal)
+        
+        let menuBarItem = UIBarButtonItem(customView: menuBtn)
+        let currWidth = menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 24)
+        let currHeight = menuBarItem.customView?.heightAnchor.constraint(equalToConstant: 24)
+        currWidth?.isActive = true
+        currHeight?.isActive = true
+        self.navigationItem.leftBarButtonItem = menuBarItem
     }
     
     private func setupTableView() {

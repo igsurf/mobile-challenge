@@ -22,6 +22,7 @@
 		E37D7B9A25E082C900A5042C /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7B9925E082C900A5042C /* DetailPresenter.swift */; };
 		E37D7B9F25E082DC00A5042C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7B9E25E082DC00A5042C /* DetailViewController.swift */; };
 		E37D7BA425E082F000A5042C /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BA325E082F000A5042C /* DetailTableViewCell.swift */; };
+		E37D7BAC25E0AA8200A5042C /* DetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BAB25E0AA8200A5042C /* DetailHeaderTableViewCell.swift */; };
 		E3FCDBFE25DF58DE00C9F419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDBFD25DF58DE00C9F419 /* AppDelegate.swift */; };
 		E3FCDC0825DF58DE00C9F419 /* mobile_challenger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDC0625DF58DE00C9F419 /* mobile_challenger.xcdatamodeld */; };
 		E3FCDC0A25DF58DF00C9F419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FCDC0925DF58DF00C9F419 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		E37D7B9925E082C900A5042C /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		E37D7B9E25E082DC00A5042C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E37D7BA325E082F000A5042C /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		E37D7BAB25E0AA8200A5042C /* DetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E3FCDBFA25DF58DE00C9F419 /* mobile-challenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-challenger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FCDBFD25DF58DE00C9F419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3FCDC0725DF58DE00C9F419 /* mobile_challenger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mobile_challenger.xcdatamodel; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				E37D7BA325E082F000A5042C /* DetailTableViewCell.swift */,
+				E37D7BAB25E0AA8200A5042C /* DetailHeaderTableViewCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37D7BAC25E0AA8200A5042C /* DetailHeaderTableViewCell.swift in Sources */,
 				E37D7B9F25E082DC00A5042C /* DetailViewController.swift in Sources */,
 				E360C9F625E035C6006E7F20 /* RoundedImageView.swift in Sources */,
 				E360CA3A25E05B27006E7F20 /* Strings.swift in Sources */,

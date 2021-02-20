@@ -23,11 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setNavigationBar() {
-//        UINavigationBar.appearance().tintColor = .black
-//        UINavigationBar.appearance().backgroundColor = UIColor.grayColor()
-//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-//        UINavigationBar.appearance().isTranslucent = false
-//        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0), for:UIBarMetrics.default)
+        UINavigationBar.appearance().barTintColor = .darkGrayColor()
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0), for:UIBarMetrics.default)
     }
     
     private func configureInitialViewController() {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeTableViewCell: UITableViewCell {
 
@@ -34,6 +35,15 @@ class HomeTableViewCell: UITableViewCell {
         self.userNameLabel?.textColor = .blueColor()
         self.nameLabel?.textColor = .lightGrayColor()
         self.descriptionRepositoryLabel?.textColor = .black
+    }
+    
+    func setupCellWithRepositoriesDatas(response: RepositoriesModel) {
+        self.forkLabel?.text = "\(response.forksCount?.intValue ?? 0)"
+        self.starsLabel?.text = "\(response.starsCount?.intValue ?? 0)"
+        self.descriptionRepositoryLabel?.text = response.descriptionRepository
+        self.titleRepository?.text = response.repositoryName
+        self.userNameLabel?.text = response.ownerUsername
+        self.perfilImagemView?.sd_setImage(with: URL(string: response.ownerImage ?? ""), placeholderImage: UIImage(named: "img-perfil-placeholder"))
     }
     
     func setupCellWithModel() { //change name

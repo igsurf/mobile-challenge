@@ -23,6 +23,8 @@
 		E37D7B9F25E082DC00A5042C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7B9E25E082DC00A5042C /* DetailViewController.swift */; };
 		E37D7BA425E082F000A5042C /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BA325E082F000A5042C /* DetailTableViewCell.swift */; };
 		E37D7BAC25E0AA8200A5042C /* DetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BAB25E0AA8200A5042C /* DetailHeaderTableViewCell.swift */; };
+		E37D7BB725E0CCCF00A5042C /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BB625E0CCCF00A5042C /* NetworkingManager.swift */; };
+		E37D7BC525E0F21E00A5042C /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BC425E0F21E00A5042C /* RepositoriesModel.swift */; };
 		E3FCDBFE25DF58DE00C9F419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDBFD25DF58DE00C9F419 /* AppDelegate.swift */; };
 		E3FCDC0825DF58DE00C9F419 /* mobile_challenger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDC0625DF58DE00C9F419 /* mobile_challenger.xcdatamodeld */; };
 		E3FCDC0A25DF58DF00C9F419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FCDC0925DF58DF00C9F419 /* Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		E37D7B9E25E082DC00A5042C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E37D7BA325E082F000A5042C /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		E37D7BAB25E0AA8200A5042C /* DetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		E37D7BB625E0CCCF00A5042C /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		E37D7BC425E0F21E00A5042C /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
 		E3FCDBFA25DF58DE00C9F419 /* mobile-challenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-challenger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FCDBFD25DF58DE00C9F419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3FCDC0725DF58DE00C9F419 /* mobile_challenger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mobile_challenger.xcdatamodel; sourceTree = "<group>"; };
@@ -204,6 +208,14 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		E37D7BC325E0F21200A5042C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E37D7BC425E0F21E00A5042C /* RepositoriesModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		E3FCDBF125DF58DE00C9F419 = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +241,7 @@
 		E3FCDBFC25DF58DE00C9F419 /* mobile-challenger */ = {
 			isa = PBXGroup;
 			children = (
+				E37D7BC325E0F21200A5042C /* models */,
 				E360C9FD25E04BD6006E7F20 /* components */,
 				E3FCDC3F25DF5C4C00C9F419 /* assets */,
 				E3FCDC3325DF58EA00C9F419 /* app */,
@@ -300,6 +313,7 @@
 		E3FCDC3D25DF5BCD00C9F419 /* networking */ = {
 			isa = PBXGroup;
 			children = (
+				E37D7BB625E0CCCF00A5042C /* NetworkingManager.swift */,
 			);
 			path = networking;
 			sourceTree = "<group>";
@@ -591,6 +605,8 @@
 				E360CA2125E0573F006E7F20 /* HomeTableViewCell.swift in Sources */,
 				E3FCDC0825DF58DE00C9F419 /* mobile_challenger.xcdatamodeld in Sources */,
 				E360CA1C25E05645006E7F20 /* HomePresenter.swift in Sources */,
+				E37D7BB725E0CCCF00A5042C /* NetworkingManager.swift in Sources */,
+				E37D7BC525E0F21E00A5042C /* RepositoriesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

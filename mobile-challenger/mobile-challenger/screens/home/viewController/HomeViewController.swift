@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
     private func setup() {
         self.setupNavigation()
         self.setupTableView()
+        self.presenter.getRositories(refresh: false)
     }
     
     private func setupNavigation() {
@@ -53,7 +54,6 @@ class HomeViewController: UIViewController {
         self.tableView?.tableFooterView = UIView()
 
         refreshControl.addTarget(self, action: #selector(getRepository), for: .valueChanged)
-
         
         if #available(iOS 10.0, *) {
             self.tableView?.refreshControl = self.refreshControl
@@ -64,7 +64,7 @@ class HomeViewController: UIViewController {
     
     //MARK: - API
     @objc private func getRepository() {
-        self.refreshControl.endRefreshing()
+        self.presenter.getRositories(refresh: true)
     }
     
     
@@ -81,22 +81,22 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        presenter.didSelectTableViewSegue(at: indexPath)
-        
+        self.presenter.didSelectTableViewSegue(at: indexPath)
     }
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.presenter.getSizeRepositories()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
         }
+        
         cell.setupColors()
+        cell.setupCellWithRepositoriesDatas(response: self.presenter.getRepositorie(at: indexPath))
         return cell
     }
     
@@ -104,13 +104,24 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 extension HomeViewController: HomePresenterProtocol {
-    func performForSegueCall() {
-        performSegue(withIdentifier: segueIdentifier, sender: nil)
-
+    func showLoader(refresh: Bool) {
+        
+    }
+    
+    func endLoader() {
+        self.refreshControl.endRefreshing()
+    }
+    
+    func showError(error: String) {
+        
     }
     
     func successData() {
-        
+        self.tableView?.reloadData()
+    }
+    
+    func performForSegueCall() {
+        performSegue(withIdentifier: segueIdentifier, sender: nil)
     }
     
     func errorData() {

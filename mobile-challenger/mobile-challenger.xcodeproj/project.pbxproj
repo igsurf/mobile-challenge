@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,10 @@
 		E360CA2125E0573F006E7F20 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360CA2025E0573F006E7F20 /* HomeTableViewCell.swift */; };
 		E360CA3625E05ACC006E7F20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E360CA3825E05ACC006E7F20 /* Localizable.strings */; };
 		E360CA3A25E05B27006E7F20 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360CA3925E05B27006E7F20 /* Strings.swift */; };
+		E37D7B9A25E082C900A5042C /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7B9925E082C900A5042C /* DetailPresenter.swift */; };
+		E37D7B9F25E082DC00A5042C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7B9E25E082DC00A5042C /* DetailViewController.swift */; };
+		E37D7BA425E082F000A5042C /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BA325E082F000A5042C /* DetailTableViewCell.swift */; };
+		E37D7BAC25E0AA8200A5042C /* DetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BAB25E0AA8200A5042C /* DetailHeaderTableViewCell.swift */; };
 		E3FCDBFE25DF58DE00C9F419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDBFD25DF58DE00C9F419 /* AppDelegate.swift */; };
 		E3FCDC0825DF58DE00C9F419 /* mobile_challenger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDC0625DF58DE00C9F419 /* mobile_challenger.xcdatamodeld */; };
 		E3FCDC0A25DF58DF00C9F419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FCDC0925DF58DF00C9F419 /* Assets.xcassets */; };
@@ -63,6 +67,10 @@
 		E360CA2025E0573F006E7F20 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		E360CA3725E05ACC006E7F20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E360CA3925E05B27006E7F20 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E37D7B9925E082C900A5042C /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		E37D7B9E25E082DC00A5042C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E37D7BA325E082F000A5042C /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		E37D7BAB25E0AA8200A5042C /* DetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E3FCDBFA25DF58DE00C9F419 /* mobile-challenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-challenger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FCDBFD25DF58DE00C9F419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3FCDC0725DF58DE00C9F419 /* mobile_challenger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mobile_challenger.xcdatamodel; sourceTree = "<group>"; };
@@ -125,7 +133,6 @@
 				42C9CEB6A577E30D15AB2819 /* Pods-mobile-challengerTests.debug.xcconfig */,
 				D2FFB50AC31770BD154E7AC1 /* Pods-mobile-challengerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,6 +163,8 @@
 		E360C9EE25E033C8006E7F20 /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				E37D7BA325E082F000A5042C /* DetailTableViewCell.swift */,
+				E37D7BAB25E0AA8200A5042C /* DetailHeaderTableViewCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -163,6 +172,7 @@
 		E360C9EF25E033CC006E7F20 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				E37D7B9E25E082DC00A5042C /* DetailViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -170,6 +180,7 @@
 		E360C9F025E033D6006E7F20 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				E37D7B9925E082C900A5042C /* DetailPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -225,7 +236,6 @@
 				E3FCDC3D25DF5BCD00C9F419 /* networking */,
 				E3FCDC3E25DF5BE300C9F419 /* storyboards */,
 				E3FCDC3425DF590200C9F419 /* screens */,
-				E3FCDC0B25DF58DF00C9F419 /* LaunchScreen.storyboard */,
 			);
 			path = "mobile-challenger";
 			sourceTree = "<group>";
@@ -297,6 +307,7 @@
 		E3FCDC3E25DF5BE300C9F419 /* storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				E3FCDC0B25DF58DF00C9F419 /* LaunchScreen.storyboard */,
 				E360C9E625E03349006E7F20 /* home.storyboard */,
 			);
 			path = storyboards;
@@ -567,10 +578,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37D7BAC25E0AA8200A5042C /* DetailHeaderTableViewCell.swift in Sources */,
+				E37D7B9F25E082DC00A5042C /* DetailViewController.swift in Sources */,
 				E360C9F625E035C6006E7F20 /* RoundedImageView.swift in Sources */,
 				E360CA3A25E05B27006E7F20 /* Strings.swift in Sources */,
 				E3FCDBFE25DF58DE00C9F419 /* AppDelegate.swift in Sources */,
+				E37D7B9A25E082C900A5042C /* DetailPresenter.swift in Sources */,
 				E360CA1225E0503D006E7F20 /* StatusBar.swift in Sources */,
+				E37D7BA425E082F000A5042C /* DetailTableViewCell.swift in Sources */,
 				E360C9FF25E04BE4006E7F20 /* Color.swift in Sources */,
 				E360CA1725E055C5006E7F20 /* HomeViewController.swift in Sources */,
 				E360CA2125E0573F006E7F20 /* HomeTableViewCell.swift in Sources */,

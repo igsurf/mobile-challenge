@@ -14,7 +14,9 @@ class HomeViewController: UIViewController {
     
     //MARK: - Lets
     private let refreshControl = UIRefreshControl()
-
+    private let cellIdentifier = "homeTableViewCell"
+    private let segueIdentifier = "DetailSegue"
+    
     //MARK: - Vars
     lazy var presenter = HomePresenter(with: self)
     
@@ -38,6 +40,8 @@ class HomeViewController: UIViewController {
     private func setupTableView() {
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
+        self.tableView?.tableFooterView = UIView()
+
         refreshControl.addTarget(self, action: #selector(getRepository), for: .valueChanged)
 
         
@@ -52,11 +56,24 @@ class HomeViewController: UIViewController {
     @objc private func getRepository() {
         self.refreshControl.endRefreshing()
     }
+    
+    
+    //MARK: - Prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifier {
+            if let viewController = segue.destination as? DetailViewController {
+                
+            }
+        }
+    }
 }
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        presenter.didSelectTableViewSegue(at: indexPath)
+        
     }
 }
 
@@ -66,7 +83,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableViewCell", for: indexPath) as? HomeTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
         }
         cell.setupColors()
@@ -77,6 +94,11 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 extension HomeViewController: HomePresenterProtocol {
+    func performForSegueCall() {
+        performSegue(withIdentifier: segueIdentifier, sender: nil)
+
+    }
+    
     func successData() {
         
     }

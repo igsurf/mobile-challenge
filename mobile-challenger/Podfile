@@ -8,6 +8,7 @@ target 'mobile-challenger' do
   pod 'AFNetworking', '3.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'UIScrollView-InfiniteScroll'
+  pod 'Mantle'
 
   # Pods for mobile-challenger
 

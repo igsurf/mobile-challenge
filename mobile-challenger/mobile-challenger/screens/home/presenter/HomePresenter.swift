@@ -10,6 +10,7 @@ import Foundation
 protocol HomePresenterProtocol: class {
     func successData()
     func errorData()
+    func performForSegueCall() //passar o objeto
 }
 
 class HomePresenter {
@@ -19,6 +20,11 @@ class HomePresenter {
         self.view = view
     }
     
+    //MARK: - PerformForSegue
+    func didSelectTableViewSegue(at index: IndexPath) {
+        
+        self.view?.performForSegueCall()
+    }
     
 }
 

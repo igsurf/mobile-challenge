@@ -9,13 +9,28 @@ import UIKit
 
 class DetailHeaderTableViewCell: UITableViewCell {
 
+    //MARK: - Outlets
     @IBOutlet weak var titleLabel: UILabel?
 
+    //MARK: - Lets
+    let boldFontSize: CGFloat = 14
+    
+    //MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
+    //MARK: - Setups
+    func setupCellWithPR(open: Int, close: Int) {
+        let stringValue = "\(open) opened / \(close) closed"
+
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: stringValue)
+        attributedString.setColorForText(textForAttribute: "\(open) opened", withColor: UIColor.yellowColor())
+        attributedString.setColorForText(textForAttribute: "/ \(close) closed", withColor: UIColor.black)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: boldFontSize)
+
+        titleLabel?.attributedText = attributedString
+    }
     
     
 }

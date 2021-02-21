@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeTableViewCell: UITableViewCell {
 
@@ -18,7 +19,6 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var starImageView: UIImageView?
     @IBOutlet weak var perfilImagemView: RoundedImageView?
     @IBOutlet weak var userNameLabel: UILabel?
-    @IBOutlet weak var nameLabel: UILabel?
     
     //MARK: - Life cycle
     override func awakeFromNib() {
@@ -32,8 +32,17 @@ class HomeTableViewCell: UITableViewCell {
         self.starImageView?.tintColor = .yellowColor()
         self.titleRepository?.textColor = .blueColor()
         self.userNameLabel?.textColor = .blueColor()
-        self.nameLabel?.textColor = .lightGrayColor()
         self.descriptionRepositoryLabel?.textColor = .black
+    }
+    
+    func setupCellWithRepositoriesDatas(response: RepositoriesModel) {
+        self.forkLabel?.text = "\(response.forksCount?.intValue ?? 0)"
+        self.starsLabel?.text = "\(response.starsCount?.intValue ?? 0)"
+        self.descriptionRepositoryLabel?.text = response.descriptionRepository
+        self.descriptionRepositoryLabel?.sizeToFit()
+        self.titleRepository?.text = response.repositoryName
+        self.userNameLabel?.text = response.ownerUsername
+        self.perfilImagemView?.sd_setImage(with: URL(string: response.ownerImage ?? ""), placeholderImage: UIImage(named: "img-perfil-placeholder"))
     }
     
     func setupCellWithModel() { //change name

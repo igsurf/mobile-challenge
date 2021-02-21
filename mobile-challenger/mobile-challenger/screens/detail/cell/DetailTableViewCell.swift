@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailTableViewCell: UITableViewCell {
 
@@ -14,7 +15,10 @@ class DetailTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionPullRequestLabel: UILabel?
     @IBOutlet weak var userImageView: RoundedImageView?
     @IBOutlet weak var userNameLabel: UILabel?
-    @IBOutlet weak var nameLabel: UILabel?
+    @IBOutlet weak var dateLabel: UILabel?
+    
+    //MARK: - Lets
+    let dateFormat = "dd/MM/yyyy HH:mm:ss"
     
     //MARK: - Life cycle
     override func awakeFromNib() {
@@ -27,7 +31,17 @@ class DetailTableViewCell: UITableViewCell {
         self.titlePullRequestLabel?.textColor = .blueColor()
         self.descriptionPullRequestLabel?.textColor = .black
         self.userNameLabel?.textColor = .blueColor()
-        self.nameLabel?.textColor = .lightGrayColor()
+        self.dateLabel?.textColor = .lightGrayColor()
     }
 
+    func setupCellWithPullRequest(request: PullRequestModel?) {
+        self.titlePullRequestLabel?.text = request?.titlePR
+        self.descriptionPullRequestLabel?.text = request?.descriptionPR
+        self.descriptionPullRequestLabel?.sizeToFit()
+        self.userNameLabel?.text = request?.ownerUsername
+        self.dateLabel?.text = request?.createDate?.transformDateToFormat(format: dateFormat)
+
+        self.userImageView?.sd_setImage(with: URL(string: request?.ownerImage ?? ""), placeholderImage: UIImage(named: "img-perfil-placeholder"))
+
+    }
 }

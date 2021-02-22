@@ -23,6 +23,5 @@ extension UIColor {
     
     static func lightGrayColor() -> UIColor {
         return UIColor( red: CGFloat(170/255.0), green: CGFloat(170/255.0), blue: CGFloat(170/255.0), alpha: CGFloat(1.0) )
-
     }
 }

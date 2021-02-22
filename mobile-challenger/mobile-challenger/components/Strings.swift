@@ -17,7 +17,8 @@ extension String {
     func transformDateToFormat(format: String) -> String {
         let dateAPIFormatter = "yyyy-MM-dd'T'HH:mm:ssZ"
         let dateFormatter = DateFormatter()
-        
+        dateFormatter.locale = Locale(identifier: "pt_br")
+
         dateFormatter.dateFormat = dateAPIFormatter
         
         let date = dateFormatter.date(from: self)

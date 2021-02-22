@@ -17,7 +17,6 @@ class RoundedImageView: UIImageView {
     }
     
     private func set(cornerRadius value: CGFloat) {
-        self.layer.masksToBounds = false
         self.layer.cornerRadius = value
         self.clipsToBounds = true
     }

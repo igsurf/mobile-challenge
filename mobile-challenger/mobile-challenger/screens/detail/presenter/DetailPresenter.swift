@@ -11,17 +11,17 @@ protocol DetailPresenterProtocol: class {
     func showLoader()
     func endLoader()
     func successData()
-    func errorData()
+    func errorData(message: String)
     func openURL(url: String)
 }
 
 class DetailPresenter {
     
     //MARK: - Lets
-    let manager = NetworkingManager()
     
     //MARK: - Vars
     weak var view: DetailPresenterProtocol?
+    var manager = NetworkingManager()
     var repository: RepositoriesModel?
     var response : [PullRequestModel] = []
     var actualResponse : [PullRequestModel] = []
@@ -51,7 +51,7 @@ class DetailPresenter {
     //MARK: - Setter
     func setOpenAndClose() {
         for item in actualResponse {
-            if item.state?.elementsEqual("open") ?? false {
+            if let state = item.state, state.elementsEqual("open") {
                 self.opened += 1
             } else {
                 self.closed += 1
@@ -65,8 +65,9 @@ class DetailPresenter {
     }
     
     func openUrl(at index: IndexPath) {
-        let url = self.response[index.row - 1].urlPR
-        self.view?.openURL(url: url ?? String())
+        if let url = self.response[index.row - 1].urlPR {
+            self.view?.openURL(url: url)
+        }
     }
     
     func refreshValues() {
@@ -78,6 +79,10 @@ class DetailPresenter {
     
     //MARK: - API
     func getPullrequest(refresh: Bool, pagination: Bool) {
+        guard let repositoryName = repository?.fullName else {
+            return
+        }
+        
         if refresh {
             self.refreshValues()
         }
@@ -86,7 +91,7 @@ class DetailPresenter {
             self.view?.showLoader()
         }
         
-        manager.getPullRequest(page: page, nameUrl: repository?.fullName ?? "") { [weak self] (response) in
+        manager.getPullRequest(page: page, nameUrl: repositoryName) { [weak self] (response) in
             if let self = self {
                 self.view?.endLoader()
                 
@@ -104,6 +109,8 @@ class DetailPresenter {
         } error: { [weak self] (errorMessage) in
             if let self = self {
                 self.view?.endLoader()
+                self.view?.errorData(message: errorMessage)
+            }
         }
     }
-}}
+}

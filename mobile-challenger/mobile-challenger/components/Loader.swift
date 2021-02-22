@@ -37,15 +37,16 @@ class Loader: UIView {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("")
+        return nil
     }
 
     private func addLoader() {
-        guard let blurEffectView = blurEffectView else { return }
-        let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
-        activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-        blurEffectView.contentView.addSubview(activityIndicator)
-        activityIndicator.center = blurEffectView.contentView.center
-        activityIndicator.startAnimating()
+        if let blurEffectView = blurEffectView {
+            let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+            activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+            blurEffectView.contentView.addSubview(activityIndicator)
+            activityIndicator.center = blurEffectView.contentView.center
+            activityIndicator.startAnimating()
+        }
     }
 }

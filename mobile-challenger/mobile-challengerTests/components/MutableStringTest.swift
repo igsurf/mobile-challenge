@@ -22,8 +22,15 @@ class MutableStringTest: QuickSpec {
                 attributedString.setColorForText(textForAttribute: "teste azul", withColor: UIColor.yellowColor())
                 attributedString.setColorForText(textForAttribute: "/ teste verde", withColor: UIColor.black)
 
+                let firstRange: NSRange = attributedString.mutableString.range(of: "teste azul", options: .caseInsensitive)
+                let secondRange: NSRange = attributedString.mutableString.range(of: "/ teste verde", options: .caseInsensitive)
                 
-                //TO DO
+                let start = attributedString.attributedSubstring(from: firstRange)
+                let final = attributedString.attributedSubstring(from: secondRange)
+                 
+                expect(start).to(equal(NSAttributedString(string: "teste azul", attributes: [NSAttributedString.Key.foregroundColor : UIColor.yellowColor()])))
+                
+                expect(final).to(equal(NSAttributedString(string: "/ teste verde", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black])))
             }
         }
     }

@@ -42,7 +42,6 @@ class NetworkingManager {
                 }
             }
         } failure: { (operation, errorMessage) in
-            //Ajustes do erro de API
             error(errorMessage.localizedDescription)
         }
     }

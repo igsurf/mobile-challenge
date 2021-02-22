@@ -7,7 +7,30 @@
 		<key>mobile-challenger.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>9</integer>
+		</dict>
+		<key>mobile-challengerTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E3FCDBF925DF58DE00C9F419</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3FCDC1225DF58DF00C9F419</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3FCDC1D25DF58DF00C9F419</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

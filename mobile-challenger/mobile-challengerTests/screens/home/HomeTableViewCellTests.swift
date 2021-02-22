@@ -27,7 +27,11 @@ class HomeTableViewCellTests: QuickSpec {
             
             beforeEach {
                 let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-                viewController = storyboard.instantiateViewController(identifier: controllerID) as? HomeViewController
+                if #available(iOS 13.0, *) {
+                    viewController = storyboard.instantiateViewController(identifier: controllerID) as? HomeViewController
+                } else {
+                    viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as? HomeViewController
+                }
                 viewController.beginAppearanceTransition(true, animated: true)
                 viewController.endAppearanceTransition()
 

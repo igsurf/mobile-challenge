@@ -930,7 +930,6 @@
 			baseConfigurationReference = D03C0B96A81E635FF880C767 /* Pods-mobile-challenger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F65Q2A73U8;
 				INFOPLIST_FILE = "mobile-challenger/app/Info.plist";
@@ -951,7 +950,6 @@
 			baseConfigurationReference = 4D537B9A1FF737E10079AEED /* Pods-mobile-challenger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F65Q2A73U8;
 				INFOPLIST_FILE = "mobile-challenger/app/Info.plist";
@@ -976,7 +974,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F65Q2A73U8;
 				INFOPLIST_FILE = "mobile-challengerTests/app/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -999,7 +997,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F65Q2A73U8;
 				INFOPLIST_FILE = "mobile-challengerTests/app/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

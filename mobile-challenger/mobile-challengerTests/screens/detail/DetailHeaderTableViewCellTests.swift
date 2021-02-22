@@ -26,7 +26,11 @@ class DetailHeaderTableViewCellTests: QuickSpec {
             
             beforeEach {
                 let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-                viewController = storyboard.instantiateViewController(identifier: controllerID) as? DetailViewController
+                if #available(iOS 13.0, *) {
+                    viewController = storyboard.instantiateViewController(identifier: controllerID) as? DetailViewController
+                } else {
+                    viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as? DetailViewController
+                }
                 viewController.beginAppearanceTransition(true, animated: true)
                 viewController.endAppearanceTransition()
                 

@@ -40,8 +40,6 @@ class DetailTableViewCell: UITableViewCell {
         self.descriptionPullRequestLabel?.sizeToFit()
         self.userNameLabel?.text = request?.ownerUsername
         self.dateLabel?.text = request?.createDate?.transformDateToFormat(format: dateFormat)
-
         self.userImageView?.sd_setImage(with: URL(string: request?.ownerImage ?? ""), placeholderImage: UIImage(named: "img-perfil-placeholder"))
-
     }
 }

@@ -29,7 +29,7 @@
         <!--Home View Controller-->
         <scene sceneID="oGB-tk-ZYB">
             <objects>
-                <viewController id="ytm-Gd-tkL" customClass="HomeViewController" customModule="mobile_challenger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="ytm-Gd-tkL" customClass="HomeViewController" customModule="mobile_challenger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gok-Wr-gfP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,13 +55,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição do repositório lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGI-eP-epO">
-                                                    <rect key="frame" x="20" y="54.5" width="283" height="16"/>
+                                                    <rect key="frame" x="20" y="54.5" width="264.5" height="31.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ner-iF-swV">
-                                                    <rect key="frame" x="44" y="78.5" width="56" height="22"/>
+                                                    <rect key="frame" x="44" y="94" width="56" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="56" id="uD7-bf-iG2"/>
                                                     </constraints>
@@ -70,32 +70,32 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MSF-UH-gop">
-                                                    <rect key="frame" x="132" y="78.5" width="60" height="22"/>
+                                                    <rect key="frame" x="132" y="94" width="60" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6N3-1T-bPL">
-                                                    <rect key="frame" x="334.5" y="83.5" width="47.5" height="12"/>
+                                                    <rect key="frame" x="330" y="91.5" width="56" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-code-fork" translatesAutoresizingMaskIntoConstraints="NO" id="vfo-Zr-wg7">
-                                                    <rect key="frame" x="20" y="78.5" width="22" height="22"/>
+                                                    <rect key="frame" x="20" y="94" width="22" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="tQh-bh-EK1"/>
                                                         <constraint firstAttribute="width" constant="22" id="yXV-Lf-0KA"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-star" translatesAutoresizingMaskIntoConstraints="NO" id="HLU-Cg-UX4">
-                                                    <rect key="frame" x="108" y="78.5" width="22" height="22"/>
+                                                    <rect key="frame" x="108" y="94" width="22" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="22" id="08u-AR-DvP"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-perfil-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="o9S-q9-ZvY" customClass="RoundedImageView" customModule="mobile_challenger" customModuleProvider="target">
-                                                    <rect key="frame" x="338" y="39.5" width="40" height="40"/>
+                                                    <rect key="frame" x="338" y="47.5" width="40" height="40"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="IOU-dn-bDz"/>
@@ -128,6 +128,7 @@
                                                 <constraint firstItem="vfo-Zr-wg7" firstAttribute="leading" secondItem="xpg-Ai-njn" secondAttribute="leadingMargin" id="Zq9-rk-Cho"/>
                                                 <constraint firstItem="1gk-as-5E7" firstAttribute="top" secondItem="xpg-Ai-njn" secondAttribute="topMargin" constant="16" id="eZg-xK-nJK"/>
                                                 <constraint firstItem="MSF-UH-gop" firstAttribute="width" secondItem="Ner-iF-swV" secondAttribute="width" multiplier="1.07143" id="kiL-GJ-mAS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6N3-1T-bPL" secondAttribute="trailing" constant="8" id="lSe-9v-SUO"/>
                                                 <constraint firstItem="HLU-Cg-UX4" firstAttribute="bottom" secondItem="Ner-iF-swV" secondAttribute="bottom" id="nza-8J-JJl"/>
                                                 <constraint firstItem="Ner-iF-swV" firstAttribute="bottom" secondItem="vfo-Zr-wg7" secondAttribute="bottom" id="pCP-1u-6tj"/>
                                                 <constraint firstItem="6N3-1T-bPL" firstAttribute="top" secondItem="o9S-q9-ZvY" secondAttribute="bottom" constant="4" id="qeK-mo-j1d"/>
@@ -170,7 +171,7 @@
         <!--Detail View Controller-->
         <scene sceneID="eVJ-i6-cdm">
             <objects>
-                <viewController id="Hvv-zG-poF" customClass="DetailViewController" customModule="mobile_challenger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="Hvv-zG-poF" customClass="DetailViewController" customModule="mobile_challenger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xbx-0V-fFj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

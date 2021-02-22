@@ -12,16 +12,15 @@ protocol HomePresenterProtocol: class {
     func endLoader()
     func showError(error: String)
     func successData()
-    func errorData()
     func performForSegueCall(repository: RepositoriesModel)
 }
 
 class HomePresenter {
     
     //MARK: - Lets
-    let manager = NetworkingManager()
     
     //MARK: - Vars
+    var manager = NetworkingManager()
     weak var view: HomePresenterProtocol?
     var response : [RepositoriesModel] = []
     var page: Int = 1
@@ -68,12 +67,11 @@ class HomePresenter {
         manager.getRepositories(page: page) { [weak self] (response) in
             if let self = self {
                 self.view?.endLoader()
+
                 if refresh {
                     self.response = response
-
                 } else {
                     self.response.append(contentsOf: response)
-
                 }
                 
                 self.view?.successData()

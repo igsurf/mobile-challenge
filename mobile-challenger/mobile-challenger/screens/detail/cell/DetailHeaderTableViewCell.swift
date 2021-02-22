@@ -27,9 +27,9 @@ class DetailHeaderTableViewCell: UITableViewCell {
         let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: stringValue)
         attributedString.setColorForText(textForAttribute: "\(open) opened", withColor: UIColor.yellowColor())
         attributedString.setColorForText(textForAttribute: "/ \(close) closed", withColor: UIColor.black)
-        titleLabel?.font = UIFont.boldSystemFont(ofSize: boldFontSize)
-
-        titleLabel?.attributedText = attributedString
+        
+        self.titleLabel?.font = UIFont.boldSystemFont(ofSize: boldFontSize)
+        self.titleLabel?.attributedText = attributedString
     }
     
     

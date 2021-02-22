@@ -10,10 +10,10 @@
 		10E18A460DD009C4AD78C9FC /* Pods_mobile_challenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167BA08F8DFDA28AD4B3337A /* Pods_mobile_challenger.framework */; };
 		641C9A914E64D1F566FF4BAC /* Pods_mobile_challenger_mobile_challengerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51AAF7463F53D7AD79AE4B10 /* Pods_mobile_challenger_mobile_challengerUITests.framework */; };
 		8370411A5B5564D57F0D5770 /* Pods_mobile_challengerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC8C16916BDFDD03B28CFC9 /* Pods_mobile_challengerTests.framework */; };
+		E342FFE925E3138300AA0813 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E342FFE825E3138300AA0813 /* HomeViewControllerTests.swift */; };
 		E360C9E725E03349006E7F20 /* home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E360C9E625E03349006E7F20 /* home.storyboard */; };
 		E360C9F625E035C6006E7F20 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360C9F525E035C6006E7F20 /* RoundedImageView.swift */; };
 		E360C9FF25E04BE4006E7F20 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360C9FE25E04BE4006E7F20 /* Color.swift */; };
-		E360CA1225E0503D006E7F20 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360CA1125E0503D006E7F20 /* StatusBar.swift */; };
 		E360CA1725E055C5006E7F20 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360CA1625E055C5006E7F20 /* HomeViewController.swift */; };
 		E360CA1C25E05645006E7F20 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360CA1B25E05645006E7F20 /* HomePresenter.swift */; };
 		E360CA2125E0573F006E7F20 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360CA2025E0573F006E7F20 /* HomeTableViewCell.swift */; };
@@ -28,11 +28,27 @@
 		E37D7BCA25E197A700A5042C /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BC925E197A700A5042C /* Loader.swift */; };
 		E37D7BCF25E19DFE00A5042C /* PullRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BCE25E19DFE00A5042C /* PullRequestModel.swift */; };
 		E37D7BE725E1B7E100A5042C /* MutableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7BE625E1B7E100A5042C /* MutableString.swift */; };
+		E37D7C1525E21FEF00A5042C /* NetworkingManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7C1425E21FEF00A5042C /* NetworkingManagerMock.swift */; };
+		E37D7C1D25E2241500A5042C /* ModelsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7C1C25E2241500A5042C /* ModelsMock.swift */; };
+		E37D7C2625E2374C00A5042C /* ColorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7C2525E2374C00A5042C /* ColorTest.swift */; };
+		E37D7C2B25E239C200A5042C /* StringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7C2A25E239C200A5042C /* StringTest.swift */; };
+		E37D7C3025E23E4400A5042C /* LoaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7C2F25E23E4400A5042C /* LoaderTest.swift */; };
+		E37D7C3825E2DC8200A5042C /* MutableStringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7C3725E2DC8200A5042C /* MutableStringTest.swift */; };
+		E37D7C3E25E2DE4000A5042C /* RoundedImageViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7C3D25E2DE4000A5042C /* RoundedImageViewTest.swift */; };
+		E37D7C9625E30E1F00A5042C /* DetailHeaderTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7C9525E30E1F00A5042C /* DetailHeaderTableViewCellTests.swift */; };
+		E37D7C9E25E30E4C00A5042C /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7C9D25E30E4C00A5042C /* DetailPresenterTests.swift */; };
+		E37D7CA325E30E6600A5042C /* DetailTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7CA225E30E6600A5042C /* DetailTableViewCellTests.swift */; };
+		E37D7CA825E30E7D00A5042C /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7CA725E30E7D00A5042C /* DetailViewControllerTests.swift */; };
+		E37D7CAD25E30E9600A5042C /* DetailPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7CAC25E30E9600A5042C /* DetailPresenterMock.swift */; };
+		E37D7CB225E30EB200A5042C /* DetailPresenterProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7CB125E30EB200A5042C /* DetailPresenterProtocolMock.swift */; };
+		E37D7CB825E30F0400A5042C /* HomePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7CB725E30F0400A5042C /* HomePresenterMock.swift */; };
+		E37D7CC025E30F2800A5042C /* HomePresenterProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7CBF25E30F2800A5042C /* HomePresenterProtocolMock.swift */; };
+		E37D7CC525E30F4800A5042C /* HomeTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7CC425E30F4800A5042C /* HomeTableViewCellTests.swift */; };
+		E37D7CD225E30FF800A5042C /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D7CD125E30FF800A5042C /* HomePresenterTests.swift */; };
 		E3FCDBFE25DF58DE00C9F419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDBFD25DF58DE00C9F419 /* AppDelegate.swift */; };
 		E3FCDC0825DF58DE00C9F419 /* mobile_challenger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDC0625DF58DE00C9F419 /* mobile_challenger.xcdatamodeld */; };
 		E3FCDC0A25DF58DF00C9F419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FCDC0925DF58DF00C9F419 /* Assets.xcassets */; };
 		E3FCDC0D25DF58DF00C9F419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FCDC0B25DF58DF00C9F419 /* LaunchScreen.storyboard */; };
-		E3FCDC1825DF58DF00C9F419 /* mobile_challengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDC1725DF58DF00C9F419 /* mobile_challengerTests.swift */; };
 		E3FCDC2325DF58DF00C9F419 /* mobile_challengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FCDC2225DF58DF00C9F419 /* mobile_challengerUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,10 +79,10 @@
 		B7CFE5B7BACF2B2F8EF70D5C /* Pods-mobile-challenger-mobile-challengerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile-challenger-mobile-challengerUITests.debug.xcconfig"; path = "Target Support Files/Pods-mobile-challenger-mobile-challengerUITests/Pods-mobile-challenger-mobile-challengerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D03C0B96A81E635FF880C767 /* Pods-mobile-challenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile-challenger.debug.xcconfig"; path = "Target Support Files/Pods-mobile-challenger/Pods-mobile-challenger.debug.xcconfig"; sourceTree = "<group>"; };
 		D2FFB50AC31770BD154E7AC1 /* Pods-mobile-challengerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile-challengerTests.release.xcconfig"; path = "Target Support Files/Pods-mobile-challengerTests/Pods-mobile-challengerTests.release.xcconfig"; sourceTree = "<group>"; };
+		E342FFE825E3138300AA0813 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		E360C9E625E03349006E7F20 /* home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = home.storyboard; sourceTree = "<group>"; };
 		E360C9F525E035C6006E7F20 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		E360C9FE25E04BE4006E7F20 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		E360CA1125E0503D006E7F20 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		E360CA1625E055C5006E7F20 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E360CA1B25E05645006E7F20 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		E360CA2025E0573F006E7F20 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,6 +97,23 @@
 		E37D7BC925E197A700A5042C /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		E37D7BCE25E19DFE00A5042C /* PullRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestModel.swift; sourceTree = "<group>"; };
 		E37D7BE625E1B7E100A5042C /* MutableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableString.swift; sourceTree = "<group>"; };
+		E37D7C1425E21FEF00A5042C /* NetworkingManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManagerMock.swift; sourceTree = "<group>"; };
+		E37D7C1C25E2241500A5042C /* ModelsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsMock.swift; sourceTree = "<group>"; };
+		E37D7C2525E2374C00A5042C /* ColorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTest.swift; sourceTree = "<group>"; };
+		E37D7C2A25E239C200A5042C /* StringTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTest.swift; sourceTree = "<group>"; };
+		E37D7C2F25E23E4400A5042C /* LoaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderTest.swift; sourceTree = "<group>"; };
+		E37D7C3725E2DC8200A5042C /* MutableStringTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableStringTest.swift; sourceTree = "<group>"; };
+		E37D7C3D25E2DE4000A5042C /* RoundedImageViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageViewTest.swift; sourceTree = "<group>"; };
+		E37D7C9525E30E1F00A5042C /* DetailHeaderTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTableViewCellTests.swift; sourceTree = "<group>"; };
+		E37D7C9D25E30E4C00A5042C /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
+		E37D7CA225E30E6600A5042C /* DetailTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCellTests.swift; sourceTree = "<group>"; };
+		E37D7CA725E30E7D00A5042C /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
+		E37D7CAC25E30E9600A5042C /* DetailPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterMock.swift; sourceTree = "<group>"; };
+		E37D7CB125E30EB200A5042C /* DetailPresenterProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterProtocolMock.swift; sourceTree = "<group>"; };
+		E37D7CB725E30F0400A5042C /* HomePresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterMock.swift; sourceTree = "<group>"; };
+		E37D7CBF25E30F2800A5042C /* HomePresenterProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterProtocolMock.swift; sourceTree = "<group>"; };
+		E37D7CC425E30F4800A5042C /* HomeTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCellTests.swift; sourceTree = "<group>"; };
+		E37D7CD125E30FF800A5042C /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		E3FCDBFA25DF58DE00C9F419 /* mobile-challenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-challenger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FCDBFD25DF58DE00C9F419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3FCDC0725DF58DE00C9F419 /* mobile_challenger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mobile_challenger.xcdatamodel; sourceTree = "<group>"; };
@@ -88,7 +121,6 @@
 		E3FCDC0C25DF58DF00C9F419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3FCDC0E25DF58DF00C9F419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3FCDC1325DF58DF00C9F419 /* mobile-challengerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mobile-challengerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3FCDC1725DF58DF00C9F419 /* mobile_challengerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_challengerTests.swift; sourceTree = "<group>"; };
 		E3FCDC1925DF58DF00C9F419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3FCDC1E25DF58DF00C9F419 /* mobile-challengerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mobile-challengerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FCDC2225DF58DF00C9F419 /* mobile_challengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_challengerUITests.swift; sourceTree = "<group>"; };
@@ -207,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				E360C9FE25E04BE4006E7F20 /* Color.swift */,
-				E360CA1125E0503D006E7F20 /* StatusBar.swift */,
 				E360CA3825E05ACC006E7F20 /* Localizable.strings */,
 				E360CA3925E05B27006E7F20 /* Strings.swift */,
 				E37D7BC925E197A700A5042C /* Loader.swift */,
@@ -223,6 +254,92 @@
 				E37D7BCE25E19DFE00A5042C /* PullRequestModel.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		E37D7BF425E2043D00A5042C /* app */ = {
+			isa = PBXGroup;
+			children = (
+				E3FCDC1925DF58DF00C9F419 /* Info.plist */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		E37D7C1325E21FB700A5042C /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				E37D7C1425E21FEF00A5042C /* NetworkingManagerMock.swift */,
+				E37D7C1C25E2241500A5042C /* ModelsMock.swift */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
+		E37D7C2125E2371900A5042C /* components */ = {
+			isa = PBXGroup;
+			children = (
+				E37D7C2525E2374C00A5042C /* ColorTest.swift */,
+				E37D7C2A25E239C200A5042C /* StringTest.swift */,
+				E37D7C2F25E23E4400A5042C /* LoaderTest.swift */,
+				E37D7C3725E2DC8200A5042C /* MutableStringTest.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		E37D7C3C25E2DE2400A5042C /* customView */ = {
+			isa = PBXGroup;
+			children = (
+				E37D7C3D25E2DE4000A5042C /* RoundedImageViewTest.swift */,
+			);
+			path = customView;
+			sourceTree = "<group>";
+		};
+		E37D7C7A25E30D2F00A5042C /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				E37D7C9325E30DF400A5042C /* home */,
+				E37D7C9225E30DDA00A5042C /* detail */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		E37D7C9225E30DDA00A5042C /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				E37D7C9425E30E1100A5042C /* mock */,
+				E37D7C9525E30E1F00A5042C /* DetailHeaderTableViewCellTests.swift */,
+				E37D7C9D25E30E4C00A5042C /* DetailPresenterTests.swift */,
+				E37D7CA225E30E6600A5042C /* DetailTableViewCellTests.swift */,
+				E37D7CA725E30E7D00A5042C /* DetailViewControllerTests.swift */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
+		E37D7C9325E30DF400A5042C /* home */ = {
+			isa = PBXGroup;
+			children = (
+				E37D7CB625E30EF600A5042C /* mock */,
+				E37D7CC425E30F4800A5042C /* HomeTableViewCellTests.swift */,
+				E37D7CD125E30FF800A5042C /* HomePresenterTests.swift */,
+				E342FFE825E3138300AA0813 /* HomeViewControllerTests.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		E37D7C9425E30E1100A5042C /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				E37D7CAC25E30E9600A5042C /* DetailPresenterMock.swift */,
+				E37D7CB125E30EB200A5042C /* DetailPresenterProtocolMock.swift */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
+		E37D7CB625E30EF600A5042C /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				E37D7CB725E30F0400A5042C /* HomePresenterMock.swift */,
+				E37D7CBF25E30F2800A5042C /* HomePresenterProtocolMock.swift */,
+			);
+			path = mock;
 			sourceTree = "<group>";
 		};
 		E3FCDBF125DF58DE00C9F419 = {
@@ -265,8 +382,11 @@
 		E3FCDC1625DF58DF00C9F419 /* mobile-challengerTests */ = {
 			isa = PBXGroup;
 			children = (
-				E3FCDC1725DF58DF00C9F419 /* mobile_challengerTests.swift */,
-				E3FCDC1925DF58DF00C9F419 /* Info.plist */,
+				E37D7C2125E2371900A5042C /* components */,
+				E37D7C3C25E2DE2400A5042C /* customView */,
+				E37D7C1325E21FB700A5042C /* mock */,
+				E37D7BF425E2043D00A5042C /* app */,
+				E37D7C7A25E30D2F00A5042C /* screens */,
 			);
 			path = "mobile-challengerTests";
 			sourceTree = "<group>";
@@ -609,7 +729,6 @@
 				E37D7BE725E1B7E100A5042C /* MutableString.swift in Sources */,
 				E3FCDBFE25DF58DE00C9F419 /* AppDelegate.swift in Sources */,
 				E37D7B9A25E082C900A5042C /* DetailPresenter.swift in Sources */,
-				E360CA1225E0503D006E7F20 /* StatusBar.swift in Sources */,
 				E37D7BA425E082F000A5042C /* DetailTableViewCell.swift in Sources */,
 				E360C9FF25E04BE4006E7F20 /* Color.swift in Sources */,
 				E360CA1725E055C5006E7F20 /* HomeViewController.swift in Sources */,
@@ -626,7 +745,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3FCDC1825DF58DF00C9F419 /* mobile_challengerTests.swift in Sources */,
+				E37D7CD225E30FF800A5042C /* HomePresenterTests.swift in Sources */,
+				E342FFE925E3138300AA0813 /* HomeViewControllerTests.swift in Sources */,
+				E37D7CC025E30F2800A5042C /* HomePresenterProtocolMock.swift in Sources */,
+				E37D7C9E25E30E4C00A5042C /* DetailPresenterTests.swift in Sources */,
+				E37D7CAD25E30E9600A5042C /* DetailPresenterMock.swift in Sources */,
+				E37D7C3E25E2DE4000A5042C /* RoundedImageViewTest.swift in Sources */,
+				E37D7C9625E30E1F00A5042C /* DetailHeaderTableViewCellTests.swift in Sources */,
+				E37D7C2625E2374C00A5042C /* ColorTest.swift in Sources */,
+				E37D7CC525E30F4800A5042C /* HomeTableViewCellTests.swift in Sources */,
+				E37D7C1D25E2241500A5042C /* ModelsMock.swift in Sources */,
+				E37D7CA825E30E7D00A5042C /* DetailViewControllerTests.swift in Sources */,
+				E37D7C1525E21FEF00A5042C /* NetworkingManagerMock.swift in Sources */,
+				E37D7C2B25E239C200A5042C /* StringTest.swift in Sources */,
+				E37D7C3025E23E4400A5042C /* LoaderTest.swift in Sources */,
+				E37D7CA325E30E6600A5042C /* DetailTableViewCellTests.swift in Sources */,
+				E37D7CB225E30EB200A5042C /* DetailPresenterProtocolMock.swift in Sources */,
+				E37D7C3825E2DC8200A5042C /* MutableStringTest.swift in Sources */,
+				E37D7CB825E30F0400A5042C /* HomePresenterMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,7 +975,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F65Q2A73U8;
-				INFOPLIST_FILE = "mobile-challengerTests/Info.plist";
+				INFOPLIST_FILE = "mobile-challengerTests/app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -862,7 +998,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F65Q2A73U8;
-				INFOPLIST_FILE = "mobile-challengerTests/Info.plist";
+				INFOPLIST_FILE = "mobile-challengerTests/app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

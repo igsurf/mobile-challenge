@@ -13,11 +13,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView?
     
     //MARK: - Lets
-    private let cellIdentifier = "DetailTableViewCell"
-    private let headerCellIdentifier = "DetailHeaderTableViewCell"
-    private let refreshControl = UIRefreshControl()
-    private let headerHeight: CGFloat = 24
-
+    var cellIdentifier = "DetailTableViewCell"
+    var headerCellIdentifier = "DetailHeaderTableViewCell"
+    var refreshControl = UIRefreshControl()
+    var headerHeight: CGFloat = 24
+    var application = UIApplication.shared
+    
     //MARK: - Vars
     var presenter: DetailPresenter?
 
@@ -60,7 +61,7 @@ class DetailViewController: UIViewController {
     }
     
     //MARK: - API
-    @objc private func getPullRequests() {
+    @objc func getPullRequests() {
         self.presenter?.getPullrequest(refresh: true, pagination: true)
     }
 }
@@ -124,16 +125,18 @@ extension DetailViewController: DetailPresenterProtocol {
         self.tableView?.reloadData()
     }
     
-    func errorData() {
-        
+    func errorData(message: String) {
+        let alert = UIAlertController(title: "error_title".localized(), message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "ok".localized(), style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func openURL(url: String) {
-        if let url = URL(string: url), UIApplication.shared.canOpenURL(url) {
+        if let url = URL(string: url), application.canOpenURL(url) {
             if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:])
+                application.open(url, options: [:])
             } else {
-                UIApplication.shared.openURL(url)
+                application.openURL(url)
             }
         }
     }

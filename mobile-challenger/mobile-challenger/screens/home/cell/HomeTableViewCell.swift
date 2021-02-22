@@ -44,9 +44,4 @@ class HomeTableViewCell: UITableViewCell {
         self.userNameLabel?.text = response.ownerUsername
         self.perfilImagemView?.sd_setImage(with: URL(string: response.ownerImage ?? ""), placeholderImage: UIImage(named: "img-perfil-placeholder"))
     }
-    
-    func setupCellWithModel() { //change name
-        setupColors()
-    }
-
 }

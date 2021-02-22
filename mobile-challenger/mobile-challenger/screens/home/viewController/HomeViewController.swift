@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView?
     
     //MARK: - Lets
-    private let refreshControl = UIRefreshControl()
+    let refreshControl = UIRefreshControl()
     private let cellIdentifier = "homeTableViewCell"
     private let segueIdentifier = "DetailSegue"
     
@@ -60,7 +60,7 @@ class HomeViewController: UIViewController {
             }
         })
         
-        refreshControl.addTarget(self, action: #selector(getRepository), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(getRepositories), for: .valueChanged)
         
         if #available(iOS 10.0, *) {
             self.tableView?.refreshControl = self.refreshControl
@@ -70,7 +70,7 @@ class HomeViewController: UIViewController {
     }
     
     //MARK: - API
-    @objc private func getRepository() {
+    @objc func getRepositories() {
         self.presenter.getRositories(refresh: true, pagination: false)
     }
     
@@ -124,7 +124,9 @@ extension HomeViewController: HomePresenterProtocol {
     }
     
     func showError(error: String) {
-        
+        let alert = UIAlertController(title: "error_title".localized(), message: error, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "ok".localized(), style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func successData() {
@@ -134,10 +136,4 @@ extension HomeViewController: HomePresenterProtocol {
     func performForSegueCall(repository: RepositoriesModel) {
         performSegue(withIdentifier: segueIdentifier, sender: repository)
     }
-    
-    func errorData() {
-        
-    }
-    
-    
 }

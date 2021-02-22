@@ -40,7 +40,7 @@ Sua aplicação deve:
 - usar gestão de dependências no projeto. Ex: Cocoapods
 - usar um Framework para Comunicação com API. Ex: AFNetwork
 - fazer mapeamento json -> Objeto . Ex: [Mantle](https://github.com/Mantle/Mantle#mtlmodel)
-- possuir boa cobertura de testes unitários no projeto. Ex: XCTests / Quick, Nimble
+- possuir boa cobertura de testes unitários no projeto. Ex: Quick / Nimble
 
 Você ganha mais pontos se:
 

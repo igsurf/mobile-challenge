@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  mobile-challenger
+
+  Created by Leonardo Sugano on 19/02/21.
+  
+*/
+"home_title" = "Github JavaPop";
+"error_title" = "Erro";
+"ok" = "ok";

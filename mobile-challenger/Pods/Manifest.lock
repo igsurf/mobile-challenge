@@ -1,0 +1,54 @@
+PODS:
+  - AFNetworking (3.0.0):
+    - AFNetworking/NSURLSession (= 3.0.0)
+    - AFNetworking/Reachability (= 3.0.0)
+    - AFNetworking/Security (= 3.0.0)
+    - AFNetworking/Serialization (= 3.0.0)
+    - AFNetworking/UIKit (= 3.0.0)
+  - AFNetworking/NSURLSession (3.0.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.0)
+  - AFNetworking/Security (3.0.0)
+  - AFNetworking/Serialization (3.0.0)
+  - AFNetworking/UIKit (3.0.0):
+    - AFNetworking/NSURLSession
+  - Mantle (2.1.6):
+    - Mantle/extobjc (= 2.1.6)
+  - Mantle/extobjc (2.1.6)
+  - Nimble (8.0.2)
+  - Quick (2.1.0)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
+  - UIScrollView-InfiniteScroll (1.1.0)
+
+DEPENDENCIES:
+  - AFNetworking (= 3.0)
+  - Mantle
+  - Nimble (= 8.0.2)
+  - Quick (= 2.1.0)
+  - SDWebImage (~> 5.0)
+  - UIScrollView-InfiniteScroll
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Mantle
+    - Nimble
+    - Quick
+    - SDWebImage
+    - UIScrollView-InfiniteScroll
+
+SPEC CHECKSUMS:
+  AFNetworking: 932ff751f9d6fb1dad0b3af58b7e3ffba0a4e7fd
+  Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
+  UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
+
+PODFILE CHECKSUM: 8b259dc84ca63eb0ba247923d45cf63ca2e83ac1
+
+COCOAPODS: 1.10.1

@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DDXNetwork",
+        "repositoryURL": "git@github.com:dedeexe/DDXNetwork.git",
+        "state": {
+          "branch": null,
+          "revision": "53eec7f933b3c609205a44fc514059c8500a1abf",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "SnapshotTesting",
+        "repositoryURL": "https://github.com/pointfreeco/swift-snapshot-testing.git",
+        "state": {
+          "branch": null,
+          "revision": "c466812aa2e22898f27557e2e780d3aad7a27203",
+          "version": "1.8.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

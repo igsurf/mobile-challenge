@@ -19,7 +19,7 @@ public extension Repository {
         stargazersCount: Int? = 10,
         owner: Owner? = .fixture()
     ) -> Self {
-        Self(
+        .init(
             id: id,
             name: name,
             description: description,

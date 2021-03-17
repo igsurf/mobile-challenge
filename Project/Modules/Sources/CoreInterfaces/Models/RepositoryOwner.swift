@@ -13,7 +13,7 @@ public extension Repository.Owner {
         login: String = "12345",
         avatarUrl: String? = "Salad"
     ) -> Self {
-        Self(
+        .init(
             login: login,
             avatarUrl: avatarUrl
         )

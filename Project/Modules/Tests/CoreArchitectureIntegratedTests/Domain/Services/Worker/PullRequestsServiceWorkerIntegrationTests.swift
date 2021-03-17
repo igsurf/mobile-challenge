@@ -3,23 +3,26 @@ import CoreInterfaces
 import DDXNetwork
 import XCTest
 
-class RepositorieserviceWorkerIntegrationTests: XCTestCase {
+class PullRequestsServiceWorkerIntegrationTests: XCTestCase {
 
-    var sut: RepositoriesServiceWorker!
+    var sut: PullRequestsServiceWorker!
     var service: RequestServicePort!
 
     ///
     /// Testes if endpoint to get the list of Repositories is working and giving back a valida structure of data
     ///
 
-    func testGetRepositories__whenRequestRepositories__RepositoriesCountIsGraterThanZero() {
+    func testGetPullRequests__whenRequestRepositories__RepositoriesCountIsEqualThree() {
         //GIVEN
-        sut = RepositoriesServiceWorker(service: RequestServiceAdapter())
+        sut = PullRequestsServiceWorker(service: RequestServiceAdapter(), pageSize: 3)
         let expectation = XCTestExpectation()
-        var elements: [Repository] = []
+        var elements: [PullRequest] = []
 
         //WHEN
-        sut.getRepositories(
+
+        sut.getPullRequests(
+            in: "Alamofire",
+            owner: "Alamofire",
             page: 1,
             onCompletion: {
                 elements = $0
@@ -32,7 +35,8 @@ class RepositorieserviceWorkerIntegrationTests: XCTestCase {
         )
 
         //THEN
+
         wait(for: [expectation], timeout: 10.0)
-        XCTAssertGreaterThan(elements.capacity, 0)
+        XCTAssertEqual(elements.count, 3)
     }
 }

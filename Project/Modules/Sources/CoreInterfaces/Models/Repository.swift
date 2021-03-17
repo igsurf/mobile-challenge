@@ -6,7 +6,7 @@ public struct Repository: Decodable, Equatable {
     public let description: String?
     public let forksCount: Int?
     public let stargazersCount: Int?
-    public let owner: Owner?
+    public let owner: User?
 }
 
 #if DEBUG
@@ -17,7 +17,7 @@ public extension Repository {
         description: String? = "Description",
         forksCount: Int? = 10,
         stargazersCount: Int? = 10,
-        owner: Owner? = .fixture()
+        owner: User? = .fixture()
     ) -> Self {
         .init(
             id: id,

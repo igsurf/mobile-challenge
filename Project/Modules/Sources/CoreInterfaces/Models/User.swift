@@ -1,14 +1,12 @@
 import Foundation
 
-public extension Repository {
-    struct Owner: Decodable, Equatable {
-        public let login: String
-        public let avatarUrl: String?
-    }
+public struct User: Decodable, Equatable {
+    public let login: String
+    public let avatarUrl: String?
 }
 
 #if DEBUG
-public extension Repository.Owner {
+public extension User {
     static func fixture(
         login: String = "12345",
         avatarUrl: String? = "Salad"

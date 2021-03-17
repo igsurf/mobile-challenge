@@ -109,6 +109,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1015EE6226021AAE0017F585 /* PullRequestsList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PullRequestsList;
+			sourceTree = "<group>";
+		};
 		107BA68126016A7F00F1B9FD = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +174,7 @@
 		10E0E1B726019F9D0003CFE0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1015EE6226021AAE0017F585 /* PullRequestsList */,
 				10E0E1B826019FA20003CFE0 /* RespositoriesList */,
 			);
 			path = Scenes;

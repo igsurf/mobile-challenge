@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1015EE5E260214C70017F585 /* CoreArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1015EE5D260214C70017F585 /* CoreArchitecture */; };
+		1051627D26026433009A12ED /* PullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF62BE2602478300DB0416 /* PullRequestCell.swift */; };
+		1051627E26026433009A12ED /* ErrorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF62BA2602478200DB0416 /* ErrorCell.swift */; };
+		1051627F26026433009A12ED /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FF62B92602478200DB0416 /* LoadingCell.xib */; };
+		1051628026026433009A12ED /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF62BC2602478200DB0416 /* LoadingCell.swift */; };
+		1051628126026433009A12ED /* PullRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FF62BD2602478300DB0416 /* PullRequestCell.xib */; };
+		1051628226026433009A12ED /* ErrorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FF62BB2602478200DB0416 /* ErrorCell.xib */; };
+		10516286260264AD009A12ED /* PullRequestsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF62B42602478200DB0416 /* PullRequestsListModel.swift */; };
+		10516287260264AD009A12ED /* PullRequestsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF62B22602478200DB0416 /* PullRequestsListViewController.swift */; };
+		10516288260264AD009A12ED /* PullRequestsListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF62B32602478200DB0416 /* PullRequestsListAdapter.swift */; };
+		10516289260264AD009A12ED /* PullRequetstsListDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF62B52602478200DB0416 /* PullRequetstsListDependencies.swift */; };
+		1051628D260266E4009A12ED /* PullRequestsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF62B72602478200DB0416 /* PullRequestsTableViewHandler.swift */; };
 		107BA68E26016A7F00F1B9FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BA68D26016A7F00F1B9FD /* AppDelegate.swift */; };
 		107BA69026016A7F00F1B9FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BA68F26016A7F00F1B9FD /* SceneDelegate.swift */; };
 		107BA69526016A7F00F1B9FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107BA69326016A7F00F1B9FD /* Main.storyboard */; };
@@ -16,12 +27,8 @@
 		107BA6A526016A8100F1B9FD /* GithubRepositoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BA6A426016A8100F1B9FD /* GithubRepositoriesTests.swift */; };
 		107BA6B026016A8100F1B9FD /* GithubRepositoriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BA6AF26016A8100F1B9FD /* GithubRepositoriesUITests.swift */; };
 		10E0E1C92601A1FC0003CFE0 /* ImageDownloadAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0E1C82601A1FC0003CFE0 /* ImageDownloadAdapter.swift */; };
-		10E0E1D62601A2130003CFE0 /* RecipeTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0E1CE2601A2130003CFE0 /* RecipeTableViewHandler.swift */; };
+		10E0E1D62601A2130003CFE0 /* RepositoriesTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0E1CE2601A2130003CFE0 /* RepositoriesTableViewHandler.swift */; };
 		10E0E1D72601A2130003CFE0 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0E1D02601A2130003CFE0 /* RepositoryCell.swift */; };
-		10E0E1D82601A2130003CFE0 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E0E1D12601A2130003CFE0 /* LoadingCell.xib */; };
-		10E0E1D92601A2130003CFE0 /* ErrorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E0E1D22601A2130003CFE0 /* ErrorCell.xib */; };
-		10E0E1DA2601A2130003CFE0 /* ErrorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0E1D32601A2130003CFE0 /* ErrorCell.swift */; };
-		10E0E1DB2601A2130003CFE0 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0E1D42601A2130003CFE0 /* LoadingCell.swift */; };
 		10E0E1DC2601A2130003CFE0 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E0E1D52601A2130003CFE0 /* RepositoryCell.xib */; };
 		10E0E1EB2601AAF80003CFE0 /* RepositoriesListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0E1E92601AAF80003CFE0 /* RepositoriesListAdapter.swift */; };
 		10E0E1EC2601AAF80003CFE0 /* RepositoriesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0E1EA2601AAF80003CFE0 /* RepositoriesListModel.swift */; };
@@ -62,18 +69,25 @@
 		107BA6AF26016A8100F1B9FD /* GithubRepositoriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoriesUITests.swift; sourceTree = "<group>"; };
 		107BA6B126016A8100F1B9FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10E0E1C82601A1FC0003CFE0 /* ImageDownloadAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadAdapter.swift; sourceTree = "<group>"; };
-		10E0E1CE2601A2130003CFE0 /* RecipeTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewHandler.swift; sourceTree = "<group>"; };
+		10E0E1CE2601A2130003CFE0 /* RepositoriesTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesTableViewHandler.swift; sourceTree = "<group>"; };
 		10E0E1D02601A2130003CFE0 /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
-		10E0E1D12601A2130003CFE0 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
-		10E0E1D22601A2130003CFE0 /* ErrorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorCell.xib; sourceTree = "<group>"; };
-		10E0E1D32601A2130003CFE0 /* ErrorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCell.swift; sourceTree = "<group>"; };
-		10E0E1D42601A2130003CFE0 /* LoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		10E0E1D52601A2130003CFE0 /* RepositoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		10E0E1E92601AAF80003CFE0 /* RepositoriesListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesListAdapter.swift; sourceTree = "<group>"; };
 		10E0E1EA2601AAF80003CFE0 /* RepositoriesListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesListModel.swift; sourceTree = "<group>"; };
 		10E0E1F02601AB090003CFE0 /* RepositoriesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesListViewController.swift; sourceTree = "<group>"; };
 		10E0E2012602045A0003CFE0 /* RepositoriesListDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListDependencies.swift; sourceTree = "<group>"; };
 		10E0E20A26020B610003CFE0 /* UIImage+extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extentions.swift"; sourceTree = "<group>"; };
+		10FF62B22602478200DB0416 /* PullRequestsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsListViewController.swift; sourceTree = "<group>"; };
+		10FF62B32602478200DB0416 /* PullRequestsListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsListAdapter.swift; sourceTree = "<group>"; };
+		10FF62B42602478200DB0416 /* PullRequestsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsListModel.swift; sourceTree = "<group>"; };
+		10FF62B52602478200DB0416 /* PullRequetstsListDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequetstsListDependencies.swift; sourceTree = "<group>"; };
+		10FF62B72602478200DB0416 /* PullRequestsTableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsTableViewHandler.swift; sourceTree = "<group>"; };
+		10FF62B92602478200DB0416 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		10FF62BA2602478200DB0416 /* ErrorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCell.swift; sourceTree = "<group>"; };
+		10FF62BB2602478200DB0416 /* ErrorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorCell.xib; sourceTree = "<group>"; };
+		10FF62BC2602478200DB0416 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		10FF62BD2602478300DB0416 /* PullRequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullRequestCell.xib; sourceTree = "<group>"; };
+		10FF62BE2602478300DB0416 /* PullRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +126,12 @@
 		1015EE6226021AAE0017F585 /* PullRequestsList */ = {
 			isa = PBXGroup;
 			children = (
+				10FF62B62602478200DB0416 /* TableViewHandler */,
+				10FF62B82602478200DB0416 /* Views */,
+				10FF62B22602478200DB0416 /* PullRequestsListViewController.swift */,
+				10FF62B32602478200DB0416 /* PullRequestsListAdapter.swift */,
+				10FF62B42602478200DB0416 /* PullRequestsListModel.swift */,
+				10FF62B52602478200DB0416 /* PullRequetstsListDependencies.swift */,
 			);
 			path = PullRequestsList;
 			sourceTree = "<group>";
@@ -204,7 +224,7 @@
 		10E0E1CD2601A2130003CFE0 /* TableViewHandler */ = {
 			isa = PBXGroup;
 			children = (
-				10E0E1CE2601A2130003CFE0 /* RecipeTableViewHandler.swift */,
+				10E0E1CE2601A2130003CFE0 /* RepositoriesTableViewHandler.swift */,
 			);
 			path = TableViewHandler;
 			sourceTree = "<group>";
@@ -212,10 +232,6 @@
 		10E0E1CF2601A2130003CFE0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				10E0E1D22601A2130003CFE0 /* ErrorCell.xib */,
-				10E0E1D32601A2130003CFE0 /* ErrorCell.swift */,
-				10E0E1D12601A2130003CFE0 /* LoadingCell.xib */,
-				10E0E1D42601A2130003CFE0 /* LoadingCell.swift */,
 				10E0E1D52601A2130003CFE0 /* RepositoryCell.xib */,
 				10E0E1D02601A2130003CFE0 /* RepositoryCell.swift */,
 			);
@@ -228,6 +244,27 @@
 				10E0E20A26020B610003CFE0 /* UIImage+extentions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		10FF62B62602478200DB0416 /* TableViewHandler */ = {
+			isa = PBXGroup;
+			children = (
+				10FF62B72602478200DB0416 /* PullRequestsTableViewHandler.swift */,
+			);
+			path = TableViewHandler;
+			sourceTree = "<group>";
+		};
+		10FF62B82602478200DB0416 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10FF62BB2602478200DB0416 /* ErrorCell.xib */,
+				10FF62BA2602478200DB0416 /* ErrorCell.swift */,
+				10FF62B92602478200DB0416 /* LoadingCell.xib */,
+				10FF62BC2602478200DB0416 /* LoadingCell.swift */,
+				10FF62BD2602478300DB0416 /* PullRequestCell.xib */,
+				10FF62BE2602478300DB0416 /* PullRequestCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,11 +373,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1051628126026433009A12ED /* PullRequestCell.xib in Resources */,
 				107BA69A26016A8100F1B9FD /* LaunchScreen.storyboard in Resources */,
 				10E0E1DC2601A2130003CFE0 /* RepositoryCell.xib in Resources */,
-				10E0E1D92601A2130003CFE0 /* ErrorCell.xib in Resources */,
+				1051628226026433009A12ED /* ErrorCell.xib in Resources */,
 				107BA69726016A8100F1B9FD /* Assets.xcassets in Resources */,
-				10E0E1D82601A2130003CFE0 /* LoadingCell.xib in Resources */,
+				1051627F26026433009A12ED /* LoadingCell.xib in Resources */,
 				107BA69526016A7F00F1B9FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,14 +407,20 @@
 				10E0E20B26020B610003CFE0 /* UIImage+extentions.swift in Sources */,
 				10E0E2022602045A0003CFE0 /* RepositoriesListDependencies.swift in Sources */,
 				10E0E1C92601A1FC0003CFE0 /* ImageDownloadAdapter.swift in Sources */,
-				10E0E1DB2601A2130003CFE0 /* LoadingCell.swift in Sources */,
-				10E0E1DA2601A2130003CFE0 /* ErrorCell.swift in Sources */,
+				1051628D260266E4009A12ED /* PullRequestsTableViewHandler.swift in Sources */,
 				107BA68E26016A7F00F1B9FD /* AppDelegate.swift in Sources */,
+				1051627D26026433009A12ED /* PullRequestCell.swift in Sources */,
 				10E0E1EB2601AAF80003CFE0 /* RepositoriesListAdapter.swift in Sources */,
 				10E0E1D72601A2130003CFE0 /* RepositoryCell.swift in Sources */,
+				1051628026026433009A12ED /* LoadingCell.swift in Sources */,
+				10516286260264AD009A12ED /* PullRequestsListModel.swift in Sources */,
 				107BA69026016A7F00F1B9FD /* SceneDelegate.swift in Sources */,
-				10E0E1D62601A2130003CFE0 /* RecipeTableViewHandler.swift in Sources */,
+				1051627E26026433009A12ED /* ErrorCell.swift in Sources */,
+				10516289260264AD009A12ED /* PullRequetstsListDependencies.swift in Sources */,
+				10E0E1D62601A2130003CFE0 /* RepositoriesTableViewHandler.swift in Sources */,
 				10E0E1F12601AB090003CFE0 /* RepositoriesListViewController.swift in Sources */,
+				10516287260264AD009A12ED /* PullRequestsListViewController.swift in Sources */,
+				10516288260264AD009A12ED /* PullRequestsListAdapter.swift in Sources */,
 				10E0E1EC2601AAF80003CFE0 /* RepositoriesListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

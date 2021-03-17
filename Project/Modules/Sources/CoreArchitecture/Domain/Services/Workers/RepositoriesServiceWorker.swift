@@ -28,8 +28,8 @@ final class RepositoriesServiceWorker: RepositoriesService {
         }
     }
 
-    private func makeRequest(language: String = "Java", page:Int = 1) -> ServiceRequest {
-        let urlPath = Config.baseURL + "/repositories?q=\(language):Java&sort=stars&page=\(page)"
+    private func makeRequest(language: String = "Swift", page:Int = 1) -> ServiceRequest {
+        let urlPath = Config.baseURL + "/repositories?q=language:\(language)&sort=stars&page=\(page)"
 
         let request = ServiceRequest(url: urlPath,
                                      method: .get,

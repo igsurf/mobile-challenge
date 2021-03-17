@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="grf-9K-Dhl"/>
                     <connections>
                         <outlet property="tableView" destination="KhC-EO-G78" id="DKs-ex-Ubh"/>
-                        <segue destination="Zme-ZD-ayO" kind="show" id="CJm-OC-ufb"/>
+                        <segue destination="Zme-ZD-ayO" kind="show" identifier="pullrequests" id="CJm-OC-ufb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="-223.18840579710147" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Pull Requests List View Controller-->
         <scene sceneID="Lpm-An-yfo">
             <objects>
-                <viewController id="Zme-ZD-ayO" sceneMemberID="viewController">
+                <viewController id="Zme-ZD-ayO" customClass="PullRequestsListViewController" customModule="GithubRepositories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I7v-kr-iUC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,6 +81,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VKY-xT-AAG"/>
+                    <connections>
+                        <outlet property="tableView" destination="whz-ef-AVl" id="3X7-uC-c5Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4o-cQ-KuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

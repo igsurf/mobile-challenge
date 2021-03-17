@@ -8,7 +8,7 @@ class PullRequestsServiceWorkerTests: XCTestCase {
     var sut: PullRequestsServiceWorker!
     var service: RequestServicePort!
 
-    func testGetPullRequests__whenMakeRequest_itFails() {
+    func testGetPullRequests__whenMakeRequest__itFails() {
 
         // GIVEN
 
@@ -16,6 +16,7 @@ class PullRequestsServiceWorkerTests: XCTestCase {
         let service = MockedRequestServiceAdapter(error: error)
         sut = PullRequestsServiceWorker(service: service)
         let expectation = XCTestExpectation()
+        var expectedError: Error?
 
         // WHEN
 
@@ -29,26 +30,28 @@ class PullRequestsServiceWorkerTests: XCTestCase {
             },
 
             onError: {
-
-                // THEN
-
-                let error = $0 as NSError
-                XCTAssertEqual(error.code, 555)
-                XCTAssertEqual(error.domain, "Expected error")
+                expectedError = $0
                 expectation.fulfill()
             }
         )
 
         wait(for: [expectation], timeout: 10.0)
+
+        //THEN
+
+        let collectedError = expectedError as NSError?
+        XCTAssertEqual(collectedError?.code, 555)
+        XCTAssertEqual(collectedError?.domain, "Expected error")
     }
 
-    func testGetPullRequests__whenMakeRequest_itHasSuccess() {
+    func testGetPullRequests__whenMakeRequest__itHasSuccess() {
 
         // GIVEN
 
         let service = MockedRequestServiceAdapter(data: Fixture.PullRequestsList.data)
         sut = PullRequestsServiceWorker(service: service)
         let expectation = XCTestExpectation()
+        var elements: [PullRequest] = []
 
         let expectedResult : [PullRequest] = [
             .fixture(title: "First PR",
@@ -70,18 +73,20 @@ class PullRequestsServiceWorkerTests: XCTestCase {
             owner: "anyone",
             page: 1,
             onCompletion: { repositories in
-                // THEN
-
-                XCTAssertEqual(repositories, expectedResult)
+                elements = repositories
                 expectation.fulfill()
             },
 
             onError: { _ in
-                XCTFail("Unexpected error. It shout be success")
+                expectation.fulfill()
             }
         )
 
         wait(for: [expectation], timeout: 10.0)
+
+        //THEN
+
+        XCTAssertEqual(expectedResult, elements)
     }
 
 }

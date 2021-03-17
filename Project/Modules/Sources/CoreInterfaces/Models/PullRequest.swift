@@ -1,11 +1,11 @@
 import Foundation
 
 public struct PullRequest: Decodable, Equatable {
-    let title: String
-    let createdAt: String
-    let body: String
-    let htmlUrl: String
-    let user: User
+    public let title: String
+    public let createdAt: String
+    public let body: String
+    public let htmlUrl: String
+    public let user: User
 }
 
 #if DEBUG

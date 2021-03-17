@@ -1,6 +1,6 @@
 import UIKit
 
-class RecipeTableViewHandler: NSObject, UITableViewDataSource, UITableViewDelegate {
+class RepositoriesTableViewHandler: NSObject, UITableViewDataSource, UITableViewDelegate {
     typealias Repository = RepositoriesListModel.Repository
     private let tableView: UITableView
 
@@ -16,6 +16,9 @@ class RecipeTableViewHandler: NSObject, UITableViewDataSource, UITableViewDelega
 
     /// This closure sends a signal to reload recipes. Only called in case of fail.
     var onRetry: (() -> Void)?
+
+    /// This closure sends a signal to get mor elements
+    var onReachEndOfList: (() -> Void)?
 
     var shouldShowRecipes: Bool {
         errorMessage == nil && isLoading == false
@@ -38,7 +41,7 @@ class RecipeTableViewHandler: NSObject, UITableViewDataSource, UITableViewDelega
 
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
     }
 
     private func regiserCell(identifier: String) {
@@ -74,6 +77,12 @@ class RecipeTableViewHandler: NSObject, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         onSelectRecipe?(recipes[indexPath.row])
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == recipes.count - 1 {
+            onReachEndOfList?()
+        }
     }
 
     //

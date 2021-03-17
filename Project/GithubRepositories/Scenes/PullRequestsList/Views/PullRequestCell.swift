@@ -1,14 +1,13 @@
 import UIKit
 
 /// Cell for UITableView to show a recipe.
-class RepositoryCell: UITableViewCell {
-    static let cellIdentifier = String(describing: RepositoryCell.self)
+class PullRequestCell: UITableViewCell {
+    static let cellIdentifier = String(describing: PullRequestCell.self)
 
     @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var forksLabel: UILabel!
-    @IBOutlet weak var starLabel: UILabel!
+    @IBOutlet weak var pullTitleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var username: UILabel!
 
     override func awakeFromNib() {
@@ -24,12 +23,12 @@ class RepositoryCell: UITableViewCell {
     // MARK: - Cell Control Methods
     //
 
-    func show(model: RepositoriesListModel.Repository) {
-        nameLabel.text = model.name
-        descriptionLabel.text = model.description
-        forksLabel.text = model.forksCount
-        starLabel.text = model.stargazersCount
-        username.text = model.login
+    func show(model: PullRequestsListModel.PullRequest) {
+        userImageView.image = UIImage.placeholder
+        descriptionLabel.text = model.body
+        pullTitleLabel.text = model.title
+        dateLabel.text = model.createdAt
+        username.text = model.owner
     }
 
     func updateImage(_ image: UIImage?) {

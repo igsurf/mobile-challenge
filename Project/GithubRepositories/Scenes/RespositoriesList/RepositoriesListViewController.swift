@@ -7,7 +7,7 @@ final class RepositoriesListViewController: UIViewController {
 
     private let dependencies = RepositoriesListDependencies.default()
     private var model: RepositoriesListModel!
-    private var tableHandler: RecipeTableViewHandler?
+    private var tableHandler: RepositoriesTableViewHandler?
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -41,7 +41,7 @@ final class RepositoriesListViewController: UIViewController {
         }
 
         tableHandler?.onSelectRecipe = { repository in
-            //Do nothing yet
+            self.showPullRequests(repository: repository)
         }
 
         tableHandler?.onNeedImageUpdate = { recipe, indexPath in
@@ -63,5 +63,27 @@ final class RepositoriesListViewController: UIViewController {
 
     private func setupComponents() {
         tableHandler = .init(tableView: tableView)
+    }
+
+
+    private func showPullRequests(repository: RepositoriesListModel.Repository) {
+        let owner = repository.login
+        let name = repository.name
+        let segue = "pullrequests"
+
+        let dependencies = PullRequestsListDependencies.default(
+            owner: owner,
+            repository: name,
+            pageSize: 40
+        )
+
+        performSegue(withIdentifier: segue, sender: dependencies)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PullRequestsListViewController,
+           let dependencies = sender as? PullRequestsListDependencies {
+            destination.dependencies = dependencies
+        }
     }
 }

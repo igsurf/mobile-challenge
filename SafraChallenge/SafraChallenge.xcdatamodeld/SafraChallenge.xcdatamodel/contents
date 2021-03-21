@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PullRequest" representedClassName="PullRequestEntity" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ownerAvatar" optional="YES" attributeType="String"/>
+        <attribute name="ownerName" optional="YES" attributeType="String"/>
+        <attribute name="ownerType" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="ofRepository" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Repository" inverseName="pullRequests" inverseEntity="Repository"/>
+    </entity>
+    <entity name="Repository" representedClassName="RepositoryEntity" syncable="YES">
+        <attribute name="descript" optional="YES" attributeType="String"/>
+        <attribute name="forks" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="forksCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isPrivate" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="ownerAvatar" optional="YES" attributeType="String"/>
+        <attribute name="ownerLogin" optional="YES" attributeType="String"/>
+        <attribute name="ownerUserType" optional="YES" attributeType="String"/>
+        <attribute name="pullRequestsURL" optional="YES" attributeType="String"/>
+        <attribute name="score" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="stargazersCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="pullRequests" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PullRequest" inverseName="ofRepository" inverseEntity="PullRequest"/>
+    </entity>
+    <elements>
+        <element name="PullRequest" positionX="-63" positionY="-18" width="128" height="193"/>
+        <element name="Repository" positionX="-54" positionY="36" width="128" height="253"/>
+    </elements>
+</model>

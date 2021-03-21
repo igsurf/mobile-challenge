@@ -41,6 +41,7 @@ public class PullRequestViewCell: UITableViewCell {
     }
     
     private func initWidgets() {
+        self.backgroundColor = UIColor.white
         self.titleLabel = UILabel()
         self.titleLabel.textColor = UIColor.titleLabel
         self.titleLabel.font = UIFont.boldSystemFont(ofSize: 20)

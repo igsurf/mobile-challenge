@@ -19,12 +19,17 @@ class ReachabilityNotifier {
     var delegate: ReachabilityNotifierDelegate?
     
     var isNetworkAvailable : Bool {
-        return reachabilityStatus != .unavailable
+        self.reachability = try? Reachability()
+
+        if let reachability = self.reachability {
+            return reachability.connection != .unavailable
+        }
+        return true
     }
     
     var reachabilityStatus: Reachability.Connection = .unavailable
     
-    let reachability: Reachability?
+    var reachability: Reachability?
     
     private init() {
         self.reachability = try? Reachability()
@@ -43,6 +48,8 @@ class ReachabilityNotifier {
         case .none:
             RGLog.d("Rede não conectada!")
         }
+        
+        self.reachabilityStatus = reachability.connection
     }
 
     func startMonitoring() {
@@ -57,6 +64,7 @@ class ReachabilityNotifier {
         
         do{
             try reachability.startNotifier()
+            self.reachabilityStatus = reachability.connection
         } catch {
             RGLog.d("Não foi possível iniciar o NOTIFIER do Reachability!")
         }

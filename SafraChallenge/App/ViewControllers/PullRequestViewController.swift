@@ -22,7 +22,7 @@ public class PullRequestViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.setUpNavigation()
         self.setUpBarView()
         self.setUpTableView()
@@ -55,7 +55,7 @@ extension PullRequestViewController {
                                      style: UITableView.Style.plain)
         
         PullRequestViewCell.registerCell(tableView: tableView)
-        self.tableView.backgroundColor = UIColor.darkWhite
+        self.tableView.backgroundColor = UIColor.white
         self.tableView.assignTo(delegate: self, dataSource: self)
         self.tableView.setSeparator(style: .none, color: UIColor.clear)
         

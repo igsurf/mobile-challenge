@@ -39,12 +39,20 @@ class RepositoriesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewModel()
-        getRepositoriesList(language: .swift)
         setupCollectionView()
         setupTableView()
     }
 
     // MARK: - Private Properties
+
+    private func errorOcurred() {
+        let alert = UIAlertController(title: "Erro", message: "ocorreu um erro na api, tente novamente mais tarde", preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: "ok", style: .cancel)
+        alert.addAction(okAction)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
+        }
+    }
 
     private func getService() -> ServicesProtocol {
         let serviceType = Bundle.main.object(forInfoDictionaryKey: kServiceTypeKey) as? String
@@ -89,11 +97,22 @@ class RepositoriesViewController: BaseViewController {
             success: {
                 DispatchQueue.main.async {
                     self.repositoriesTableView.reloadData()
-                    self.hideLoading()
                 }
+                self.hideLoading()
             }, failure: { _ in
                 self.hideLoading()
+                self.errorOcurred()
             })
+    }
+
+    private func getRepositoriesListNextPage() {
+        viewModel?.getRepositoriesListNextPage(success: {
+            DispatchQueue.main.async {
+                self.repositoriesTableView.reloadData()
+            }
+        }, failure: { error in
+            self.errorOcurred()
+        })
     }
 }
 
@@ -109,6 +128,15 @@ extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource
         let cellViewModel = RepositoryCellViewModel(model: repository)
         cell.setup(viewModel: cellViewModel)
         return cell
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > contentHeight - scrollView.frame.height {
+            getRepositoriesListNextPage()
+        }
     }
 }
 
@@ -134,6 +162,10 @@ extension RepositoriesViewController: UICollectionViewDelegate, UICollectionView
 extension RepositoriesViewController: RepositoriesViewControllerDelegate {
     func changeCodeLanguage(language: CodeLanguage) {
         unselectAllLanguageOptions()
+        DispatchQueue.main.async {
+            self.viewModel?.resetList()
+            self.repositoriesTableView.reloadData()
+        }
         getRepositoriesList(language: language)
     }
 }

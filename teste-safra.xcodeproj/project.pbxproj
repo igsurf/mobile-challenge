@@ -24,6 +24,10 @@
 		94905C4E26227E0200DF766E /* CodeLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C4D26227E0200DF766E /* CodeLanguageCell.swift */; };
 		94905C5226227E8C00DF766E /* CodeLanguageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C5126227E8C00DF766E /* CodeLanguageCellViewModel.swift */; };
 		94A9B54326235E6F00CD683A /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9B54226235E6F00CD683A /* MockServices.swift */; };
+		94ACBDCC262362B6002973E1 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94ACBDCB262362B6002973E1 /* RepositoryCell.xib */; };
+		94ACBDCF2623759F002973E1 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACBDCE2623759F002973E1 /* RepositoryCell.swift */; };
+		94ACBDD226237812002973E1 /* RepositoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACBDD126237812002973E1 /* RepositoryCellViewModel.swift */; };
+		94ACBDD62623791C002973E1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACBDD52623791C002973E1 /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		94905C4D26227E0200DF766E /* CodeLanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLanguageCell.swift; sourceTree = "<group>"; };
 		94905C5126227E8C00DF766E /* CodeLanguageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLanguageCellViewModel.swift; sourceTree = "<group>"; };
 		94A9B54226235E6F00CD683A /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
+		94ACBDCB262362B6002973E1 /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
+		94ACBDCE2623759F002973E1 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		94ACBDD126237812002973E1 /* RepositoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellViewModel.swift; sourceTree = "<group>"; };
+		94ACBDD52623791C002973E1 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		AEDE4FED10264F45550695F5 /* Pods-teste-safra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.debug.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.debug.xcconfig"; sourceTree = "<group>"; };
 		B9BA22298C6D5818FDC2805A /* Pods-teste-safra.homolog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.homolog.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.homolog.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +130,7 @@
 		94905C0F2622657D00DF766E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				94ACBDD426237911002973E1 /* Extension */,
 				94905C432622702000DF766E /* Model */,
 				94905C24262269F200DF766E /* Components */,
 				94905BF72622651E00DF766E /* AppDelegate.swift */,
@@ -183,6 +192,7 @@
 		94905C1D262268FB00DF766E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				94ACBDCA262362A3002973E1 /* Repository */,
 				94905C4C26227DF100DF766E /* CodeLanguage */,
 			);
 			path = Cell;
@@ -203,6 +213,7 @@
 			children = (
 				94905C2E26226CEB00DF766E /* RepositoriesListViewModel.swift */,
 				94905C5126227E8C00DF766E /* CodeLanguageCellViewModel.swift */,
+				94ACBDD126237812002973E1 /* RepositoryCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -233,6 +244,23 @@
 				94905C4D26227E0200DF766E /* CodeLanguageCell.swift */,
 			);
 			path = CodeLanguage;
+			sourceTree = "<group>";
+		};
+		94ACBDCA262362A3002973E1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				94ACBDCB262362B6002973E1 /* RepositoryCell.xib */,
+				94ACBDCE2623759F002973E1 /* RepositoryCell.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		94ACBDD426237911002973E1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				94ACBDD52623791C002973E1 /* String+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		F36728F51F81CA13AD8DDAA9 /* Frameworks */ = {
@@ -305,6 +333,7 @@
 				94905C1B2622669600DF766E /* RepositoriesList.storyboard in Resources */,
 				94905C012622651F00DF766E /* Assets.xcassets in Resources */,
 				94905C1F2622691A00DF766E /* CodeLanguageCell.xib in Resources */,
+				94ACBDCC262362B6002973E1 /* RepositoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94905C22262269B100DF766E /* RepositoriesViewController.swift in Sources */,
+				94ACBDCF2623759F002973E1 /* RepositoryCell.swift in Sources */,
 				94905C2F26226CEB00DF766E /* RepositoriesListViewModel.swift in Sources */,
 				94905C2A26226A7D00DF766E /* LoadingView.swift in Sources */,
 				94905C4A2622758A00DF766E /* Owner.swift in Sources */,
@@ -366,6 +396,8 @@
 				94905C3E26226F1600DF766E /* Services.swift in Sources */,
 				94905C3A26226EB600DF766E /* ServicesProtocol.swift in Sources */,
 				94905C4E26227E0200DF766E /* CodeLanguageCell.swift in Sources */,
+				94ACBDD62623791C002973E1 /* String+.swift in Sources */,
+				94ACBDD226237812002973E1 /* RepositoryCellViewModel.swift in Sources */,
 				94905BF82622651E00DF766E /* AppDelegate.swift in Sources */,
 				94905C5226227E8C00DF766E /* CodeLanguageCellViewModel.swift in Sources */,
 				94905C2626226A0000DF766E /* BaseViewController.swift in Sources */,

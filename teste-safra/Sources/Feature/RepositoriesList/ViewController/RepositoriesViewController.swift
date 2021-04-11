@@ -26,6 +26,8 @@ class RepositoriesViewController: BaseViewController {
     // MARK: - Constants
 
     private let kCollectionViewIdentifier = "CodeLanguageCell"
+    private let tableViewCellIdentifier = "RepositoryCell"
+    private let kServiceTypeKey = "Service_type"
 
     // MARK: - Private Properties
 
@@ -39,12 +41,13 @@ class RepositoriesViewController: BaseViewController {
         setupViewModel()
         getRepositoriesList(language: .swift)
         setupCollectionView()
+        setupTableView()
     }
 
     // MARK: - Private Properties
 
     private func getService() -> ServicesProtocol {
-        let serviceType = Bundle.main.object(forInfoDictionaryKey: "Service_type") as? String
+        let serviceType = Bundle.main.object(forInfoDictionaryKey: kServiceTypeKey) as? String
         switch serviceType {
         case ServiceType.mock.rawValue:
             return MockServices()
@@ -62,6 +65,13 @@ class RepositoriesViewController: BaseViewController {
         codeLanguageCollectionView.delegate = self
     }
 
+    private func setupTableView() {
+        let nib = UINib(nibName: tableViewCellIdentifier, bundle: nil)
+        repositoriesTableView.register(nib, forCellReuseIdentifier: tableViewCellIdentifier)
+        repositoriesTableView.dataSource = self
+        repositoriesTableView.delegate = self
+    }
+
     private func unselectAllLanguageOptions() {
         languageCells.forEach { cell in
             cell.setUnselected()
@@ -76,15 +86,29 @@ class RepositoriesViewController: BaseViewController {
         showLoading()
         viewModel?.getRepositoriesList(
             language: language,
-            page: 1,
-            success: { repositories in
-                print(repositories)
-                self.hideLoading()
-            },
-            failure: { error in
-                print(error)
+            success: {
+                DispatchQueue.main.async {
+                    self.repositoriesTableView.reloadData()
+                    self.hideLoading()
+                }
+            }, failure: { _ in
                 self.hideLoading()
             })
+    }
+}
+
+// MARK: - Tableview Delegate
+
+extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel?.repositoriesCount ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier, for: indexPath) as? RepositoryCell, let repository = viewModel?.getRepository(position: indexPath.row)  else { return UITableViewCell() }
+        let cellViewModel = RepositoryCellViewModel(model: repository)
+        cell.setup(viewModel: cellViewModel)
+        return cell
     }
 }
 

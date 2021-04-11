@@ -1,0 +1,18 @@
+PODS:
+  - SDKGithubServices (0.1.2):
+    - SDKGithubServices/Core (= 0.1.2)
+  - SDKGithubServices/Core (0.1.2)
+
+DEPENDENCIES:
+  - SDKGithubServices (= 0.1.2)
+
+SPEC REPOS:
+  https://github.com/gabrielsousaleal/pod-specs.git:
+    - SDKGithubServices
+
+SPEC CHECKSUMS:
+  SDKGithubServices: da01969858815b4607ecb8a457c2ae4c0af97d63
+
+PODFILE CHECKSUM: ddca88d927034d98dbbd0c48924447c59d166ec4
+
+COCOAPODS: 1.10.1

@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D1C9033BA56B6F3DB991F24 /* libPods-teste-safra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB2C8E7F22527E289749366 /* libPods-teste-safra.a */; };
+		94905BF82622651E00DF766E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905BF72622651E00DF766E /* AppDelegate.swift */; };
+		94905C012622651F00DF766E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94905C002622651F00DF766E /* Assets.xcassets */; };
+		94905C1B2622669600DF766E /* RepositoriesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94905C1A2622669600DF766E /* RepositoriesList.storyboard */; };
+		94905C1F2622691A00DF766E /* CodeLanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94905C1E2622691A00DF766E /* CodeLanguageCell.xib */; };
+		94905C22262269B100DF766E /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C21262269B100DF766E /* RepositoriesViewController.swift */; };
+		94905C2626226A0000DF766E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C2526226A0000DF766E /* BaseViewController.swift */; };
+		94905C2A26226A7D00DF766E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C2926226A7D00DF766E /* LoadingView.swift */; };
+		94905C2F26226CEB00DF766E /* RepositoriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C2E26226CEB00DF766E /* RepositoriesListViewModel.swift */; };
+		94905C3A26226EB600DF766E /* ServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C3926226EB600DF766E /* ServicesProtocol.swift */; };
+		94905C3E26226F1600DF766E /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C3D26226F1600DF766E /* Services.swift */; };
+		94905C4126226F9300DF766E /* DataUnwraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C4026226F9300DF766E /* DataUnwraper.swift */; };
+		94905C452622702B00DF766E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C442622702B00DF766E /* Repository.swift */; };
+		94905C4A2622758A00DF766E /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C492622758A00DF766E /* Owner.swift */; };
+		94905C4E26227E0200DF766E /* CodeLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C4D26227E0200DF766E /* CodeLanguageCell.swift */; };
+		94905C5226227E8C00DF766E /* CodeLanguageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C5126227E8C00DF766E /* CodeLanguageCellViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		193A88BEE8310205F9BE399E /* Pods-teste-safra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.release.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.release.xcconfig"; sourceTree = "<group>"; };
+		6AB2C8E7F22527E289749366 /* libPods-teste-safra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teste-safra.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94905BF42622651E00DF766E /* teste-safra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teste-safra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94905BF72622651E00DF766E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94905C002622651F00DF766E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94905C052622651F00DF766E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94905C1A2622669600DF766E /* RepositoriesList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepositoriesList.storyboard; sourceTree = "<group>"; };
+		94905C1E2622691A00DF766E /* CodeLanguageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeLanguageCell.xib; sourceTree = "<group>"; };
+		94905C21262269B100DF766E /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		94905C2526226A0000DF766E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		94905C2926226A7D00DF766E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		94905C2E26226CEB00DF766E /* RepositoriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListViewModel.swift; sourceTree = "<group>"; };
+		94905C3926226EB600DF766E /* ServicesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProtocol.swift; sourceTree = "<group>"; };
+		94905C3D26226F1600DF766E /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		94905C4026226F9300DF766E /* DataUnwraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUnwraper.swift; sourceTree = "<group>"; };
+		94905C442622702B00DF766E /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		94905C492622758A00DF766E /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		94905C4D26227E0200DF766E /* CodeLanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLanguageCell.swift; sourceTree = "<group>"; };
+		94905C5126227E8C00DF766E /* CodeLanguageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLanguageCellViewModel.swift; sourceTree = "<group>"; };
+		AEDE4FED10264F45550695F5 /* Pods-teste-safra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.debug.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94905BF12622651E00DF766E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1C9033BA56B6F3DB991F24 /* libPods-teste-safra.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8062E83510D1FE1C13487CC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEDE4FED10264F45550695F5 /* Pods-teste-safra.debug.xcconfig */,
+				193A88BEE8310205F9BE399E /* Pods-teste-safra.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		94905BEB2622651E00DF766E = {
+			isa = PBXGroup;
+			children = (
+				94905BF62622651E00DF766E /* teste-safra */,
+				94905BF52622651E00DF766E /* Products */,
+				8062E83510D1FE1C13487CC8 /* Pods */,
+				F36728F51F81CA13AD8DDAA9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		94905BF52622651E00DF766E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94905BF42622651E00DF766E /* teste-safra.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94905BF62622651E00DF766E /* teste-safra */ = {
+			isa = PBXGroup;
+			children = (
+				94905C0D2622655200DF766E /* Resources */,
+				94905C0C2622652800DF766E /* Sources */,
+			);
+			path = "teste-safra";
+			sourceTree = "<group>";
+		};
+		94905C0C2622652800DF766E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				94905C3826226EA700DF766E /* Service */,
+				94905C16262265F800DF766E /* Feature */,
+				94905C0F2622657D00DF766E /* Commons */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		94905C0D2622655200DF766E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				94905C12262265BA00DF766E /* SupportingFiles */,
+				94905C11262265A800DF766E /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		94905C0F2622657D00DF766E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				94905C432622702000DF766E /* Model */,
+				94905C24262269F200DF766E /* Components */,
+				94905BF72622651E00DF766E /* AppDelegate.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		94905C11262265A800DF766E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				94905C002622651F00DF766E /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		94905C12262265BA00DF766E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				94905C052622651F00DF766E /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		94905C16262265F800DF766E /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				94905C17262265FE00DF766E /* RepositoriesList */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		94905C17262265FE00DF766E /* RepositoriesList */ = {
+			isa = PBXGroup;
+			children = (
+				94905C2C26226CD600DF766E /* ViewModel */,
+				94905C1D262268FB00DF766E /* Cell */,
+				94905C192622668500DF766E /* Storyboard */,
+				94905C182622667700DF766E /* ViewController */,
+			);
+			path = RepositoriesList;
+			sourceTree = "<group>";
+		};
+		94905C182622667700DF766E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				94905C21262269B100DF766E /* RepositoriesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		94905C192622668500DF766E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				94905C1A2622669600DF766E /* RepositoriesList.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		94905C1D262268FB00DF766E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				94905C4C26227DF100DF766E /* CodeLanguage */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		94905C24262269F200DF766E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				94905C2526226A0000DF766E /* BaseViewController.swift */,
+				94905C2926226A7D00DF766E /* LoadingView.swift */,
+				94905C4026226F9300DF766E /* DataUnwraper.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		94905C2C26226CD600DF766E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94905C2E26226CEB00DF766E /* RepositoriesListViewModel.swift */,
+				94905C5126227E8C00DF766E /* CodeLanguageCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94905C3826226EA700DF766E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				94905C3926226EB600DF766E /* ServicesProtocol.swift */,
+				94905C3D26226F1600DF766E /* Services.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		94905C432622702000DF766E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94905C442622702B00DF766E /* Repository.swift */,
+				94905C492622758A00DF766E /* Owner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		94905C4C26227DF100DF766E /* CodeLanguage */ = {
+			isa = PBXGroup;
+			children = (
+				94905C1E2622691A00DF766E /* CodeLanguageCell.xib */,
+				94905C4D26227E0200DF766E /* CodeLanguageCell.swift */,
+			);
+			path = CodeLanguage;
+			sourceTree = "<group>";
+		};
+		F36728F51F81CA13AD8DDAA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AB2C8E7F22527E289749366 /* libPods-teste-safra.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94905BF32622651E00DF766E /* teste-safra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94905C082622651F00DF766E /* Build configuration list for PBXNativeTarget "teste-safra" */;
+			buildPhases = (
+				85780BC67BE1A36FE9E05175 /* [CP] Check Pods Manifest.lock */,
+				94905BF02622651E00DF766E /* Sources */,
+				94905BF12622651E00DF766E /* Frameworks */,
+				94905BF22622651E00DF766E /* Resources */,
+				A3C03F682551136E846F5D8F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "teste-safra";
+			productName = "teste-safra";
+			productReference = 94905BF42622651E00DF766E /* teste-safra.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94905BEC2622651E00DF766E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					94905BF32622651E00DF766E = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 94905BEF2622651E00DF766E /* Build configuration list for PBXProject "teste-safra" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94905BEB2622651E00DF766E;
+			productRefGroup = 94905BF52622651E00DF766E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94905BF32622651E00DF766E /* teste-safra */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94905BF22622651E00DF766E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94905C1B2622669600DF766E /* RepositoriesList.storyboard in Resources */,
+				94905C012622651F00DF766E /* Assets.xcassets in Resources */,
+				94905C1F2622691A00DF766E /* CodeLanguageCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85780BC67BE1A36FE9E05175 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teste-safra-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3C03F682551136E846F5D8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-teste-safra/Pods-teste-safra-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-teste-safra/Pods-teste-safra-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-teste-safra/Pods-teste-safra-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94905BF02622651E00DF766E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94905C22262269B100DF766E /* RepositoriesViewController.swift in Sources */,
+				94905C2F26226CEB00DF766E /* RepositoriesListViewModel.swift in Sources */,
+				94905C2A26226A7D00DF766E /* LoadingView.swift in Sources */,
+				94905C4A2622758A00DF766E /* Owner.swift in Sources */,
+				94905C4126226F9300DF766E /* DataUnwraper.swift in Sources */,
+				94905C3E26226F1600DF766E /* Services.swift in Sources */,
+				94905C3A26226EB600DF766E /* ServicesProtocol.swift in Sources */,
+				94905C4E26227E0200DF766E /* CodeLanguageCell.swift in Sources */,
+				94905BF82622651E00DF766E /* AppDelegate.swift in Sources */,
+				94905C5226227E8C00DF766E /* CodeLanguageCellViewModel.swift in Sources */,
+				94905C2626226A0000DF766E /* BaseViewController.swift in Sources */,
+				94905C452622702B00DF766E /* Repository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		94905C062622651F00DF766E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		94905C072622651F00DF766E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94905C092622651F00DF766E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEDE4FED10264F45550695F5 /* Pods-teste-safra.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67ALGZ83W8;
+				INFOPLIST_FILE = "teste-safra/Resources/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teste-safra";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94905C0A2622651F00DF766E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 193A88BEE8310205F9BE399E /* Pods-teste-safra.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67ALGZ83W8;
+				INFOPLIST_FILE = "teste-safra/Resources/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teste-safra";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94905BEF2622651E00DF766E /* Build configuration list for PBXProject "teste-safra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94905C062622651F00DF766E /* Debug */,
+				94905C072622651F00DF766E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94905C082622651F00DF766E /* Build configuration list for PBXNativeTarget "teste-safra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94905C092622651F00DF766E /* Debug */,
+				94905C0A2622651F00DF766E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94905BEC2622651E00DF766E /* Project object */;
+}

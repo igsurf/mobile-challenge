@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UKf-b5-LuM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="PqC-Ve-Mr0">
+            <objects>
+                <navigationController id="UKf-b5-LuM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6yV-I0-Hu5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NIg-oi-8wm" kind="relationship" relationship="rootViewController" id="SGO-CM-Rbw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDs-G2-edh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-964" y="76"/>
+        </scene>
+        <!--Repositories View Controller-->
+        <scene sceneID="FxL-Oo-LGc">
+            <objects>
+                <viewController id="NIg-oi-8wm" customClass="RepositoriesViewController" customModule="teste_safra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cvf-Pg-eXh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZPj-An-sVH">
+                                <rect key="frame" x="0.0" y="151" width="414" height="711"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GEg-or-S2h">
+                                <rect key="frame" x="0.0" y="88" width="414" height="63"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="AXe-Qa-7nb"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="S8L-hi-xzC">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oeN-Qe-tXB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GEg-or-S2h" firstAttribute="trailing" secondItem="oeN-Qe-tXB" secondAttribute="trailing" id="35C-4l-amh"/>
+                            <constraint firstItem="ZPj-An-sVH" firstAttribute="leading" secondItem="oeN-Qe-tXB" secondAttribute="leading" id="6fM-oD-8eA"/>
+                            <constraint firstItem="oeN-Qe-tXB" firstAttribute="bottom" secondItem="ZPj-An-sVH" secondAttribute="bottom" id="PPF-pX-Wrv"/>
+                            <constraint firstItem="GEg-or-S2h" firstAttribute="leading" secondItem="oeN-Qe-tXB" secondAttribute="leading" id="fM3-Pl-whv"/>
+                            <constraint firstItem="ZPj-An-sVH" firstAttribute="top" secondItem="GEg-or-S2h" secondAttribute="bottom" id="moO-CB-4kW"/>
+                            <constraint firstItem="GEg-or-S2h" firstAttribute="top" secondItem="oeN-Qe-tXB" secondAttribute="top" id="omD-0J-2GK"/>
+                            <constraint firstItem="oeN-Qe-tXB" firstAttribute="trailing" secondItem="ZPj-An-sVH" secondAttribute="trailing" id="wGs-dx-UE8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mIz-hz-QJO"/>
+                    <connections>
+                        <outlet property="codeLanguageCollectionView" destination="GEg-or-S2h" id="v4f-lN-g8L"/>
+                        <outlet property="repositoriesTableView" destination="ZPj-An-sVH" id="Vdt-Py-xdh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H4u-to-DQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207.24637681159422" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

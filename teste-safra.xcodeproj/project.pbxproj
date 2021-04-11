@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D1C9033BA56B6F3DB991F24 /* libPods-teste-safra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB2C8E7F22527E289749366 /* libPods-teste-safra.a */; };
+		7E95C6A900A0ABC7BC3D7C0A /* libPods-teste-safra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06177AB402E357F5028B3D24 /* libPods-teste-safra.a */; };
+		9417D1CC2623A72F00F8FEE5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417D1CB2623A72F00F8FEE5 /* Session.swift */; };
 		94905BF82622651E00DF766E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905BF72622651E00DF766E /* AppDelegate.swift */; };
 		94905C012622651F00DF766E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94905C002622651F00DF766E /* Assets.xcassets */; };
 		94905C1B2622669600DF766E /* RepositoriesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94905C1A2622669600DF766E /* RepositoriesList.storyboard */; };
@@ -31,8 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		193A88BEE8310205F9BE399E /* Pods-teste-safra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.release.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.release.xcconfig"; sourceTree = "<group>"; };
-		6AB2C8E7F22527E289749366 /* libPods-teste-safra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teste-safra.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06177AB402E357F5028B3D24 /* libPods-teste-safra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teste-safra.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9417D1CB2623A72F00F8FEE5 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		94905BF42622651E00DF766E /* teste-safra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teste-safra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94905BF72622651E00DF766E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94905C002622651F00DF766E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,8 +56,9 @@
 		94ACBDCE2623759F002973E1 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		94ACBDD126237812002973E1 /* RepositoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellViewModel.swift; sourceTree = "<group>"; };
 		94ACBDD52623791C002973E1 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
-		AEDE4FED10264F45550695F5 /* Pods-teste-safra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.debug.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.debug.xcconfig"; sourceTree = "<group>"; };
-		B9BA22298C6D5818FDC2805A /* Pods-teste-safra.homolog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.homolog.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.homolog.xcconfig"; sourceTree = "<group>"; };
+		BD57EB5B6683D7DA07B2469B /* Pods-teste-safra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.debug.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.debug.xcconfig"; sourceTree = "<group>"; };
+		C4613EC0EAD35C969C5114C1 /* Pods-teste-safra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.release.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.release.xcconfig"; sourceTree = "<group>"; };
+		C93E66A6A039B2C6D5459F74 /* Pods-teste-safra.homolog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.homolog.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.homolog.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D1C9033BA56B6F3DB991F24 /* libPods-teste-safra.a in Frameworks */,
+				7E95C6A900A0ABC7BC3D7C0A /* libPods-teste-safra.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,11 +76,27 @@
 		8062E83510D1FE1C13487CC8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AEDE4FED10264F45550695F5 /* Pods-teste-safra.debug.xcconfig */,
-				193A88BEE8310205F9BE399E /* Pods-teste-safra.release.xcconfig */,
-				B9BA22298C6D5818FDC2805A /* Pods-teste-safra.homolog.xcconfig */,
+				BD57EB5B6683D7DA07B2469B /* Pods-teste-safra.debug.xcconfig */,
+				C93E66A6A039B2C6D5459F74 /* Pods-teste-safra.homolog.xcconfig */,
+				C4613EC0EAD35C969C5114C1 /* Pods-teste-safra.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		87EC9431C433EBCA4C484F09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06177AB402E357F5028B3D24 /* libPods-teste-safra.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9417D1CA2623A72300F8FEE5 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				9417D1CB2623A72F00F8FEE5 /* Session.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		94905BEB2622651E00DF766E = {
@@ -87,7 +105,7 @@
 				94905BF62622651E00DF766E /* teste-safra */,
 				94905BF52622651E00DF766E /* Products */,
 				8062E83510D1FE1C13487CC8 /* Pods */,
-				F36728F51F81CA13AD8DDAA9 /* Frameworks */,
+				87EC9431C433EBCA4C484F09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +148,7 @@
 		94905C0F2622657D00DF766E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				9417D1CA2623A72300F8FEE5 /* Session */,
 				94ACBDD426237911002973E1 /* Extension */,
 				94905C432622702000DF766E /* Model */,
 				94905C24262269F200DF766E /* Components */,
@@ -263,14 +282,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		F36728F51F81CA13AD8DDAA9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6AB2C8E7F22527E289749366 /* libPods-teste-safra.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,11 +289,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94905C082622651F00DF766E /* Build configuration list for PBXNativeTarget "teste-safra" */;
 			buildPhases = (
-				85780BC67BE1A36FE9E05175 /* [CP] Check Pods Manifest.lock */,
+				50412229D38550F091DBFFA0 /* [CP] Check Pods Manifest.lock */,
 				94905BF02622651E00DF766E /* Sources */,
 				94905BF12622651E00DF766E /* Frameworks */,
 				94905BF22622651E00DF766E /* Resources */,
-				46D792D10AD535253CDF78FB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,24 +350,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46D792D10AD535253CDF78FB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-teste-safra/Pods-teste-safra-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-teste-safra/Pods-teste-safra-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-teste-safra/Pods-teste-safra-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		85780BC67BE1A36FE9E05175 /* [CP] Check Pods Manifest.lock */ = {
+		50412229D38550F091DBFFA0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94905C22262269B100DF766E /* RepositoriesViewController.swift in Sources */,
+				9417D1CC2623A72F00F8FEE5 /* Session.swift in Sources */,
 				94ACBDCF2623759F002973E1 /* RepositoryCell.swift in Sources */,
 				94905C2F26226CEB00DF766E /* RepositoriesListViewModel.swift in Sources */,
 				94905C2A26226A7D00DF766E /* LoadingView.swift in Sources */,
@@ -526,7 +520,7 @@
 		};
 		94905C092622651F00DF766E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEDE4FED10264F45550695F5 /* Pods-teste-safra.debug.xcconfig */;
+			baseConfigurationReference = BD57EB5B6683D7DA07B2469B /* Pods-teste-safra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -546,7 +540,7 @@
 		};
 		94905C0A2622651F00DF766E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 193A88BEE8310205F9BE399E /* Pods-teste-safra.release.xcconfig */;
+			baseConfigurationReference = C4613EC0EAD35C969C5114C1 /* Pods-teste-safra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -627,7 +621,7 @@
 		};
 		94D165B1262342CA00FD9749 /* Homolog */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9BA22298C6D5818FDC2805A /* Pods-teste-safra.homolog.xcconfig */;
+			baseConfigurationReference = C93E66A6A039B2C6D5459F74 /* Pods-teste-safra.homolog.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

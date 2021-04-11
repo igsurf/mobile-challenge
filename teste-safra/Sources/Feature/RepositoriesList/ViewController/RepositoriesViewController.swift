@@ -27,7 +27,6 @@ class RepositoriesViewController: BaseViewController {
 
     private let kCollectionViewIdentifier = "CodeLanguageCell"
     private let tableViewCellIdentifier = "RepositoryCell"
-    private let kServiceTypeKey = "Service_type"
 
     // MARK: - Private Properties
 
@@ -54,18 +53,6 @@ class RepositoriesViewController: BaseViewController {
         }
     }
 
-    private func getService() -> ServicesProtocol {
-        let serviceType = Bundle.main.object(forInfoDictionaryKey: kServiceTypeKey) as? String
-        switch serviceType {
-        case ServiceType.mock.rawValue:
-            return MockServices()
-        case ServiceType.services.rawValue:
-            return Services()
-        default:
-            return Services()
-        }
-    }
-
     private func setupCollectionView() {
         let nib = UINib(nibName: kCollectionViewIdentifier, bundle: nil)
         codeLanguageCollectionView.register(nib, forCellWithReuseIdentifier: kCollectionViewIdentifier)
@@ -87,7 +74,7 @@ class RepositoriesViewController: BaseViewController {
     }
 
     private func setupViewModel() {
-        viewModel = RepositoriesListViewModel(services: getService())
+        viewModel = RepositoriesListViewModel(services: Session.service)
     }
 
     private func getRepositoriesList(language: CodeLanguage) {
@@ -125,7 +112,7 @@ extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier, for: indexPath) as? RepositoryCell, let repository = viewModel?.getRepository(position: indexPath.row)  else { return UITableViewCell() }
-        let cellViewModel = RepositoryCellViewModel(model: repository)
+        let cellViewModel = RepositoryCellViewModel(model: repository, service: Session.service)
         cell.setup(viewModel: cellViewModel)
         return cell
     }

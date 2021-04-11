@@ -5,7 +5,7 @@
 //  Created by Gabriel Sousa on 10/04/21.
 //
 
-import Foundation
+import UIKit
 
 enum CodeLanguage: String {
     case swift = "swift"
@@ -15,4 +15,6 @@ enum CodeLanguage: String {
 
 protocol ServicesProtocol: AnyObject {
     func getRepositoriesList(language: CodeLanguage, page: Int, success: @escaping([Repository]) -> Void, failure: @escaping(Error) -> Void)
+    func getUser(username: String, success: @escaping(Owner) -> Void, failure: @escaping(Error) -> Void)
+    func getImageData(url: URL, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
 }

@@ -19,13 +19,13 @@ struct Owner: Codable {
     let eventsURL: String
     let receivedEventsURL: String
     let siteAdmin: Bool
+    let name: String?
 
     enum CodingKeys: String, CodingKey {
-        case login, id
+        case login, id, name, url
         case nodeID = "node_id"
         case avatarURL = "avatar_url"
         case gravatarID = "gravatar_id"
-        case url
         case htmlURL = "html_url"
         case followersURL = "followers_url"
         case followingURL = "following_url"

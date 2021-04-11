@@ -11,6 +11,6 @@ post_install do |installer|
 end
 
   # Pods for teste-safra
-    pod 'SDKGithubServices', '0.1.3'
+    pod 'SDKGithubServices/Debug', '0.1.6'
 
 end

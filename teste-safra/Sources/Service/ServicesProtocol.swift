@@ -6,7 +6,12 @@
 //
 
 import Foundation
-import SDKGithubServices
+
+enum CodeLanguage: String {
+    case swift = "swift"
+    case java = "java"
+    case kotlin = "kotlin"
+}
 
 protocol ServicesProtocol: AnyObject {
     func getRepositoriesList(language: CodeLanguage, page: Int, success: @escaping([Repository]) -> Void, failure: @escaping(Error) -> Void)

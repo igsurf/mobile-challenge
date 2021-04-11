@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45AB6D79E7941BA5B6100A18 /* libPods-teste-safra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDA2D374B1845CF4D146FFA /* libPods-teste-safra.a */; };
+		3D1C9033BA56B6F3DB991F24 /* libPods-teste-safra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB2C8E7F22527E289749366 /* libPods-teste-safra.a */; };
 		94905BF82622651E00DF766E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905BF72622651E00DF766E /* AppDelegate.swift */; };
 		94905C012622651F00DF766E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94905C002622651F00DF766E /* Assets.xcassets */; };
 		94905C1B2622669600DF766E /* RepositoriesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94905C1A2622669600DF766E /* RepositoriesList.storyboard */; };
@@ -23,12 +23,12 @@
 		94905C4A2622758A00DF766E /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C492622758A00DF766E /* Owner.swift */; };
 		94905C4E26227E0200DF766E /* CodeLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C4D26227E0200DF766E /* CodeLanguageCell.swift */; };
 		94905C5226227E8C00DF766E /* CodeLanguageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905C5126227E8C00DF766E /* CodeLanguageCellViewModel.swift */; };
-		94943A8B2623464F002553CA /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94943A8A2623464F002553CA /* MockServices.swift */; };
+		94A9B54326235E6F00CD683A /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9B54226235E6F00CD683A /* MockServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1FDA2D374B1845CF4D146FFA /* libPods-teste-safra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teste-safra.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A78CF636EB8989198D88680 /* Pods-teste-safra.homolog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.homolog.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.homolog.xcconfig"; sourceTree = "<group>"; };
+		193A88BEE8310205F9BE399E /* Pods-teste-safra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.release.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.release.xcconfig"; sourceTree = "<group>"; };
+		6AB2C8E7F22527E289749366 /* libPods-teste-safra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teste-safra.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94905BF42622651E00DF766E /* teste-safra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teste-safra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94905BF72622651E00DF766E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94905C002622651F00DF766E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,9 +46,9 @@
 		94905C492622758A00DF766E /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		94905C4D26227E0200DF766E /* CodeLanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLanguageCell.swift; sourceTree = "<group>"; };
 		94905C5126227E8C00DF766E /* CodeLanguageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLanguageCellViewModel.swift; sourceTree = "<group>"; };
-		94943A8A2623464F002553CA /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
-		9F16DA1B911C8B95B3CAE096 /* Pods-teste-safra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.debug.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.debug.xcconfig"; sourceTree = "<group>"; };
-		AE62E81CD2D11366B2D8C625 /* Pods-teste-safra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.release.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.release.xcconfig"; sourceTree = "<group>"; };
+		94A9B54226235E6F00CD683A /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
+		AEDE4FED10264F45550695F5 /* Pods-teste-safra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.debug.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.debug.xcconfig"; sourceTree = "<group>"; };
+		B9BA22298C6D5818FDC2805A /* Pods-teste-safra.homolog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.homolog.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.homolog.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45AB6D79E7941BA5B6100A18 /* libPods-teste-safra.a in Frameworks */,
+				3D1C9033BA56B6F3DB991F24 /* libPods-teste-safra.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,9 +66,9 @@
 		8062E83510D1FE1C13487CC8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9F16DA1B911C8B95B3CAE096 /* Pods-teste-safra.debug.xcconfig */,
-				AE62E81CD2D11366B2D8C625 /* Pods-teste-safra.release.xcconfig */,
-				3A78CF636EB8989198D88680 /* Pods-teste-safra.homolog.xcconfig */,
+				AEDE4FED10264F45550695F5 /* Pods-teste-safra.debug.xcconfig */,
+				193A88BEE8310205F9BE399E /* Pods-teste-safra.release.xcconfig */,
+				B9BA22298C6D5818FDC2805A /* Pods-teste-safra.homolog.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -79,7 +79,7 @@
 				94905BF62622651E00DF766E /* teste-safra */,
 				94905BF52622651E00DF766E /* Products */,
 				8062E83510D1FE1C13487CC8 /* Pods */,
-				B410B3C279CCC5E862636971 /* Frameworks */,
+				F36728F51F81CA13AD8DDAA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,7 +212,7 @@
 			children = (
 				94905C3926226EB600DF766E /* ServicesProtocol.swift */,
 				94905C3D26226F1600DF766E /* Services.swift */,
-				94943A8A2623464F002553CA /* MockServices.swift */,
+				94A9B54226235E6F00CD683A /* MockServices.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -235,10 +235,10 @@
 			path = CodeLanguage;
 			sourceTree = "<group>";
 		};
-		B410B3C279CCC5E862636971 /* Frameworks */ = {
+		F36728F51F81CA13AD8DDAA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1FDA2D374B1845CF4D146FFA /* libPods-teste-safra.a */,
+				6AB2C8E7F22527E289749366 /* libPods-teste-safra.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,11 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94905C082622651F00DF766E /* Build configuration list for PBXNativeTarget "teste-safra" */;
 			buildPhases = (
-				8E07B52264FF3DB8DDBBFE86 /* [CP] Check Pods Manifest.lock */,
+				85780BC67BE1A36FE9E05175 /* [CP] Check Pods Manifest.lock */,
 				94905BF02622651E00DF766E /* Sources */,
 				94905BF12622651E00DF766E /* Frameworks */,
 				94905BF22622651E00DF766E /* Resources */,
-				5E16CEABEDB109C7E9E396F5 /* [CP] Embed Pods Frameworks */,
+				46D792D10AD535253CDF78FB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,7 +311,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5E16CEABEDB109C7E9E396F5 /* [CP] Embed Pods Frameworks */ = {
+		46D792D10AD535253CDF78FB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -328,7 +328,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-teste-safra/Pods-teste-safra-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E07B52264FF3DB8DDBBFE86 /* [CP] Check Pods Manifest.lock */ = {
+		85780BC67BE1A36FE9E05175 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -362,9 +362,9 @@
 				94905C2A26226A7D00DF766E /* LoadingView.swift in Sources */,
 				94905C4A2622758A00DF766E /* Owner.swift in Sources */,
 				94905C4126226F9300DF766E /* DataUnwraper.swift in Sources */,
+				94A9B54326235E6F00CD683A /* MockServices.swift in Sources */,
 				94905C3E26226F1600DF766E /* Services.swift in Sources */,
 				94905C3A26226EB600DF766E /* ServicesProtocol.swift in Sources */,
-				94943A8B2623464F002553CA /* MockServices.swift in Sources */,
 				94905C4E26227E0200DF766E /* CodeLanguageCell.swift in Sources */,
 				94905BF82622651E00DF766E /* AppDelegate.swift in Sources */,
 				94905C5226227E8C00DF766E /* CodeLanguageCellViewModel.swift in Sources */,
@@ -485,7 +485,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -495,7 +494,7 @@
 		};
 		94905C092622651F00DF766E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F16DA1B911C8B95B3CAE096 /* Pods-teste-safra.debug.xcconfig */;
+			baseConfigurationReference = AEDE4FED10264F45550695F5 /* Pods-teste-safra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -508,7 +507,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teste-safra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SERVICE_TYPE = mock;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -516,7 +514,7 @@
 		};
 		94905C0A2622651F00DF766E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE62E81CD2D11366B2D8C625 /* Pods-teste-safra.release.xcconfig */;
+			baseConfigurationReference = 193A88BEE8310205F9BE399E /* Pods-teste-safra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -529,13 +527,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teste-safra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SERVICE_TYPE = services;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		94943A752623437D002553CA /* Homolog */ = {
+		94D165B0262342CA00FD9749 /* Homolog */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -596,9 +593,9 @@
 			};
 			name = Homolog;
 		};
-		94943A762623437D002553CA /* Homolog */ = {
+		94D165B1262342CA00FD9749 /* Homolog */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A78CF636EB8989198D88680 /* Pods-teste-safra.homolog.xcconfig */;
+			baseConfigurationReference = B9BA22298C6D5818FDC2805A /* Pods-teste-safra.homolog.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -609,10 +606,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PODS_CONFIGURATION_BUILD_DIR = "${PODS_BUILD_DIR}/Debug$(EFFECTIVE_PLATFORM_NAME)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teste-safra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SERVICE_TYPE = services;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -625,7 +620,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94905C062622651F00DF766E /* Debug */,
-				94943A752623437D002553CA /* Homolog */,
+				94D165B0262342CA00FD9749 /* Homolog */,
 				94905C072622651F00DF766E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -635,7 +630,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94905C092622651F00DF766E /* Debug */,
-				94943A762623437D002553CA /* Homolog */,
+				94D165B1262342CA00FD9749 /* Homolog */,
 				94905C0A2622651F00DF766E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

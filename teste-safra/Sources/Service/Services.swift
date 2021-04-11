@@ -11,7 +11,7 @@ import SDKGithubServices
 class Services: ServicesProtocol {
     func getRepositoriesList(language: CodeLanguage, page: Int, success: @escaping ([Repository]) -> Void, failure: @escaping (Error) -> Void) {
         SDKGithubServices.Services.shared.getRepositories(
-            language: language,
+            language: language.rawValue,
             page: page,
             success: { data in
                 DataUnwraper.unwrapModel(

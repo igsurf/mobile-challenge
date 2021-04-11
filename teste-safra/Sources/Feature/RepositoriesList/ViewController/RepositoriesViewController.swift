@@ -6,10 +6,14 @@
 //
 
 import UIKit
-import SDKGithubServices
 
 protocol RepositoriesViewControllerDelegate: AnyObject {
     func changeCodeLanguage(language: CodeLanguage)
+}
+
+enum ServiceType: String {
+    case services = "services"
+    case mock = "mock"
 }
 
 class RepositoriesViewController: BaseViewController {
@@ -22,9 +26,6 @@ class RepositoriesViewController: BaseViewController {
     // MARK: - Constants
 
     private let kCollectionViewIdentifier = "CodeLanguageCell"
-    private let kServiceConfigurationKey = "Service_type"
-    private let kMockKey = "mock"
-    private let kServicesKey = "services"
 
     // MARK: - Private Properties
 
@@ -42,6 +43,18 @@ class RepositoriesViewController: BaseViewController {
 
     // MARK: - Private Properties
 
+    private func getService() -> ServicesProtocol {
+        let serviceType = Bundle.main.object(forInfoDictionaryKey: "Service_type") as? String
+        switch serviceType {
+        case ServiceType.mock.rawValue:
+            return MockServices()
+        case ServiceType.services.rawValue:
+            return Services()
+        default:
+            return Services()
+        }
+    }
+
     private func setupCollectionView() {
         let nib = UINib(nibName: kCollectionViewIdentifier, bundle: nil)
         codeLanguageCollectionView.register(nib, forCellWithReuseIdentifier: kCollectionViewIdentifier)
@@ -56,19 +69,7 @@ class RepositoriesViewController: BaseViewController {
     }
 
     private func setupViewModel() {
-        viewModel = RepositoriesListViewModel(services: getServices())
-    }
-
-    private func getServices() -> ServicesProtocol {
-        let serviceType = Bundle.main.object(forInfoDictionaryKey: kServiceConfigurationKey) as? String
-        switch serviceType {
-        case kMockKey:
-            return MockServices()
-        case kServicesKey:
-            return Services()
-        default:
-            return Services()
-        }
+        viewModel = RepositoriesListViewModel(services: getService())
     }
 
     private func getRepositoriesList(language: CodeLanguage) {

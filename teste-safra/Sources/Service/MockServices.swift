@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SDKGithubServices
 
 class MockServices: ServicesProtocol {
     func getRepositoriesList(language: CodeLanguage, page: Int, success: @escaping ([Repository]) -> Void, failure: @escaping (Error) -> Void) {

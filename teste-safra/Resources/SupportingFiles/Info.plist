@@ -43,5 +43,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Service_type</key>
+	<string>$(SERVICE_TYPE)</string>
 </dict>
 </plist>

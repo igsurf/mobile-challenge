@@ -22,6 +22,9 @@ class RepositoriesViewController: BaseViewController {
     // MARK: - Constants
 
     private let kCollectionViewIdentifier = "CodeLanguageCell"
+    private let kServiceConfigurationKey = "Service_type"
+    private let kMockKey = "mock"
+    private let kServicesKey = "services"
 
     // MARK: - Private Properties
 
@@ -53,7 +56,19 @@ class RepositoriesViewController: BaseViewController {
     }
 
     private func setupViewModel() {
-        viewModel = RepositoriesListViewModel()
+        viewModel = RepositoriesListViewModel(services: getServices())
+    }
+
+    private func getServices() -> ServicesProtocol {
+        let serviceType = Bundle.main.object(forInfoDictionaryKey: kServiceConfigurationKey) as? String
+        switch serviceType {
+        case kMockKey:
+            return MockServices()
+        case kServicesKey:
+            return Services()
+        default:
+            return Services()
+        }
     }
 
     private func getRepositoriesList(language: CodeLanguage) {

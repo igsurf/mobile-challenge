@@ -8,9 +8,11 @@
 import Foundation
 
 enum LocalizedStrings: String {
-    case errorTitle = "errorTitle"
-    case apiErrorMessage = "apiErrorMessage"
-    case okButtonTitle = "okButtonTitle"
+    case errorTitle
+    case apiErrorMessage
+    case okButtonTitle
+    case openClosedTitle
+    case openPullRequest
 
     func localized() -> String { rawValue.localized() }
 }

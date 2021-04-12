@@ -64,4 +64,22 @@ class Services: ServicesProtocol {
                     failure(error)
             })
     }
+
+    func getPullRequests(url: URL, success: @escaping ([PullRequest]) -> Void, failure: @escaping (Error) -> Void) {
+        service.request(url: url,
+                        success: { data in
+                            DataUnwraper.unwrapModel(
+                                of: [PullRequest].self,
+                                data: data,
+                                success: { list in
+                                    success(list)
+                                },
+                                failure: { error in
+                                    failure(error)
+                                })
+                        },
+                        failure: { error in
+                            failure(error)
+                        })
+    }
 }

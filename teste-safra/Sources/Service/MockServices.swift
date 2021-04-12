@@ -8,6 +8,9 @@
 import UIKit
 
 class MockServices: ServicesProtocol {
+    func getPullRequests(url: URL, success: @escaping ([PullRequest]) -> Void, failure: @escaping (Error) -> Void) {
+    }
+    
     func getUser(username: String, success: @escaping (Owner) -> Void, failure: @escaping (Error) -> Void) {
     }
 

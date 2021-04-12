@@ -12,8 +12,8 @@ protocol RepositoriesViewControllerDelegate: AnyObject {
 }
 
 enum ServiceType: String {
-    case services = "services"
-    case mock = "mock"
+    case services
+    case mock
 }
 
 class RepositoriesViewController: BaseViewController {
@@ -56,6 +56,8 @@ class RepositoriesViewController: BaseViewController {
     private func setupNavigation() {
         let navigationTitleView = UINib(nibName: kNavigationTitleViewName, bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
         navigationItem.titleView = navigationTitleView
+        navigationController?.clearNavigation()
+        navigationItem.title = .empty
     }
 
     private func errorOcurred() {
@@ -122,6 +124,12 @@ class RepositoriesViewController: BaseViewController {
             }
         })
     }
+
+    private func openPullRequestsScreen(pullRequests: [PullRequest]) {
+        let viewModel = PullRequestsViewModel(model: pullRequests)
+        let coordinator = PullRequestsCoordinator(viewModel: viewModel)
+        coordinator.start(navigationController: self.navigationController)
+    }
 }
 
 // MARK: - Tableview Delegate
@@ -160,6 +168,24 @@ extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource
             self.repositoriesTableView.tableFooterView = spinner
             self.repositoriesTableView.tableFooterView?.isHidden = false
         }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showLoading()
+        viewModel?.getPullRequestsList(
+            position: indexPath.row,
+            success: { list in
+                DispatchQueue.main.async {
+                    self.hideLoading()
+                    self.openPullRequestsScreen(pullRequests: list)
+                }
+            },
+            failure: { error in
+                DispatchQueue.main.async {
+                    self.hideLoading()
+                    self.errorOcurred()
+                }
+            })
     }
 }
 

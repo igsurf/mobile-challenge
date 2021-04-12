@@ -1,50 +1,48 @@
 //
-//  RepositoryCellViewModel.swift
+//  PullRequestCellViewModel.swift
 //  teste-safra
 //
-//  Created by Gabriel Sousa on 11/04/21.
+//  Created by Gabriel Sousa on 12/04/21.
 //
 
 import UIKit
 
-class RepositoryCellViewModel {
+class PullRequestCellViewModel {
 
     // MARK: - Private Properties
 
-    private let model: Repository
+    private let model: PullRequest
     private let service: ServicesProtocol
 
     // MARK: - Life Cycle
 
-    init(model: Repository, service: ServicesProtocol) {
+    init(model: PullRequest, service: ServicesProtocol = Services()) {
         self.model = model
         self.service = service
     }
 
     // MARK: - Public Methods
 
-    var starCountsText: String {
-        String(model.stargazersCount)
+    var title: String {
+        model.title
     }
 
-    var repositoryName: String {
-        model.name
+    var body: String {
+        model.body
     }
 
-    var repositoryDesc: String {
-        model.itemDescription ?? .empty
+    var userName: String {
+        model.user.login ?? .empty
     }
 
-    var forksCountText: String {
-        String(model.forks)
-    }
-
-    var username: String {
-        model.owner.login ?? .empty
+    func getUserFullName(completion: @escaping(String?) -> Void) {
+        getUserDetails { user in
+            completion(user?.name)
+        }
     }
 
     func getImage(completion: @escaping(UIImage) -> Void) {
-        guard let url = URL(string: model.owner.avatarURL) else {
+        guard let url = URL(string: model.user.avatarURL) else {
             completion(UIImage())
             return
         }
@@ -59,21 +57,14 @@ class RepositoryCellViewModel {
             })
     }
 
-    func getUserFullName(completion: @escaping(String?) -> Void) {
-        getUserDetails { user in
-            completion(user?.name)
-        }
-    }
-
     // MARK: - Private Methods
 
     private func getUserDetails(completion: @escaping(Owner?) -> Void){
         service.getUser(
-            username: model.owner.login ?? .empty,
+            username: model.user.login ?? .empty,
             success: { owner in
                 completion(owner)
             }, failure: { error in
-                print("asd", error)
                 completion(nil)
         })
     }

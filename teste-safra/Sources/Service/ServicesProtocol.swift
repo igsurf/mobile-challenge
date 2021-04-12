@@ -8,17 +8,18 @@
 import UIKit
 
 enum CodeLanguage: String {
-    case swift = "swift"
-    case java = "java"
-    case kotlin = "kotlin"
+    case swift
+    case java
+    case kotlin
 }
 
 enum SortType: String {
-    case stars = "stars"
+    case stars
 }
 
 protocol ServicesProtocol: AnyObject {
     func getRepositoriesList(language: CodeLanguage, page: Int, sortBy: SortType, success: @escaping([Repository]) -> Void, failure: @escaping(Error) -> Void)
     func getUser(username: String, success: @escaping(Owner) -> Void, failure: @escaping(Error) -> Void)
     func getImageData(url: URL, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
+    func getPullRequests(url: URL, success: @escaping([PullRequest]) -> Void, failure: @escaping(Error) -> Void) 
 }

@@ -9,3 +9,5 @@
 "errorTitle" = "Erro";
 "apiErrorMessage" = "ocorreu um erro na api, tente novamente mais tarde";
 "okButtonTitle" = "ok";
+"openClosedTitle" = "%d abertos / %d fechados";
+"openPullRequest" = "%d abertos";

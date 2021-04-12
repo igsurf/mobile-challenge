@@ -30,7 +30,9 @@ class LoadingView: UIView {
         if !isLoadingShowing {
             addSubview(activityIndicator)
         }
-        UIApplication.shared.keyWindow?.addSubview(self)
+        DispatchQueue.main.async {
+            UIApplication.shared.keyWindow?.addSubview(self)
+        }
         activityIndicator.startAnimating()
     }
 

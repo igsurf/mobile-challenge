@@ -37,8 +37,7 @@ class RepositoryCell: UITableViewCell {
         repositoryDescriptionLabel.text = viewModel?.repositoryDesc
         forkCountLabel.text = viewModel?.forksCountText
         userNameLabel.text = viewModel?.username
-        userImageView.layer.cornerRadius = userImageView.frame.size.width / 2
-        userImageView.clipsToBounds = true
+        userImageView.toCircle()
         userFullNameLabel.text = .empty
         rateLabel.text = viewModel?.starCountsText
         getImage()
@@ -46,23 +45,18 @@ class RepositoryCell: UITableViewCell {
     }
 
     private func getFullName() {
-        viewModel?.getUserDetails(
-            success: { user in
-                DispatchQueue.main.async {
-                    self.userFullNameLabel.text = user.name
-                }
-            },
-            failure: { error in
-                print(error)
-            })
+        viewModel?.getUserFullName { name in
+            DispatchQueue.main.async {
+                self.userFullNameLabel.text = name
+            }
+        }
     }
 
     private func getImage() {
-        viewModel?.getImage(success: { image in
+        viewModel?.getImage { image in
             DispatchQueue.main.async {
                 self.userImageView?.image = image
             }
-        }, failure: { error in
-        })
+        }
     }
 }

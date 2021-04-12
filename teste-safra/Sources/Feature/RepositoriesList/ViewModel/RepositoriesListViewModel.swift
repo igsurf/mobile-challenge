@@ -65,6 +65,22 @@ class RepositoriesListViewModel {
         repositories[position]
     }
 
+    func getPullRequestsList(position: Int, success: @escaping([PullRequest]) -> Void, failure: @escaping(Error?) -> Void) {
+        let repository = getRepository(position: position)
+        let urlString = parsePullRequestURLString(url: repository.pullsURL)
+        guard let url = URL(string: urlString) else {
+            failure(nil)
+            return
+        }
+        services.getPullRequests(url: url,
+                                 success: { data in
+                                    success(data)
+                                 },
+                                 failure: { error in
+                                    failure(error)
+                                 })
+    }
+
     // MARK: - Private Methods
 
     private func fetchRepositoriesList(sortBy: SortType = .stars, success: @escaping([Repository]) -> Void, failure: @escaping(Error) -> Void) {
@@ -81,5 +97,10 @@ class RepositoriesListViewModel {
             failure: { error in
                 failure(error)
             })
+    }
+
+    private func parsePullRequestURLString(url: String) -> String {
+        let trash = "{/number}"
+        return url.replacingOccurrences(of: trash, with: String.empty)
     }
 }

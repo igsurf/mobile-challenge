@@ -21,6 +21,17 @@ class PullRequestCell: UITableViewCell {
 
     private var viewModel: PullRequestCellViewModel?
 
+    // MARK: - Life Cycle
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        userFullNameLabel.text = nil
+        userNameLabel.text = nil
+        descLabel.text = nil
+        titleLabel.text = nil
+        userImageView.image = nil
+    }
+
     // MARK: - Public Methods
 
     func setup(viewModel: PullRequestCellViewModel) {

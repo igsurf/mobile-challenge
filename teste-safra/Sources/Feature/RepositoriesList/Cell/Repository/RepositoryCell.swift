@@ -23,6 +23,19 @@ class RepositoryCell: UITableViewCell {
 
     private var viewModel: RepositoryCellViewModel?
 
+    // MARK: - Life Cycle
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        userImageView.image = nil
+        repositoryNameLabel.text = nil
+        repositoryDescriptionLabel.text = nil
+        forkCountLabel.text = nil
+        rateLabel.text = nil
+        userNameLabel.text = nil
+        userFullNameLabel.text = nil
+    }
+
     // MARK: - Public Methods
 
     func setup(viewModel: RepositoryCellViewModel) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A56F8A8C388645710B2A99A /* libPods-teste-safra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE20913CE48A66578D83594 /* libPods-teste-safra.a */; };
 		9417D1CC2623A72F00F8FEE5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417D1CB2623A72F00F8FEE5 /* Session.swift */; };
 		9417D1DB2623C55B00F8FEE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9417D1DA2623C55B00F8FEE5 /* Localizable.strings */; };
 		9417D1DE2623C5C700F8FEE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417D1DD2623C5C700F8FEE5 /* LocalizedStrings.swift */; };
@@ -42,12 +43,12 @@
 		94ACBDCF2623759F002973E1 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACBDCE2623759F002973E1 /* RepositoryCell.swift */; };
 		94ACBDD226237812002973E1 /* RepositoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACBDD126237812002973E1 /* RepositoryCellViewModel.swift */; };
 		94ACBDD62623791C002973E1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACBDD52623791C002973E1 /* String+.swift */; };
-		9C06B6B3785DE7DBC517DA76 /* libPods-teste-safra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A16C704198B2CA772AB88E03 /* libPods-teste-safra.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1561F3379539C1E14BF1C542 /* Pods-teste-safra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.release.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.release.xcconfig"; sourceTree = "<group>"; };
-		66785B411A6ED71602611EE8 /* Pods-teste-safra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.debug.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.debug.xcconfig"; sourceTree = "<group>"; };
+		26A722C762B0C6CAC4A88458 /* Pods-teste-safra.homolog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.homolog.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.homolog.xcconfig"; sourceTree = "<group>"; };
+		5820770D7F92E35218BDDCE1 /* Pods-teste-safra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.release.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.release.xcconfig"; sourceTree = "<group>"; };
+		88C5AB3F73593525B1624E01 /* Pods-teste-safra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.debug.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.debug.xcconfig"; sourceTree = "<group>"; };
 		9417D1CB2623A72F00F8FEE5 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		9417D1DA2623C55B00F8FEE5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9417D1DD2623C5C700F8FEE5 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
@@ -85,8 +86,7 @@
 		94ACBDCE2623759F002973E1 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		94ACBDD126237812002973E1 /* RepositoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellViewModel.swift; sourceTree = "<group>"; };
 		94ACBDD52623791C002973E1 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
-		A16C704198B2CA772AB88E03 /* libPods-teste-safra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teste-safra.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7C09FD7CBA154A8A97E8A0B /* Pods-teste-safra.homolog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.homolog.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.homolog.xcconfig"; sourceTree = "<group>"; };
+		BCE20913CE48A66578D83594 /* libPods-teste-safra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teste-safra.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,27 +94,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C06B6B3785DE7DBC517DA76 /* libPods-teste-safra.a in Frameworks */,
+				7A56F8A8C388645710B2A99A /* libPods-teste-safra.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1CF93AC475D7A1E4E7A4242E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A16C704198B2CA772AB88E03 /* libPods-teste-safra.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		8062E83510D1FE1C13487CC8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				66785B411A6ED71602611EE8 /* Pods-teste-safra.debug.xcconfig */,
-				A7C09FD7CBA154A8A97E8A0B /* Pods-teste-safra.homolog.xcconfig */,
-				1561F3379539C1E14BF1C542 /* Pods-teste-safra.release.xcconfig */,
+				88C5AB3F73593525B1624E01 /* Pods-teste-safra.debug.xcconfig */,
+				26A722C762B0C6CAC4A88458 /* Pods-teste-safra.homolog.xcconfig */,
+				5820770D7F92E35218BDDCE1 /* Pods-teste-safra.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -142,7 +134,7 @@
 				94905BF62622651E00DF766E /* teste-safra */,
 				94905BF52622651E00DF766E /* Products */,
 				8062E83510D1FE1C13487CC8 /* Pods */,
-				1CF93AC475D7A1E4E7A4242E /* Frameworks */,
+				D5601CB8373B50ABBD64130D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -388,6 +380,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		D5601CB8373B50ABBD64130D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCE20913CE48A66578D83594 /* libPods-teste-safra.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -395,11 +395,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94905C082622651F00DF766E /* Build configuration list for PBXNativeTarget "teste-safra" */;
 			buildPhases = (
-				05D8982E0054EDC0EEC8974E /* [CP] Check Pods Manifest.lock */,
+				6EDAE5AEE6DBEAC3BBC89CA3 /* [CP] Check Pods Manifest.lock */,
 				94905BF02622651E00DF766E /* Sources */,
 				94905BF12622651E00DF766E /* Frameworks */,
 				94905BF22622651E00DF766E /* Resources */,
-				F27CA5FDB2092B2BDC2C1657 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -461,7 +460,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05D8982E0054EDC0EEC8974E /* [CP] Check Pods Manifest.lock */ = {
+		6EDAE5AEE6DBEAC3BBC89CA3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -481,23 +480,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F27CA5FDB2092B2BDC2C1657 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-teste-safra/Pods-teste-safra-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-teste-safra/Pods-teste-safra-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-teste-safra/Pods-teste-safra-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -658,7 +640,7 @@
 		};
 		94905C092622651F00DF766E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66785B411A6ED71602611EE8 /* Pods-teste-safra.debug.xcconfig */;
+			baseConfigurationReference = 88C5AB3F73593525B1624E01 /* Pods-teste-safra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -678,7 +660,7 @@
 		};
 		94905C0A2622651F00DF766E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1561F3379539C1E14BF1C542 /* Pods-teste-safra.release.xcconfig */;
+			baseConfigurationReference = 5820770D7F92E35218BDDCE1 /* Pods-teste-safra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -759,7 +741,7 @@
 		};
 		94D165B1262342CA00FD9749 /* Homolog */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7C09FD7CBA154A8A97E8A0B /* Pods-teste-safra.homolog.xcconfig */;
+			baseConfigurationReference = 26A722C762B0C6CAC4A88458 /* Pods-teste-safra.homolog.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7E95C6A900A0ABC7BC3D7C0A /* libPods-teste-safra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06177AB402E357F5028B3D24 /* libPods-teste-safra.a */; };
 		9417D1CC2623A72F00F8FEE5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417D1CB2623A72F00F8FEE5 /* Session.swift */; };
+		9417D1DB2623C55B00F8FEE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9417D1DA2623C55B00F8FEE5 /* Localizable.strings */; };
+		9417D1DE2623C5C700F8FEE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417D1DD2623C5C700F8FEE5 /* LocalizedStrings.swift */; };
 		94905BF82622651E00DF766E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905BF72622651E00DF766E /* AppDelegate.swift */; };
 		94905C012622651F00DF766E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94905C002622651F00DF766E /* Assets.xcassets */; };
 		94905C1B2622669600DF766E /* RepositoriesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94905C1A2622669600DF766E /* RepositoriesList.storyboard */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		06177AB402E357F5028B3D24 /* libPods-teste-safra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teste-safra.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9417D1CB2623A72F00F8FEE5 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		9417D1DA2623C55B00F8FEE5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9417D1DD2623C5C700F8FEE5 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		94905BF42622651E00DF766E /* teste-safra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teste-safra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94905BF72622651E00DF766E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94905C002622651F00DF766E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
+		9417D1D92623C54600F8FEE5 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				9417D1DA2623C55B00F8FEE5 /* Localizable.strings */,
+				9417D1DD2623C5C700F8FEE5 /* LocalizedStrings.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		94905BEB2622651E00DF766E = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +161,7 @@
 		94905C0F2622657D00DF766E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				9417D1D92623C54600F8FEE5 /* Strings */,
 				9417D1CA2623A72300F8FEE5 /* Session */,
 				94ACBDD426237911002973E1 /* Extension */,
 				94905C432622702000DF766E /* Model */,
@@ -340,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9417D1DB2623C55B00F8FEE5 /* Localizable.strings in Resources */,
 				94905C1B2622669600DF766E /* RepositoriesList.storyboard in Resources */,
 				94905C012622651F00DF766E /* Assets.xcassets in Resources */,
 				94905C1F2622691A00DF766E /* CodeLanguageCell.xib in Resources */,
@@ -395,6 +410,7 @@
 				94905BF82622651E00DF766E /* AppDelegate.swift in Sources */,
 				94905C5226227E8C00DF766E /* CodeLanguageCellViewModel.swift in Sources */,
 				94905C2626226A0000DF766E /* BaseViewController.swift in Sources */,
+				9417D1DE2623C5C700F8FEE5 /* LocalizedStrings.swift in Sources */,
 				94905C452622702B00DF766E /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,10 @@ class RepositoryCellViewModel {
     private let model: Repository
     private let service: ServicesProtocol
 
+    // MARK: - Public Properties
+
+    var userDetails: Owner?
+
     // MARK: - Life Cycle
 
     init(model: Repository, service: ServicesProtocol) {
@@ -47,6 +51,7 @@ class RepositoryCellViewModel {
         service.getUser(
             username: model.owner.login,
             success: { owner in
+                self.userDetails = owner
                 success(owner)
             }, failure: { error in
                 failure(error)

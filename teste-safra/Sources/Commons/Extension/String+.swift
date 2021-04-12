@@ -9,4 +9,13 @@ import Foundation
 
 extension String {
     static let empty = String()
+
+    func localized() -> String {
+        let pathBundle: Bundle = .main
+        return NSLocalizedString(self,
+                                 tableName: "Localizable",
+                                 bundle: pathBundle,
+                                 value: .empty,
+                                 comment: .empty)
+    }
 }

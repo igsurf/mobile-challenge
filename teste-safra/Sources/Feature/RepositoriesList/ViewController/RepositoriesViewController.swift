@@ -32,6 +32,7 @@ class RepositoriesViewController: BaseViewController {
 
     private var viewModel: RepositoriesListViewModel?
     private var languageCells: [CodeLanguageCell] = []
+    private var isRefreshing = false
 
     // MARK: - Life Cycle
 
@@ -45,8 +46,11 @@ class RepositoriesViewController: BaseViewController {
     // MARK: - Private Properties
 
     private func errorOcurred() {
-        let alert = UIAlertController(title: "Erro", message: "ocorreu um erro na api, tente novamente mais tarde", preferredStyle: .actionSheet)
-        let okAction = UIAlertAction(title: "ok", style: .cancel)
+        let alert = UIAlertController(title: LocalizedStrings.errorTitle.localized(),
+                                      message: LocalizedStrings.apiErrorMessage.localized(),
+                                      preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: LocalizedStrings.okButtonTitle.localized(),
+                                     style: .cancel)
         alert.addAction(okAction)
         DispatchQueue.main.async {
             self.present(alert, animated: true)
@@ -95,10 +99,14 @@ class RepositoriesViewController: BaseViewController {
     private func getRepositoriesListNextPage() {
         viewModel?.getRepositoriesListNextPage(success: {
             DispatchQueue.main.async {
+                self.isRefreshing = false
                 self.repositoriesTableView.reloadData()
             }
         }, failure: { error in
-            self.errorOcurred()
+            DispatchQueue.main.async {
+                self.isRefreshing = false
+                self.errorOcurred()
+            }
         })
     }
 }
@@ -121,8 +129,11 @@ extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         
-        if offsetY > contentHeight - scrollView.frame.height {
-            getRepositoriesListNextPage()
+        if !isRefreshing {
+            if offsetY > contentHeight - scrollView.frame.height {
+                isRefreshing = true
+                getRepositoriesListNextPage()
+            }
         }
     }
 

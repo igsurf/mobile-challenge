@@ -43,6 +43,7 @@ class RepositoriesListViewModel {
 
     func getRepositoriesListNextPage(success: @escaping() -> Void, failure: @escaping(Error) -> ()) {
         currentPage += 1
+        print("uva", currentPage)
         fetchRepositoriesList (success: { repositories in
             self.repositories += repositories
             success()

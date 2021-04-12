@@ -73,7 +73,6 @@ class RepositoryCellViewModel {
             success: { owner in
                 completion(owner)
             }, failure: { error in
-                print("asd", error)
                 completion(nil)
         })
     }

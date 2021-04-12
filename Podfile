@@ -13,4 +13,8 @@ end
   # Pods for teste-safra
     pod 'SDKGithubServices/Debug', '0.2.4'
 
+target 'teste-safraTests' do
+ use_frameworks!
+end
+
 end

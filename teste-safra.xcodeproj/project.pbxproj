@@ -11,6 +11,9 @@
 		9417D1CC2623A72F00F8FEE5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417D1CB2623A72F00F8FEE5 /* Session.swift */; };
 		9417D1DB2623C55B00F8FEE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9417D1DA2623C55B00F8FEE5 /* Localizable.strings */; };
 		9417D1DE2623C5C700F8FEE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417D1DD2623C5C700F8FEE5 /* LocalizedStrings.swift */; };
+		94690D34262502E2001832E4 /* pulls.json in Resources */ = {isa = PBXBuildFile; fileRef = 94690D33262502E2001832E4 /* pulls.json */; };
+		94690D39262503C7001832E4 /* CodeLanguageCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94690D38262503C7001832E4 /* CodeLanguageCellViewModelTests.swift */; };
+		94690D4226250708001832E4 /* RepositoryCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94690D4126250708001832E4 /* RepositoryCellViewModelTests.swift */; };
 		94905BF82622651E00DF766E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94905BF72622651E00DF766E /* AppDelegate.swift */; };
 		94905C012622651F00DF766E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94905C002622651F00DF766E /* Assets.xcassets */; };
 		94905C1B2622669600DF766E /* RepositoriesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94905C1A2622669600DF766E /* RepositoriesList.storyboard */; };
@@ -38,20 +41,42 @@
 		94A882CF2624A2DA00F662ED /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A882CE2624A2DA00F662ED /* PullRequest.swift */; };
 		94A882D22624ACB200F662ED /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A882D12624ACB200F662ED /* UIImageView+.swift */; };
 		94A882D62624B27400F662ED /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A882D52624B27400F662ED /* UINavigationController+.swift */; };
+		94A883922624F07500F662ED /* PullRequestsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A883912624F07500F662ED /* PullRequestsCellViewModel.swift */; };
+		94A883C32624F89100F662ED /* repo.json in Resources */ = {isa = PBXBuildFile; fileRef = 94A883C12624F89100F662ED /* repo.json */; };
+		94A883C42624F89100F662ED /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 94A883C22624F89100F662ED /* user.json */; };
+		94A883C82624F9C200F662ED /* PullRequestsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A883C72624F9C200F662ED /* PullRequestsViewModelTests.swift */; };
+		94A883CE2624FBC200F662ED /* RepositoriesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A883CD2624FBC200F662ED /* RepositoriesListViewModelTests.swift */; };
 		94A9B54326235E6F00CD683A /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9B54226235E6F00CD683A /* MockServices.swift */; };
 		94ACBDCC262362B6002973E1 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94ACBDCB262362B6002973E1 /* RepositoryCell.xib */; };
 		94ACBDCF2623759F002973E1 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACBDCE2623759F002973E1 /* RepositoryCell.swift */; };
 		94ACBDD226237812002973E1 /* RepositoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACBDD126237812002973E1 /* RepositoryCellViewModel.swift */; };
 		94ACBDD62623791C002973E1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACBDD52623791C002973E1 /* String+.swift */; };
+		AE19CF2CFB12298E284591A6 /* Pods_teste_safra_teste_safraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A0D809F3D0262953005D68 /* Pods_teste_safra_teste_safraTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94A883942624F07500F662ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94905BEC2622651E00DF766E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94905BF32622651E00DF766E;
+			remoteInfo = "teste-safra";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		26A722C762B0C6CAC4A88458 /* Pods-teste-safra.homolog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.homolog.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.homolog.xcconfig"; sourceTree = "<group>"; };
+		31B957E0D5F69FB700CF0E01 /* Pods-teste-safraTests.homolog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safraTests.homolog.xcconfig"; path = "Target Support Files/Pods-teste-safraTests/Pods-teste-safraTests.homolog.xcconfig"; sourceTree = "<group>"; };
+		31E3056E2D559F566E2CB567 /* Pods-teste-safra-teste-safraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra-teste-safraTests.debug.xcconfig"; path = "Target Support Files/Pods-teste-safra-teste-safraTests/Pods-teste-safra-teste-safraTests.debug.xcconfig"; sourceTree = "<group>"; };
+		45A0D809F3D0262953005D68 /* Pods_teste_safra_teste_safraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teste_safra_teste_safraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5820770D7F92E35218BDDCE1 /* Pods-teste-safra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.release.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.release.xcconfig"; sourceTree = "<group>"; };
 		88C5AB3F73593525B1624E01 /* Pods-teste-safra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra.debug.xcconfig"; path = "Target Support Files/Pods-teste-safra/Pods-teste-safra.debug.xcconfig"; sourceTree = "<group>"; };
 		9417D1CB2623A72F00F8FEE5 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		9417D1DA2623C55B00F8FEE5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9417D1DD2623C5C700F8FEE5 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		94690D33262502E2001832E4 /* pulls.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pulls.json; sourceTree = "<group>"; };
+		94690D38262503C7001832E4 /* CodeLanguageCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLanguageCellViewModelTests.swift; sourceTree = "<group>"; };
+		94690D4126250708001832E4 /* RepositoryCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellViewModelTests.swift; sourceTree = "<group>"; };
 		94905BF42622651E00DF766E /* teste-safra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teste-safra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94905BF72622651E00DF766E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94905C002622651F00DF766E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,12 +106,23 @@
 		94A882CE2624A2DA00F662ED /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
 		94A882D12624ACB200F662ED /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		94A882D52624B27400F662ED /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		94A8838F2624F07500F662ED /* teste-safraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "teste-safraTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94A883912624F07500F662ED /* PullRequestsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsCellViewModel.swift; sourceTree = "<group>"; };
+		94A883932624F07500F662ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94A883C12624F89100F662ED /* repo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = repo.json; sourceTree = "<group>"; };
+		94A883C22624F89100F662ED /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
+		94A883C72624F9C200F662ED /* PullRequestsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsViewModelTests.swift; sourceTree = "<group>"; };
+		94A883CD2624FBC200F662ED /* RepositoriesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListViewModelTests.swift; sourceTree = "<group>"; };
 		94A9B54226235E6F00CD683A /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
 		94ACBDCB262362B6002973E1 /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		94ACBDCE2623759F002973E1 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		94ACBDD126237812002973E1 /* RepositoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellViewModel.swift; sourceTree = "<group>"; };
 		94ACBDD52623791C002973E1 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		99584EBA75B3F6755D65C9D9 /* Pods-teste-safra-teste-safraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra-teste-safraTests.release.xcconfig"; path = "Target Support Files/Pods-teste-safra-teste-safraTests/Pods-teste-safra-teste-safraTests.release.xcconfig"; sourceTree = "<group>"; };
+		ABBAA01023A142629D694FAB /* Pods-teste-safra-teste-safraTests.homolog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safra-teste-safraTests.homolog.xcconfig"; path = "Target Support Files/Pods-teste-safra-teste-safraTests/Pods-teste-safra-teste-safraTests.homolog.xcconfig"; sourceTree = "<group>"; };
 		BCE20913CE48A66578D83594 /* libPods-teste-safra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teste-safra.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D65927886204F83AD3508829 /* Pods-teste-safraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safraTests.release.xcconfig"; path = "Target Support Files/Pods-teste-safraTests/Pods-teste-safraTests.release.xcconfig"; sourceTree = "<group>"; };
+		DCB77D2A96A8E10295DE86C5 /* Pods-teste-safraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste-safraTests.debug.xcconfig"; path = "Target Support Files/Pods-teste-safraTests/Pods-teste-safraTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +131,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A56F8A8C388645710B2A99A /* libPods-teste-safra.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94A8838C2624F07500F662ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE19CF2CFB12298E284591A6 /* Pods_teste_safra_teste_safraTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +151,12 @@
 				88C5AB3F73593525B1624E01 /* Pods-teste-safra.debug.xcconfig */,
 				26A722C762B0C6CAC4A88458 /* Pods-teste-safra.homolog.xcconfig */,
 				5820770D7F92E35218BDDCE1 /* Pods-teste-safra.release.xcconfig */,
+				DCB77D2A96A8E10295DE86C5 /* Pods-teste-safraTests.debug.xcconfig */,
+				31B957E0D5F69FB700CF0E01 /* Pods-teste-safraTests.homolog.xcconfig */,
+				D65927886204F83AD3508829 /* Pods-teste-safraTests.release.xcconfig */,
+				31E3056E2D559F566E2CB567 /* Pods-teste-safra-teste-safraTests.debug.xcconfig */,
+				ABBAA01023A142629D694FAB /* Pods-teste-safra-teste-safraTests.homolog.xcconfig */,
+				99584EBA75B3F6755D65C9D9 /* Pods-teste-safra-teste-safraTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -132,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				94905BF62622651E00DF766E /* teste-safra */,
+				94A883902624F07500F662ED /* teste-safraTests */,
 				94905BF52622651E00DF766E /* Products */,
 				8062E83510D1FE1C13487CC8 /* Pods */,
 				D5601CB8373B50ABBD64130D /* Frameworks */,
@@ -142,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				94905BF42622651E00DF766E /* teste-safra.app */,
+				94A8838F2624F07500F662ED /* teste-safraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +229,7 @@
 		94905C0F2622657D00DF766E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				94A883C02624F88200F662ED /* Mock */,
 				94A882C326249ADE00F662ED /* Coordinator */,
 				9417D1D92623C54600F8FEE5 /* Strings */,
 				9417D1CA2623A72300F8FEE5 /* Session */,
@@ -361,6 +414,61 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		94A883902624F07500F662ED /* teste-safraTests */ = {
+			isa = PBXGroup;
+			children = (
+				94A883BC2624F2F200F662ED /* PullRequests */,
+				94A883CC2624FB9500F662ED /* RepositoriesList */,
+				94A883932624F07500F662ED /* Info.plist */,
+			);
+			path = "teste-safraTests";
+			sourceTree = "<group>";
+		};
+		94A883BC2624F2F200F662ED /* PullRequests */ = {
+			isa = PBXGroup;
+			children = (
+				94A883BD2624F2FA00F662ED /* ViewModel */,
+			);
+			path = PullRequests;
+			sourceTree = "<group>";
+		};
+		94A883BD2624F2FA00F662ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94A883912624F07500F662ED /* PullRequestsCellViewModel.swift */,
+				94A883C72624F9C200F662ED /* PullRequestsViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94A883C02624F88200F662ED /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				94690D33262502E2001832E4 /* pulls.json */,
+				94A883C12624F89100F662ED /* repo.json */,
+				94A883C22624F89100F662ED /* user.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		94A883CC2624FB9500F662ED /* RepositoriesList */ = {
+			isa = PBXGroup;
+			children = (
+				94A883D12624FC1100F662ED /* ViewModel */,
+			);
+			path = RepositoriesList;
+			sourceTree = "<group>";
+		};
+		94A883D12624FC1100F662ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94A883CD2624FBC200F662ED /* RepositoriesListViewModelTests.swift */,
+				94690D38262503C7001832E4 /* CodeLanguageCellViewModelTests.swift */,
+				94690D4126250708001832E4 /* RepositoryCellViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		94ACBDCA262362A3002973E1 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +492,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE20913CE48A66578D83594 /* libPods-teste-safra.a */,
+				45A0D809F3D0262953005D68 /* Pods_teste_safra_teste_safraTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -409,6 +518,26 @@
 			productReference = 94905BF42622651E00DF766E /* teste-safra.app */;
 			productType = "com.apple.product-type.application";
 		};
+		94A8838E2624F07500F662ED /* teste-safraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94A883992624F07500F662ED /* Build configuration list for PBXNativeTarget "teste-safraTests" */;
+			buildPhases = (
+				8864E2D8A7D57E4FB7C63088 /* [CP] Check Pods Manifest.lock */,
+				94A8838B2624F07500F662ED /* Sources */,
+				94A8838C2624F07500F662ED /* Frameworks */,
+				94A8838D2624F07500F662ED /* Resources */,
+				A0DEF1818EE285A481AAF3D4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94A883952624F07500F662ED /* PBXTargetDependency */,
+			);
+			name = "teste-safraTests";
+			productName = "teste-safraTests";
+			productReference = 94A8838F2624F07500F662ED /* teste-safraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -420,6 +549,10 @@
 				TargetAttributes = {
 					94905BF32622651E00DF766E = {
 						CreatedOnToolsVersion = 12.0;
+					};
+					94A8838E2624F07500F662ED = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 94905BF32622651E00DF766E;
 					};
 				};
 			};
@@ -437,6 +570,7 @@
 			projectRoot = "";
 			targets = (
 				94905BF32622651E00DF766E /* teste-safra */,
+				94A8838E2624F07500F662ED /* teste-safraTests */,
 			);
 		};
 /* End PBXProject section */
@@ -447,13 +581,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				9417D1DB2623C55B00F8FEE5 /* Localizable.strings in Resources */,
+				94690D34262502E2001832E4 /* pulls.json in Resources */,
+				94A883C32624F89100F662ED /* repo.json in Resources */,
 				94905C1B2622669600DF766E /* RepositoriesList.storyboard in Resources */,
 				94A882BA262497C800F662ED /* PullRequestCell.xib in Resources */,
+				94A883C42624F89100F662ED /* user.json in Resources */,
 				94A882B22624952D00F662ED /* PullRequests.storyboard in Resources */,
 				94905C012622651F00DF766E /* Assets.xcassets in Resources */,
 				94A882AD2624803800F662ED /* RepositoriesListNavigationTitleView.xib in Resources */,
 				94905C1F2622691A00DF766E /* CodeLanguageCell.xib in Resources */,
 				94ACBDCC262362B6002973E1 /* RepositoryCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94A8838D2624F07500F662ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +624,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8864E2D8A7D57E4FB7C63088 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teste-safra-teste-safraTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0DEF1818EE285A481AAF3D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-teste-safra-teste-safraTests/Pods-teste-safra-teste-safraTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-teste-safra-teste-safraTests/Pods-teste-safra-teste-safraTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-teste-safra-teste-safraTests/Pods-teste-safra-teste-safraTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -519,7 +702,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94A8838B2624F07500F662ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94690D4226250708001832E4 /* RepositoryCellViewModelTests.swift in Sources */,
+				94A883C82624F9C200F662ED /* PullRequestsViewModelTests.swift in Sources */,
+				94690D39262503C7001832E4 /* CodeLanguageCellViewModelTests.swift in Sources */,
+				94A883CE2624FBC200F662ED /* RepositoriesListViewModelTests.swift in Sources */,
+				94A883922624F07500F662ED /* PullRequestsCellViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94A883952624F07500F662ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94905BF32622651E00DF766E /* teste-safra */;
+			targetProxy = 94A883942624F07500F662ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		94905C062622651F00DF766E /* Debug */ = {
@@ -653,6 +856,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teste-safra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SERVICE_TYPE = mock;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -673,8 +877,72 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teste-safra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SERVICE_TYPE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		94A883962624F07500F662ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31E3056E2D559F566E2CB567 /* Pods-teste-safra-teste-safraTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67ALGZ83W8;
+				INFOPLIST_FILE = "teste-safraTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teste-safraTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/teste-safra.app/teste-safra";
+			};
+			name = Debug;
+		};
+		94A883972624F07500F662ED /* Homolog */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABBAA01023A142629D694FAB /* Pods-teste-safra-teste-safraTests.homolog.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67ALGZ83W8;
+				INFOPLIST_FILE = "teste-safraTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teste-safraTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/teste-safra.app/teste-safra";
+			};
+			name = Homolog;
+		};
+		94A883982624F07500F662ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99584EBA75B3F6755D65C9D9 /* Pods-teste-safra-teste-safraTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67ALGZ83W8;
+				INFOPLIST_FILE = "teste-safraTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teste-safraTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/teste-safra.app/teste-safra";
 			};
 			name = Release;
 		};
@@ -754,6 +1022,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teste-safra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SERVICE_TYPE = services;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -778,6 +1047,16 @@
 				94905C092622651F00DF766E /* Debug */,
 				94D165B1262342CA00FD9749 /* Homolog */,
 				94905C0A2622651F00DF766E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94A883992624F07500F662ED /* Build configuration list for PBXNativeTarget "teste-safraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94A883962624F07500F662ED /* Debug */,
+				94A883972624F07500F662ED /* Homolog */,
+				94A883982624F07500F662ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

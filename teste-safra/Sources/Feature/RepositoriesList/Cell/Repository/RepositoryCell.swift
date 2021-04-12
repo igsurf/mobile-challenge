@@ -52,7 +52,8 @@ class RepositoryCell: UITableViewCell {
                     self.userFullNameLabel.text = user.name
                 }
             },
-            failure: { _ in
+            failure: { error in
+                print(error)
             })
     }
 

@@ -33,13 +33,6 @@ class CodeLanguageCell: UICollectionViewCell {
         codeLanguageButton.setTitle(viewModel?.language.rawValue, for: .normal)
     }
 
-    private func setSelected() {
-        codeLanguageButton.layer.borderWidth = 0
-        codeLanguageButton.setTitleColor(.white, for: .normal)
-        codeLanguageButton.backgroundColor = viewModel?.buttonColor
-        codeLanguageButton.layer.cornerRadius = 10
-    }
-
     // MARK: - Public Methods
 
     func setUnselected() {
@@ -48,6 +41,17 @@ class CodeLanguageCell: UICollectionViewCell {
         codeLanguageButton.setTitleColor(viewModel?.buttonColor, for: .normal)
         codeLanguageButton.layer.borderColor = viewModel?.buttonColor.cgColor
         codeLanguageButton.layer.cornerRadius = 10
+    }
+
+    func setSelected() {
+        codeLanguageButton.layer.borderWidth = 0
+        codeLanguageButton.setTitleColor(.white, for: .normal)
+        codeLanguageButton.backgroundColor = viewModel?.buttonColor
+        codeLanguageButton.layer.cornerRadius = 10
+    }
+
+    var language: CodeLanguage? {
+        viewModel?.language
     }
 
     // MARK: - Storyboard Actions

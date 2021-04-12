@@ -26,7 +26,8 @@ class RepositoriesViewController: BaseViewController {
     // MARK: - Constants
 
     private let kCollectionViewIdentifier = "CodeLanguageCell"
-    private let tableViewCellIdentifier = "RepositoryCell"
+    private let kTableViewCellIdentifier = "RepositoryCell"
+    private let kNavigationTitleViewName = "RepositoriesListNavigationTitleView"
 
     // MARK: - Private Properties
 
@@ -38,12 +39,24 @@ class RepositoriesViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigation()
         setupViewModel()
         setupCollectionView()
         setupTableView()
     }
 
     // MARK: - Private Properties
+
+    private func selectFirstButton() {
+        let firstOption = languageCells.first
+        firstOption?.setSelected()
+        getRepositoriesList(language: firstOption?.language ?? .java)
+    }
+
+    private func setupNavigation() {
+        let navigationTitleView = UINib(nibName: kNavigationTitleViewName, bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
+        navigationItem.titleView = navigationTitleView
+    }
 
     private func errorOcurred() {
         let alert = UIAlertController(title: LocalizedStrings.errorTitle.localized(),
@@ -65,8 +78,8 @@ class RepositoriesViewController: BaseViewController {
     }
 
     private func setupTableView() {
-        let nib = UINib(nibName: tableViewCellIdentifier, bundle: nil)
-        repositoriesTableView.register(nib, forCellReuseIdentifier: tableViewCellIdentifier)
+        let nib = UINib(nibName: kTableViewCellIdentifier, bundle: nil)
+        repositoriesTableView.register(nib, forCellReuseIdentifier: kTableViewCellIdentifier)
         repositoriesTableView.dataSource = self
         repositoriesTableView.delegate = self
     }
@@ -119,7 +132,7 @@ extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier, for: indexPath) as? RepositoryCell, let repository = viewModel?.getRepository(position: indexPath.row)  else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: kTableViewCellIdentifier, for: indexPath) as? RepositoryCell, let repository = viewModel?.getRepository(position: indexPath.row)  else { return UITableViewCell() }
         let cellViewModel = RepositoryCellViewModel(model: repository, service: Session.service)
         cell.setup(viewModel: cellViewModel)
         return cell
@@ -161,6 +174,7 @@ extension RepositoriesViewController: UICollectionViewDelegate, UICollectionView
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionViewIdentifier, for: indexPath) as? CodeLanguageCell,
               let language = viewModel?.languageOptions[indexPath.row] else { return UICollectionViewCell() }
         languageCells.append(cell)
+        selectFirstButton()
         let viewModel = CodeLanguageCellViewModel(language: language)
         cell.setup(viewModel: viewModel, controllerDelegate: self)
         return cell

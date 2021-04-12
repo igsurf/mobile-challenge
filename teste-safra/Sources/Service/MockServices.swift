@@ -14,6 +14,6 @@ class MockServices: ServicesProtocol {
     func getImageData(url: URL, success: @escaping (Data) -> Void, failure: @escaping (Error) -> Void) {
     }
 
-    func getRepositoriesList(language: CodeLanguage, page: Int, success: @escaping ([Repository]) -> Void, failure: @escaping (Error) -> Void) {
+    func getRepositoriesList(language: CodeLanguage, page: Int, sortBy: SortType, success: @escaping ([Repository]) -> Void, failure: @escaping (Error) -> Void) {
     }
 }

@@ -43,7 +43,6 @@ class RepositoriesListViewModel {
 
     func getRepositoriesListNextPage(success: @escaping() -> Void, failure: @escaping(Error) -> ()) {
         currentPage += 1
-        print("uva", currentPage)
         fetchRepositoriesList (success: { repositories in
             self.repositories += repositories
             success()
@@ -68,13 +67,14 @@ class RepositoriesListViewModel {
 
     // MARK: - Private Methods
 
-    private func fetchRepositoriesList(success: @escaping([Repository]) -> Void, failure: @escaping(Error) -> Void) {
+    private func fetchRepositoriesList(sortBy: SortType = .stars, success: @escaping([Repository]) -> Void, failure: @escaping(Error) -> Void) {
         guard let language = currentLanguage else {
             return
         }
         services.getRepositoriesList(
             language: language,
             page: currentPage,
+            sortBy: sortBy,
             success: { repositories in
                 success(repositories)
             },

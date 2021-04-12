@@ -46,10 +46,12 @@ class Services: ServicesProtocol {
             })
     }
     
-    func getRepositoriesList(language: CodeLanguage, page: Int, success: @escaping ([Repository]) -> Void, failure: @escaping (Error) -> Void) {
+    func getRepositoriesList(language: CodeLanguage, page: Int, sortBy: SortType, success: @escaping ([Repository]) -> Void, failure: @escaping (Error) -> Void) {
+        print(service)
         service.getRepositories(
             language: language.rawValue,
             page: page,
+            sortBy: sortBy.rawValue,
             success: { data in
                 DataUnwraper.unwrapModel(
                     of: RepositoriesList.self,

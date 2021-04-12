@@ -13,8 +13,12 @@ enum CodeLanguage: String {
     case kotlin = "kotlin"
 }
 
+enum SortType: String {
+    case stars = "stars"
+}
+
 protocol ServicesProtocol: AnyObject {
-    func getRepositoriesList(language: CodeLanguage, page: Int, success: @escaping([Repository]) -> Void, failure: @escaping(Error) -> Void)
+    func getRepositoriesList(language: CodeLanguage, page: Int, sortBy: SortType, success: @escaping([Repository]) -> Void, failure: @escaping(Error) -> Void)
     func getUser(username: String, success: @escaping(Owner) -> Void, failure: @escaping(Error) -> Void)
     func getImageData(url: URL, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
 }

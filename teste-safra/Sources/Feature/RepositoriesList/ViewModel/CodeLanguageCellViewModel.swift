@@ -29,8 +29,6 @@ class CodeLanguageCellViewModel {
             return #colorLiteral(red: 0.9333333333, green: 0.4470588235, blue: 0.1960784314, alpha: 1)
         case .kotlin:
             return #colorLiteral(red: 0.4, green: 0.6862745098, blue: 0.1568627451, alpha: 1)
-        @unknown default:
-            return UIColor()
         }
     }
 }

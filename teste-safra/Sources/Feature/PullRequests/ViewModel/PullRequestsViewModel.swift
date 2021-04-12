@@ -33,6 +33,11 @@ class PullRequestsViewModel {
         model[position]
     }
 
+    func getPullRequestURL(position: Int) -> URL? {
+        let pullRequest = getPullRequest(position: position)
+        return URL(string: pullRequest.htmlURL)
+    }
+
     var openClosedTitle: NSAttributedString {
         let rawString = String(format: LocalizedStrings.openClosedTitle.localized(), openCount, closedCount)
         let textToChangeColor = String(format: LocalizedStrings.openPullRequest.localized(), openCount)

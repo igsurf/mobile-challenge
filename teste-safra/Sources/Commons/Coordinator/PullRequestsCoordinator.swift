@@ -16,11 +16,13 @@ class PullRequestsCoordinator {
     // MARK: - Private Properties
 
     private let viewModel: PullRequestsViewModel
+    private let repositoryName: String
 
     // MARK: - Life Cycle
 
-    init(viewModel: PullRequestsViewModel) {
+    init(viewModel: PullRequestsViewModel, repositoryName: String) {
         self.viewModel = viewModel
+        self.repositoryName = repositoryName
     }
 }
 
@@ -33,7 +35,7 @@ extension PullRequestsCoordinator: BaseCoordinator {
             return
         }
         controller.navigationController?.clearNavigation()
-        controller.setupController(viewModel: viewModel)
+        controller.setupController(viewModel: viewModel, repositoryName: repositoryName)
         DispatchQueue.main.async {
             navigationController?.pushViewController(controller,
                                                      animated: true)

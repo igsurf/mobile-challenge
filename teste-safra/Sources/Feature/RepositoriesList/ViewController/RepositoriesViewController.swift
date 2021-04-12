@@ -125,9 +125,10 @@ class RepositoriesViewController: BaseViewController {
         })
     }
 
-    private func openPullRequestsScreen(pullRequests: [PullRequest]) {
+    private func openPullRequestsScreen(pullRequests: [PullRequest], repositoryName: String?) {
         let viewModel = PullRequestsViewModel(model: pullRequests)
-        let coordinator = PullRequestsCoordinator(viewModel: viewModel)
+        let coordinator = PullRequestsCoordinator(viewModel: viewModel,
+                                                  repositoryName: repositoryName ?? .empty)
         coordinator.start(navigationController: self.navigationController)
     }
 }
@@ -177,7 +178,8 @@ extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource
             success: { list in
                 DispatchQueue.main.async {
                     self.hideLoading()
-                    self.openPullRequestsScreen(pullRequests: list)
+                    self.openPullRequestsScreen(pullRequests: list,
+                                                repositoryName: self.viewModel?.getSelectedRepositoryName(position: indexPath.row))
                 }
             },
             failure: { error in

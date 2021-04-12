@@ -12,4 +12,10 @@ struct PullRequest: Codable {
     let title: String
     let user: Owner
     let body: String
+    let htmlURL: String
+
+    enum CodingKeys: String, CodingKey {
+        case state, title, user, body
+        case htmlURL = "html_url"
+    }
 }

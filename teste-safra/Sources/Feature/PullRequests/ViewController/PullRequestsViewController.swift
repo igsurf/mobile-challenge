@@ -21,6 +21,7 @@ class PullRequestsViewController: BaseViewController {
     // MARK: - Private Properties
     
     private var viewModel: PullRequestsViewModel?
+    private var repositoryName: String?
 
     // MARK: - Life Cycle
 
@@ -28,13 +29,14 @@ class PullRequestsViewController: BaseViewController {
         super.viewDidLoad()
         setupTableview()
         setupLabels()
-        navigationItem.title = "teste"
+        navigationItem.title = repositoryName
     }
 
     // MARK: - Public Methods
 
-    func setupController(viewModel: PullRequestsViewModel) {
+    func setupController(viewModel: PullRequestsViewModel, repositoryName: String) {
         self.viewModel = viewModel
+        self.repositoryName = repositoryName
     }
 
     // MARK: - Private Methods
@@ -65,5 +67,10 @@ extension PullRequestsViewController: UITableViewDelegate, UITableViewDataSource
         let cellViewModel = PullRequestCellViewModel(model: pullRequest)
         cell.setup(viewModel: cellViewModel)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let url = viewModel?.getPullRequestURL(position: indexPath.row) else { return }
+        UIApplication.shared.openURL(url)
     }
 }

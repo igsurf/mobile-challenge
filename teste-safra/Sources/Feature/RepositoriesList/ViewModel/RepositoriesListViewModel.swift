@@ -65,6 +65,10 @@ class RepositoriesListViewModel {
         repositories[position]
     }
 
+    func getSelectedRepositoryName(position: Int) -> String {
+        getRepository(position: position).name
+    }
+
     func getPullRequestsList(position: Int, success: @escaping([PullRequest]) -> Void, failure: @escaping(Error?) -> Void) {
         let repository = getRepository(position: position)
         let urlString = parsePullRequestURLString(url: repository.pullsURL)

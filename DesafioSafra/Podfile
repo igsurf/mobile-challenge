@@ -1,0 +1,44 @@
+# Uncomment the next line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '12.0'
+inhibit_all_warnings!
+
+target 'DesafioSafra' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for DesafioSafra
+  pod 'SwiftEntryKit', '1.2.3'
+  pod 'LoadingPlaceholderView'
+  pod 'FreakingSimpleRoundImageView'
+  pod 'SwiftDate'
+  pod 'Alamofire', '~> 5.2'
+  pod 'SDWebImage'
+  
+  target 'DesafioSafraTests' do
+    inherit! :search_paths
+    # Pods for testing
+    
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'SwiftDate'
+    
+    pod 'FBModel', :git => 'https://github.com/Felip38rito/FBModel.git', :tag => '0.0.10'
+
+  end
+
+  target 'DesafioSafraUITests' do
+    # Pods for testing
+  end
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if Gem::Version.new('10.0') > Gem::Version.new(config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'])
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
+      end
+    end
+  end
+end

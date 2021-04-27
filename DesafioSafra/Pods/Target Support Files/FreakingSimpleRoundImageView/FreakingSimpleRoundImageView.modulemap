@@ -1,0 +1,6 @@
+framework module FreakingSimpleRoundImageView {
+  umbrella header "FreakingSimpleRoundImageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

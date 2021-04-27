@@ -1,0 +1,23 @@
+{
+  "name": "FBModel",
+  "version": "0.0.10",
+  "summary": "A simple utility for the model layer in MVC and MVVM patterns",
+  "description": "Just a simple utility for the model layer based on Codable, to translate models to json and from json with ease",
+  "homepage": "https://github.com/Felip38rito/FBModel",
+  "license": "MIT",
+  "authors": {
+    "Felipe Correia Brito": "felipe.correia.wd@gmail.com"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "source": {
+    "git": "https://github.com/Felip38rito/FBModel.git",
+    "tag": "0.0.10"
+  },
+  "source_files": [
+    "FBModel",
+    "FBModel/**/*.{h,m}"
+  ],
+  "exclude_files": "Classes/Exclude"
+}

@@ -1,0 +1,64 @@
+PODS:
+  - Alamofire (5.4.2)
+  - FBModel (0.0.10)
+  - FreakingSimpleRoundImageView (1.3)
+  - LoadingPlaceholderView (0.0.2)
+  - Nimble (9.0.0)
+  - Quick (3.1.2)
+  - QuickLayout (3.0.0)
+  - SDWebImage (5.11.0):
+    - SDWebImage/Core (= 5.11.0)
+  - SDWebImage/Core (5.11.0)
+  - SwiftDate (6.3.1)
+  - SwiftEntryKit (1.2.3):
+    - QuickLayout (= 3.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - FBModel (from `https://github.com/Felip38rito/FBModel.git`, tag `0.0.10`)
+  - FreakingSimpleRoundImageView
+  - LoadingPlaceholderView
+  - Nimble
+  - Quick
+  - SDWebImage
+  - SwiftDate
+  - SwiftEntryKit (= 1.2.3)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SDWebImage
+  trunk:
+    - Alamofire
+    - FreakingSimpleRoundImageView
+    - LoadingPlaceholderView
+    - Nimble
+    - Quick
+    - QuickLayout
+    - SwiftDate
+    - SwiftEntryKit
+
+EXTERNAL SOURCES:
+  FBModel:
+    :git: https://github.com/Felip38rito/FBModel.git
+    :tag: 0.0.10
+
+CHECKOUT OPTIONS:
+  FBModel:
+    :git: https://github.com/Felip38rito/FBModel.git
+    :tag: 0.0.10
+
+SPEC CHECKSUMS:
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
+  FBModel: c699c2c7fb7347fc0b3be6b42bc353f53eda3c2a
+  FreakingSimpleRoundImageView: 0d687cb05da8684e85c4c2ae9945bafcbe89d2a2
+  LoadingPlaceholderView: e913f5ae2673612d405ce395acca7cedb1bfaa81
+  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
+  Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+  SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
+
+PODFILE CHECKSUM: 017b08991681951a3e205bc5f175ebcb70681a1c
+
+COCOAPODS: 1.10.1

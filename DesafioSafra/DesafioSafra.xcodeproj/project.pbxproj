@@ -1,0 +1,877 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11325F411F1274E1084031FF /* Pods_DesafioSafraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FEC816CA49D9C77AEBB582 /* Pods_DesafioSafraTests.framework */; };
+		172C181E985569EF01054EF9 /* Pods_DesafioSafra_DesafioSafraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAB09D8C15F87EB76357306 /* Pods_DesafioSafra_DesafioSafraUITests.framework */; };
+		41EA120E23C2C6B61DA0B46D /* Pods_DesafioSafra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8357F81FA513B1B342A449C /* Pods_DesafioSafra.framework */; };
+		88DE5A5A2638AAAD0023D037 /* JavaPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A592638AAAD0023D037 /* JavaPop.swift */; };
+		88DE5A5C2638AAE40023D037 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A5B2638AAE40023D037 /* Items.swift */; };
+		88DE5A5E2638AB030023D037 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A5D2638AB030023D037 /* Owner.swift */; };
+		88DE5A622638B3FD0023D037 /* JavaPopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A612638B3FD0023D037 /* JavaPopViewModel.swift */; };
+		88DE5A642638B4750023D037 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A632638B4750023D037 /* User.swift */; };
+		88DE5A662638B52F0023D037 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A652638B52F0023D037 /* Mock.swift */; };
+		88DE5A6B2638B9390023D037 /* JavaPopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A6A2638B9390023D037 /* JavaPopTableViewCell.swift */; };
+		A5FA6797263735AD004D5C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA6796263735AD004D5C79 /* AppDelegate.swift */; };
+		A5FA679B263735AD004D5C79 /* JavaPopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA679A263735AD004D5C79 /* JavaPopController.swift */; };
+		A5FA679E263735AD004D5C79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FA679C263735AD004D5C79 /* Main.storyboard */; };
+		A5FA67A1263735AD004D5C79 /* DesafioSafra.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5FA679F263735AD004D5C79 /* DesafioSafra.xcdatamodeld */; };
+		A5FA67A3263735AE004D5C79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5FA67A2263735AE004D5C79 /* Assets.xcassets */; };
+		A5FA67A6263735AE004D5C79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FA67A4263735AE004D5C79 /* LaunchScreen.storyboard */; };
+		A5FA67B1263735AE004D5C79 /* DesafioSafraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA67B0263735AE004D5C79 /* DesafioSafraTests.swift */; };
+		A5FA67BC263735AE004D5C79 /* DesafioSafraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA67BB263735AE004D5C79 /* DesafioSafraUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5FA67AD263735AE004D5C79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5FA678B263735AD004D5C79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5FA6792263735AD004D5C79;
+			remoteInfo = DesafioSafra;
+		};
+		A5FA67B8263735AE004D5C79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5FA678B263735AD004D5C79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5FA6792263735AD004D5C79;
+			remoteInfo = DesafioSafra;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		144270F79E9BF546CFBDCF5B /* Pods-DesafioSafraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafraTests.release.xcconfig"; path = "Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E185C2D9CB63038F67EE86D /* Pods-DesafioSafra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra.release.xcconfig"; path = "Target Support Files/Pods-DesafioSafra/Pods-DesafioSafra.release.xcconfig"; sourceTree = "<group>"; };
+		43FD7E136F9847B44A68D17E /* Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig"; path = "Target Support Files/Pods-DesafioSafra-DesafioSafraUITests/Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		60FEC816CA49D9C77AEBB582 /* Pods_DesafioSafraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioSafraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		854874D936C2D7D18352C480 /* Pods-DesafioSafra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra.debug.xcconfig"; path = "Target Support Files/Pods-DesafioSafra/Pods-DesafioSafra.debug.xcconfig"; sourceTree = "<group>"; };
+		88DE5A592638AAAD0023D037 /* JavaPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaPop.swift; sourceTree = "<group>"; };
+		88DE5A5B2638AAE40023D037 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		88DE5A5D2638AB030023D037 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		88DE5A612638B3FD0023D037 /* JavaPopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaPopViewModel.swift; sourceTree = "<group>"; };
+		88DE5A632638B4750023D037 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		88DE5A652638B52F0023D037 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		88DE5A6A2638B9390023D037 /* JavaPopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaPopTableViewCell.swift; sourceTree = "<group>"; };
+		9CAB09D8C15F87EB76357306 /* Pods_DesafioSafra_DesafioSafraUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioSafra_DesafioSafraUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FA6793263735AD004D5C79 /* DesafioSafra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioSafra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FA6796263735AD004D5C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A5FA679A263735AD004D5C79 /* JavaPopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaPopController.swift; sourceTree = "<group>"; };
+		A5FA679D263735AD004D5C79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5FA67A0263735AD004D5C79 /* DesafioSafra.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DesafioSafra.xcdatamodel; sourceTree = "<group>"; };
+		A5FA67A2263735AE004D5C79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5FA67A5263735AE004D5C79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5FA67A7263735AE004D5C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5FA67AC263735AE004D5C79 /* DesafioSafraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioSafraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FA67B0263735AE004D5C79 /* DesafioSafraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioSafraTests.swift; sourceTree = "<group>"; };
+		A5FA67B2263735AE004D5C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5FA67B7263735AE004D5C79 /* DesafioSafraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioSafraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FA67BB263735AE004D5C79 /* DesafioSafraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioSafraUITests.swift; sourceTree = "<group>"; };
+		A5FA67BD263735AE004D5C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9229522642D96726046D27F /* Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig"; path = "Target Support Files/Pods-DesafioSafra-DesafioSafraUITests/Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CF6A70E39984A7FD56C64732 /* Pods-DesafioSafraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafraTests.debug.xcconfig"; path = "Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F8357F81FA513B1B342A449C /* Pods_DesafioSafra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioSafra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5FA6790263735AD004D5C79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41EA120E23C2C6B61DA0B46D /* Pods_DesafioSafra.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5FA67A9263735AE004D5C79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11325F411F1274E1084031FF /* Pods_DesafioSafraTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5FA67B4263735AE004D5C79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				172C181E985569EF01054EF9 /* Pods_DesafioSafra_DesafioSafraUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45708EDCE6DF340BFDB39973 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				854874D936C2D7D18352C480 /* Pods-DesafioSafra.debug.xcconfig */,
+				3E185C2D9CB63038F67EE86D /* Pods-DesafioSafra.release.xcconfig */,
+				43FD7E136F9847B44A68D17E /* Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig */,
+				A9229522642D96726046D27F /* Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig */,
+				CF6A70E39984A7FD56C64732 /* Pods-DesafioSafraTests.debug.xcconfig */,
+				144270F79E9BF546CFBDCF5B /* Pods-DesafioSafraTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5501EBACD6BE9811979F2D91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8357F81FA513B1B342A449C /* Pods_DesafioSafra.framework */,
+				9CAB09D8C15F87EB76357306 /* Pods_DesafioSafra_DesafioSafraUITests.framework */,
+				60FEC816CA49D9C77AEBB582 /* Pods_DesafioSafraTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88DE5A4D26389E950023D037 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				88DE5A5426389ED90023D037 /* Models */,
+				88DE5A5326389ED20023D037 /* ViewModels */,
+				88DE5A5226389ECC0023D037 /* View */,
+				88DE5A5026389EBA0023D037 /* Services */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		88DE5A4E26389EA00023D037 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A5FA67A2263735AE004D5C79 /* Assets.xcassets */,
+				A5FA679C263735AD004D5C79 /* Main.storyboard */,
+				A5FA67A4263735AE004D5C79 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		88DE5A4F26389EA50023D037 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		88DE5A5026389EBA0023D037 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		88DE5A5226389ECC0023D037 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88DE5A672638B8A10023D037 /* Cell */,
+				A5FA679A263735AD004D5C79 /* JavaPopController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88DE5A5326389ED20023D037 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				88DE5A612638B3FD0023D037 /* JavaPopViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		88DE5A5426389ED90023D037 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				88DE5A592638AAAD0023D037 /* JavaPop.swift */,
+				88DE5A5B2638AAE40023D037 /* Items.swift */,
+				88DE5A5D2638AB030023D037 /* Owner.swift */,
+				88DE5A632638B4750023D037 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		88DE5A672638B8A10023D037 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				88DE5A6A2638B9390023D037 /* JavaPopTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A5FA678A263735AD004D5C79 = {
+			isa = PBXGroup;
+			children = (
+				A5FA6795263735AD004D5C79 /* DesafioSafra */,
+				A5FA67AF263735AE004D5C79 /* DesafioSafraTests */,
+				A5FA67BA263735AE004D5C79 /* DesafioSafraUITests */,
+				A5FA6794263735AD004D5C79 /* Products */,
+				45708EDCE6DF340BFDB39973 /* Pods */,
+				5501EBACD6BE9811979F2D91 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A5FA6794263735AD004D5C79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5FA6793263735AD004D5C79 /* DesafioSafra.app */,
+				A5FA67AC263735AE004D5C79 /* DesafioSafraTests.xctest */,
+				A5FA67B7263735AE004D5C79 /* DesafioSafraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5FA6795263735AD004D5C79 /* DesafioSafra */ = {
+			isa = PBXGroup;
+			children = (
+				A5FA679F263735AD004D5C79 /* DesafioSafra.xcdatamodeld */,
+				A5FA6796263735AD004D5C79 /* AppDelegate.swift */,
+				88DE5A4D26389E950023D037 /* Architecture */,
+				88DE5A4E26389EA00023D037 /* UI */,
+				88DE5A4F26389EA50023D037 /* Utils */,
+				A5FA67A7263735AE004D5C79 /* Info.plist */,
+				88DE5A652638B52F0023D037 /* Mock.swift */,
+			);
+			path = DesafioSafra;
+			sourceTree = "<group>";
+		};
+		A5FA67AF263735AE004D5C79 /* DesafioSafraTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5FA67B0263735AE004D5C79 /* DesafioSafraTests.swift */,
+				A5FA67B2263735AE004D5C79 /* Info.plist */,
+			);
+			path = DesafioSafraTests;
+			sourceTree = "<group>";
+		};
+		A5FA67BA263735AE004D5C79 /* DesafioSafraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5FA67BB263735AE004D5C79 /* DesafioSafraUITests.swift */,
+				A5FA67BD263735AE004D5C79 /* Info.plist */,
+			);
+			path = DesafioSafraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5FA6792263735AD004D5C79 /* DesafioSafra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5FA67C0263735AE004D5C79 /* Build configuration list for PBXNativeTarget "DesafioSafra" */;
+			buildPhases = (
+				0C085E7F962C94FFB889B0CB /* [CP] Check Pods Manifest.lock */,
+				A5FA678F263735AD004D5C79 /* Sources */,
+				A5FA6790263735AD004D5C79 /* Frameworks */,
+				A5FA6791263735AD004D5C79 /* Resources */,
+				EA79198A614CC2CF50923DA5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesafioSafra;
+			productName = DesafioSafra;
+			productReference = A5FA6793263735AD004D5C79 /* DesafioSafra.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5FA67AB263735AE004D5C79 /* DesafioSafraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5FA67C3263735AE004D5C79 /* Build configuration list for PBXNativeTarget "DesafioSafraTests" */;
+			buildPhases = (
+				D540A8C9A110851811311EF4 /* [CP] Check Pods Manifest.lock */,
+				A5FA67A8263735AE004D5C79 /* Sources */,
+				A5FA67A9263735AE004D5C79 /* Frameworks */,
+				A5FA67AA263735AE004D5C79 /* Resources */,
+				1CAAC82B9137A61CEE4C13E8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5FA67AE263735AE004D5C79 /* PBXTargetDependency */,
+			);
+			name = DesafioSafraTests;
+			productName = DesafioSafraTests;
+			productReference = A5FA67AC263735AE004D5C79 /* DesafioSafraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A5FA67B6263735AE004D5C79 /* DesafioSafraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5FA67C6263735AE004D5C79 /* Build configuration list for PBXNativeTarget "DesafioSafraUITests" */;
+			buildPhases = (
+				B331DC92C8BCFCC6C77CEE01 /* [CP] Check Pods Manifest.lock */,
+				A5FA67B3263735AE004D5C79 /* Sources */,
+				A5FA67B4263735AE004D5C79 /* Frameworks */,
+				A5FA67B5263735AE004D5C79 /* Resources */,
+				9273BF1BA13F65B00EC7666E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5FA67B9263735AE004D5C79 /* PBXTargetDependency */,
+			);
+			name = DesafioSafraUITests;
+			productName = DesafioSafraUITests;
+			productReference = A5FA67B7263735AE004D5C79 /* DesafioSafraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5FA678B263735AD004D5C79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					A5FA6792263735AD004D5C79 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					A5FA67AB263735AE004D5C79 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = A5FA6792263735AD004D5C79;
+					};
+					A5FA67B6263735AE004D5C79 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = A5FA6792263735AD004D5C79;
+					};
+				};
+			};
+			buildConfigurationList = A5FA678E263735AD004D5C79 /* Build configuration list for PBXProject "DesafioSafra" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5FA678A263735AD004D5C79;
+			productRefGroup = A5FA6794263735AD004D5C79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5FA6792263735AD004D5C79 /* DesafioSafra */,
+				A5FA67AB263735AE004D5C79 /* DesafioSafraTests */,
+				A5FA67B6263735AE004D5C79 /* DesafioSafraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5FA6791263735AD004D5C79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5FA67A6263735AE004D5C79 /* LaunchScreen.storyboard in Resources */,
+				A5FA67A3263735AE004D5C79 /* Assets.xcassets in Resources */,
+				A5FA679E263735AD004D5C79 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5FA67AA263735AE004D5C79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5FA67B5263735AE004D5C79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C085E7F962C94FFB889B0CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesafioSafra-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CAAC82B9137A61CEE4C13E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9273BF1BA13F65B00EC7666E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioSafra-DesafioSafraUITests/Pods-DesafioSafra-DesafioSafraUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioSafra-DesafioSafraUITests/Pods-DesafioSafra-DesafioSafraUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesafioSafra-DesafioSafraUITests/Pods-DesafioSafra-DesafioSafraUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B331DC92C8BCFCC6C77CEE01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesafioSafra-DesafioSafraUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D540A8C9A110851811311EF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesafioSafraTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA79198A614CC2CF50923DA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioSafra/Pods-DesafioSafra-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioSafra/Pods-DesafioSafra-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesafioSafra/Pods-DesafioSafra-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5FA678F263735AD004D5C79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88DE5A622638B3FD0023D037 /* JavaPopViewModel.swift in Sources */,
+				A5FA679B263735AD004D5C79 /* JavaPopController.swift in Sources */,
+				A5FA67A1263735AD004D5C79 /* DesafioSafra.xcdatamodeld in Sources */,
+				88DE5A6B2638B9390023D037 /* JavaPopTableViewCell.swift in Sources */,
+				88DE5A5C2638AAE40023D037 /* Items.swift in Sources */,
+				88DE5A642638B4750023D037 /* User.swift in Sources */,
+				88DE5A5E2638AB030023D037 /* Owner.swift in Sources */,
+				A5FA6797263735AD004D5C79 /* AppDelegate.swift in Sources */,
+				88DE5A5A2638AAAD0023D037 /* JavaPop.swift in Sources */,
+				88DE5A662638B52F0023D037 /* Mock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5FA67A8263735AE004D5C79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5FA67B1263735AE004D5C79 /* DesafioSafraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5FA67B3263735AE004D5C79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5FA67BC263735AE004D5C79 /* DesafioSafraUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5FA67AE263735AE004D5C79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5FA6792263735AD004D5C79 /* DesafioSafra */;
+			targetProxy = A5FA67AD263735AE004D5C79 /* PBXContainerItemProxy */;
+		};
+		A5FA67B9263735AE004D5C79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5FA6792263735AD004D5C79 /* DesafioSafra */;
+			targetProxy = A5FA67B8263735AE004D5C79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5FA679C263735AD004D5C79 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5FA679D263735AD004D5C79 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5FA67A4263735AE004D5C79 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5FA67A5263735AE004D5C79 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5FA67BE263735AE004D5C79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A5FA67BF263735AE004D5C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5FA67C1263735AE004D5C79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 854874D936C2D7D18352C480 /* Pods-DesafioSafra.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5TQQ84X3M3;
+				INFOPLIST_FILE = DesafioSafra/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.renatoferrazdf.DesafioSafra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5FA67C2263735AE004D5C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E185C2D9CB63038F67EE86D /* Pods-DesafioSafra.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5TQQ84X3M3;
+				INFOPLIST_FILE = DesafioSafra/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.renatoferrazdf.DesafioSafra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A5FA67C4263735AE004D5C79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF6A70E39984A7FD56C64732 /* Pods-DesafioSafraTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5TQQ84X3M3;
+				INFOPLIST_FILE = DesafioSafraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.renatoferrazdf.DesafioSafraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesafioSafra.app/DesafioSafra";
+			};
+			name = Debug;
+		};
+		A5FA67C5263735AE004D5C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 144270F79E9BF546CFBDCF5B /* Pods-DesafioSafraTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5TQQ84X3M3;
+				INFOPLIST_FILE = DesafioSafraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.renatoferrazdf.DesafioSafraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesafioSafra.app/DesafioSafra";
+			};
+			name = Release;
+		};
+		A5FA67C7263735AE004D5C79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43FD7E136F9847B44A68D17E /* Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5TQQ84X3M3;
+				INFOPLIST_FILE = DesafioSafraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.renatoferrazdf.DesafioSafraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DesafioSafra;
+			};
+			name = Debug;
+		};
+		A5FA67C8263735AE004D5C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9229522642D96726046D27F /* Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5TQQ84X3M3;
+				INFOPLIST_FILE = DesafioSafraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.renatoferrazdf.DesafioSafraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DesafioSafra;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5FA678E263735AD004D5C79 /* Build configuration list for PBXProject "DesafioSafra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5FA67BE263735AE004D5C79 /* Debug */,
+				A5FA67BF263735AE004D5C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5FA67C0263735AE004D5C79 /* Build configuration list for PBXNativeTarget "DesafioSafra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5FA67C1263735AE004D5C79 /* Debug */,
+				A5FA67C2263735AE004D5C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5FA67C3263735AE004D5C79 /* Build configuration list for PBXNativeTarget "DesafioSafraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5FA67C4263735AE004D5C79 /* Debug */,
+				A5FA67C5263735AE004D5C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5FA67C6263735AE004D5C79 /* Build configuration list for PBXNativeTarget "DesafioSafraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5FA67C7263735AE004D5C79 /* Debug */,
+				A5FA67C8263735AE004D5C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A5FA679F263735AD004D5C79 /* DesafioSafra.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A5FA67A0263735AD004D5C79 /* DesafioSafra.xcdatamodel */,
+			);
+			currentVersion = A5FA67A0263735AD004D5C79 /* DesafioSafra.xcdatamodel */;
+			path = DesafioSafra.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A5FA678B263735AD004D5C79 /* Project object */;
+}

@@ -10,6 +10,7 @@
 		11325F411F1274E1084031FF /* Pods_DesafioSafraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FEC816CA49D9C77AEBB582 /* Pods_DesafioSafraTests.framework */; };
 		172C181E985569EF01054EF9 /* Pods_DesafioSafra_DesafioSafraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAB09D8C15F87EB76357306 /* Pods_DesafioSafra_DesafioSafraUITests.framework */; };
 		41EA120E23C2C6B61DA0B46D /* Pods_DesafioSafra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8357F81FA513B1B342A449C /* Pods_DesafioSafra.framework */; };
+		88DAA669263B3C230092D514 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DAA668263B3C230092D514 /* WebViewController.swift */; };
 		88DE5A5A2638AAAD0023D037 /* JavaPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A592638AAAD0023D037 /* JavaPop.swift */; };
 		88DE5A5C2638AAE40023D037 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A5B2638AAE40023D037 /* Items.swift */; };
 		88DE5A5E2638AB030023D037 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A5D2638AB030023D037 /* Owner.swift */; };
@@ -17,6 +18,12 @@
 		88DE5A642638B4750023D037 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A632638B4750023D037 /* User.swift */; };
 		88DE5A662638B52F0023D037 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A652638B52F0023D037 /* Mock.swift */; };
 		88DE5A6B2638B9390023D037 /* JavaPopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A6A2638B9390023D037 /* JavaPopTableViewCell.swift */; };
+		88DE5A6D2639C1C70023D037 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A6C2639C1C70023D037 /* PullRequest.swift */; };
+		88DE5A6F2639C2C20023D037 /* PullRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A6E2639C2C20023D037 /* PullRequestViewModel.swift */; };
+		88DE5A742639D9080023D037 /* UIViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A732639D9080023D037 /* UIViewController+Extras.swift */; };
+		88DE5A762639D93A0023D037 /* UITableViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A752639D93A0023D037 /* UITableViewController+Extras.swift */; };
+		88DE5A7D2639E59A0023D037 /* PullRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A7C2639E59A0023D037 /* PullRequestTableViewCell.swift */; };
+		88DE5A7F263B1A890023D037 /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A7E263B1A890023D037 /* PullRequestViewController.swift */; };
 		A5FA6797263735AD004D5C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA6796263735AD004D5C79 /* AppDelegate.swift */; };
 		A5FA679B263735AD004D5C79 /* JavaPopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA679A263735AD004D5C79 /* JavaPopController.swift */; };
 		A5FA679E263735AD004D5C79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FA679C263735AD004D5C79 /* Main.storyboard */; };
@@ -50,6 +57,7 @@
 		43FD7E136F9847B44A68D17E /* Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig"; path = "Target Support Files/Pods-DesafioSafra-DesafioSafraUITests/Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		60FEC816CA49D9C77AEBB582 /* Pods_DesafioSafraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioSafraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		854874D936C2D7D18352C480 /* Pods-DesafioSafra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra.debug.xcconfig"; path = "Target Support Files/Pods-DesafioSafra/Pods-DesafioSafra.debug.xcconfig"; sourceTree = "<group>"; };
+		88DAA668263B3C230092D514 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		88DE5A592638AAAD0023D037 /* JavaPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaPop.swift; sourceTree = "<group>"; };
 		88DE5A5B2638AAE40023D037 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		88DE5A5D2638AB030023D037 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
@@ -57,6 +65,12 @@
 		88DE5A632638B4750023D037 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88DE5A652638B52F0023D037 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		88DE5A6A2638B9390023D037 /* JavaPopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaPopTableViewCell.swift; sourceTree = "<group>"; };
+		88DE5A6C2639C1C70023D037 /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
+		88DE5A6E2639C2C20023D037 /* PullRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewModel.swift; sourceTree = "<group>"; };
+		88DE5A732639D9080023D037 /* UIViewController+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extras.swift"; sourceTree = "<group>"; };
+		88DE5A752639D93A0023D037 /* UITableViewController+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Extras.swift"; sourceTree = "<group>"; };
+		88DE5A7C2639E59A0023D037 /* PullRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestTableViewCell.swift; sourceTree = "<group>"; };
+		88DE5A7E263B1A890023D037 /* PullRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewController.swift; sourceTree = "<group>"; };
 		9CAB09D8C15F87EB76357306 /* Pods_DesafioSafra_DesafioSafraUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioSafra_DesafioSafraUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FA6793263735AD004D5C79 /* DesafioSafra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioSafra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FA6796263735AD004D5C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +142,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		88DAA667263B3C040092D514 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				88DAA668263B3C230092D514 /* WebViewController.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
 		88DE5A4D26389E950023D037 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +174,7 @@
 		88DE5A4F26389EA50023D037 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				88DE5A722639D8EC0023D037 /* Extension */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -166,8 +189,9 @@
 		88DE5A5226389ECC0023D037 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				88DE5A672638B8A10023D037 /* Cell */,
-				A5FA679A263735AD004D5C79 /* JavaPopController.swift */,
+				88DAA667263B3C040092D514 /* Web */,
+				88DE5A782639DADD0023D037 /* PullRequest */,
+				88DE5A772639DACD0023D037 /* JavaPop */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				88DE5A612638B3FD0023D037 /* JavaPopViewModel.swift */,
+				88DE5A6E2639C2C20023D037 /* PullRequestViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -187,6 +212,7 @@
 				88DE5A5B2638AAE40023D037 /* Items.swift */,
 				88DE5A5D2638AB030023D037 /* Owner.swift */,
 				88DE5A632638B4750023D037 /* User.swift */,
+				88DE5A6C2639C1C70023D037 /* PullRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +221,41 @@
 			isa = PBXGroup;
 			children = (
 				88DE5A6A2638B9390023D037 /* JavaPopTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		88DE5A722639D8EC0023D037 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				88DE5A732639D9080023D037 /* UIViewController+Extras.swift */,
+				88DE5A752639D93A0023D037 /* UITableViewController+Extras.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		88DE5A772639DACD0023D037 /* JavaPop */ = {
+			isa = PBXGroup;
+			children = (
+				88DE5A672638B8A10023D037 /* Cell */,
+				A5FA679A263735AD004D5C79 /* JavaPopController.swift */,
+			);
+			path = JavaPop;
+			sourceTree = "<group>";
+		};
+		88DE5A782639DADD0023D037 /* PullRequest */ = {
+			isa = PBXGroup;
+			children = (
+				88DE5A792639DAED0023D037 /* Cell */,
+				88DE5A7E263B1A890023D037 /* PullRequestViewController.swift */,
+			);
+			path = PullRequest;
+			sourceTree = "<group>";
+		};
+		88DE5A792639DAED0023D037 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				88DE5A7C2639E59A0023D037 /* PullRequestTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -509,14 +570,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88DE5A7F263B1A890023D037 /* PullRequestViewController.swift in Sources */,
 				88DE5A622638B3FD0023D037 /* JavaPopViewModel.swift in Sources */,
+				88DE5A742639D9080023D037 /* UIViewController+Extras.swift in Sources */,
 				A5FA679B263735AD004D5C79 /* JavaPopController.swift in Sources */,
 				A5FA67A1263735AD004D5C79 /* DesafioSafra.xcdatamodeld in Sources */,
 				88DE5A6B2638B9390023D037 /* JavaPopTableViewCell.swift in Sources */,
 				88DE5A5C2638AAE40023D037 /* Items.swift in Sources */,
+				88DE5A762639D93A0023D037 /* UITableViewController+Extras.swift in Sources */,
 				88DE5A642638B4750023D037 /* User.swift in Sources */,
+				88DE5A6D2639C1C70023D037 /* PullRequest.swift in Sources */,
+				88DE5A6F2639C2C20023D037 /* PullRequestViewModel.swift in Sources */,
 				88DE5A5E2638AB030023D037 /* Owner.swift in Sources */,
+				88DAA669263B3C230092D514 /* WebViewController.swift in Sources */,
 				A5FA6797263735AD004D5C79 /* AppDelegate.swift in Sources */,
+				88DE5A7D2639E59A0023D037 /* PullRequestTableViewCell.swift in Sources */,
 				88DE5A5A2638AAAD0023D037 /* JavaPop.swift in Sources */,
 				88DE5A662638B52F0023D037 /* Mock.swift in Sources */,
 			);

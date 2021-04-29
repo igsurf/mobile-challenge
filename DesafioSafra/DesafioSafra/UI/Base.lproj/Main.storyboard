@@ -198,9 +198,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="GitHub JavaPop" id="qaH-L5-pk7">
-                        <barButtonItem key="leftBarButtonItem" title="Item" style="done" id="1JS-6Z-uRx">
-                            <imageReference key="image" image="line.horizontal.3" catalog="system" symbolScale="large"/>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="leftBarButtonItem" style="done" id="1JS-6Z-uRx">
+                            <imageReference key="image" image="menu" symbolScale="large"/>
                             <connections>
                                 <action selector="showMenu:" destination="7DO-Y3-S3Q" id="pxl-31-rhY"/>
                             </connections>
@@ -328,7 +327,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvi-Ec-3dC">
-                                                            <rect key="frame" x="8" y="39" width="358" height="20"/>
+                                                            <rect key="frame" x="8" y="39" width="358" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -410,7 +409,6 @@
                                         <rect key="frame" x="347" y="15" width="47" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Tdj-dD-GFZ"/>
-                                            <constraint firstAttribute="width" constant="47" id="d93-UM-SuJ"/>
                                         </constraints>
                                         <state key="normal" title="Fechar"/>
                                         <connections>
@@ -424,10 +422,15 @@
                                     <constraint firstAttribute="trailing" secondItem="ZBw-vT-oZZ" secondAttribute="trailing" constant="20" symbolic="YES" id="TKB-Fg-Vaq"/>
                                     <constraint firstItem="ZBw-vT-oZZ" firstAttribute="top" secondItem="xtZ-gT-T2R" secondAttribute="top" constant="15" id="gOc-vM-87U"/>
                                     <constraint firstAttribute="height" constant="60" id="uAr-Rw-QhN"/>
+                                    <constraint firstItem="ZBw-vT-oZZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xtZ-gT-T2R" secondAttribute="leading" constant="20" symbolic="YES" id="vuz-rG-SlI"/>
                                 </constraints>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="l11-R2-Ffp">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="l11-R2-Ffp">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="LKz-NZ-uzk"/>
+                                    <constraint firstAttribute="height" constant="37" id="hnv-Kb-yAm"/>
+                                </constraints>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Xk-01-qpi"/>
@@ -460,7 +463,7 @@
         <image name="book" width="25" height="25"/>
         <image name="contact" width="416" height="416"/>
         <image name="forkColor" width="256" height="384"/>
-        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="menu" width="25" height="21"/>
         <image name="starcolor" width="512" height="491"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

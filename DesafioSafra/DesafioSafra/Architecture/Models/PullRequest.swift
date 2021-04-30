@@ -17,6 +17,7 @@ public struct PullRequest: Codable {
     let state: String?
     let locked: Bool?
     let title: String?
+    let user: User?
     let body: String?
 
     private enum CodingKeys: String, CodingKey {
@@ -28,6 +29,7 @@ public struct PullRequest: Codable {
         case state
         case locked
         case title
+        case user
         case body
     }
 }

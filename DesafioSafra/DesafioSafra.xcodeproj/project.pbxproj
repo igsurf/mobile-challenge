@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11325F411F1274E1084031FF /* Pods_DesafioSafraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FEC816CA49D9C77AEBB582 /* Pods_DesafioSafraTests.framework */; };
-		172C181E985569EF01054EF9 /* Pods_DesafioSafra_DesafioSafraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAB09D8C15F87EB76357306 /* Pods_DesafioSafra_DesafioSafraUITests.framework */; };
-		41EA120E23C2C6B61DA0B46D /* Pods_DesafioSafra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8357F81FA513B1B342A449C /* Pods_DesafioSafra.framework */; };
+		3DC382778B3C7DBFD923B1F5 /* Pods_DesafioSafra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CEDC13FD9C334F8702AC85 /* Pods_DesafioSafra.framework */; };
 		88DAA669263B3C230092D514 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DAA668263B3C230092D514 /* WebViewController.swift */; };
 		88DE5A5A2638AAAD0023D037 /* JavaPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A592638AAAD0023D037 /* JavaPop.swift */; };
 		88DE5A5C2638AAE40023D037 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A5B2638AAE40023D037 /* Items.swift */; };
@@ -24,6 +22,14 @@
 		88DE5A762639D93A0023D037 /* UITableViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A752639D93A0023D037 /* UITableViewController+Extras.swift */; };
 		88DE5A7D2639E59A0023D037 /* PullRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A7C2639E59A0023D037 /* PullRequestTableViewCell.swift */; };
 		88DE5A7F263B1A890023D037 /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE5A7E263B1A890023D037 /* PullRequestViewController.swift */; };
+		9D2ED4B1D5161AACE230AA94 /* Pods_DesafioSafraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA11BFF655D3E49B3B71D71B /* Pods_DesafioSafraTests.framework */; };
+		9E91AA54263C2E140055DA80 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E91AA53263C2E140055DA80 /* RequestManager.swift */; };
+		9E91AA56263C2E220055DA80 /* AlamofireRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E91AA55263C2E220055DA80 /* AlamofireRequest.swift */; };
+		9E91AA5B263C2E880055DA80 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E91AA5A263C2E880055DA80 /* UsersAPI.swift */; };
+		9E91AA5D263C2EAD0055DA80 /* StarsRepositoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E91AA5C263C2EAD0055DA80 /* StarsRepositoriesAPI.swift */; };
+		9E91AA5F263C2EDC0055DA80 /* GithubAPISources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E91AA5E263C2EDC0055DA80 /* GithubAPISources.swift */; };
+		9E91AA62263C785E0055DA80 /* PullsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E91AA61263C785E0055DA80 /* PullsApi.swift */; };
+		9E91AA64263CA1BB0055DA80 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E91AA63263CA1BB0055DA80 /* Utils.swift */; };
 		A5FA6797263735AD004D5C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA6796263735AD004D5C79 /* AppDelegate.swift */; };
 		A5FA679B263735AD004D5C79 /* JavaPopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA679A263735AD004D5C79 /* JavaPopController.swift */; };
 		A5FA679E263735AD004D5C79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FA679C263735AD004D5C79 /* Main.storyboard */; };
@@ -32,6 +38,7 @@
 		A5FA67A6263735AE004D5C79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FA67A4263735AE004D5C79 /* LaunchScreen.storyboard */; };
 		A5FA67B1263735AE004D5C79 /* DesafioSafraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA67B0263735AE004D5C79 /* DesafioSafraTests.swift */; };
 		A5FA67BC263735AE004D5C79 /* DesafioSafraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA67BB263735AE004D5C79 /* DesafioSafraUITests.swift */; };
+		E07582938257F024E4352620 /* Pods_DesafioSafra_DesafioSafraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9122FD0F2BF8A43B8EF091CB /* Pods_DesafioSafra_DesafioSafraUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		144270F79E9BF546CFBDCF5B /* Pods-DesafioSafraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafraTests.release.xcconfig"; path = "Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests.release.xcconfig"; sourceTree = "<group>"; };
-		3E185C2D9CB63038F67EE86D /* Pods-DesafioSafra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra.release.xcconfig"; path = "Target Support Files/Pods-DesafioSafra/Pods-DesafioSafra.release.xcconfig"; sourceTree = "<group>"; };
-		43FD7E136F9847B44A68D17E /* Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig"; path = "Target Support Files/Pods-DesafioSafra-DesafioSafraUITests/Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		60FEC816CA49D9C77AEBB582 /* Pods_DesafioSafraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioSafraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		854874D936C2D7D18352C480 /* Pods-DesafioSafra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra.debug.xcconfig"; path = "Target Support Files/Pods-DesafioSafra/Pods-DesafioSafra.debug.xcconfig"; sourceTree = "<group>"; };
+		1DCD2CBA65F15B224929731F /* Pods-DesafioSafraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafraTests.debug.xcconfig"; path = "Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6364849FEC7B1A9340750E3D /* Pods-DesafioSafra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra.debug.xcconfig"; path = "Target Support Files/Pods-DesafioSafra/Pods-DesafioSafra.debug.xcconfig"; sourceTree = "<group>"; };
+		69B030B26DE70723EBB79466 /* Pods-DesafioSafraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafraTests.release.xcconfig"; path = "Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests.release.xcconfig"; sourceTree = "<group>"; };
 		88DAA668263B3C230092D514 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		88DE5A592638AAAD0023D037 /* JavaPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaPop.swift; sourceTree = "<group>"; };
 		88DE5A5B2638AAE40023D037 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
@@ -71,7 +76,17 @@
 		88DE5A752639D93A0023D037 /* UITableViewController+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Extras.swift"; sourceTree = "<group>"; };
 		88DE5A7C2639E59A0023D037 /* PullRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestTableViewCell.swift; sourceTree = "<group>"; };
 		88DE5A7E263B1A890023D037 /* PullRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewController.swift; sourceTree = "<group>"; };
-		9CAB09D8C15F87EB76357306 /* Pods_DesafioSafra_DesafioSafraUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioSafra_DesafioSafraUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		898AD435214DAB70CC39FA24 /* Pods-DesafioSafra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra.release.xcconfig"; path = "Target Support Files/Pods-DesafioSafra/Pods-DesafioSafra.release.xcconfig"; sourceTree = "<group>"; };
+		9122FD0F2BF8A43B8EF091CB /* Pods_DesafioSafra_DesafioSafraUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioSafra_DesafioSafraUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93D32BC1EFF74609472CE946 /* Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig"; path = "Target Support Files/Pods-DesafioSafra-DesafioSafraUITests/Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		95CEDC13FD9C334F8702AC85 /* Pods_DesafioSafra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioSafra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E91AA53263C2E140055DA80 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		9E91AA55263C2E220055DA80 /* AlamofireRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequest.swift; sourceTree = "<group>"; };
+		9E91AA5A263C2E880055DA80 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
+		9E91AA5C263C2EAD0055DA80 /* StarsRepositoriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsRepositoriesAPI.swift; sourceTree = "<group>"; };
+		9E91AA5E263C2EDC0055DA80 /* GithubAPISources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPISources.swift; sourceTree = "<group>"; };
+		9E91AA61263C785E0055DA80 /* PullsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullsApi.swift; sourceTree = "<group>"; };
+		9E91AA63263CA1BB0055DA80 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A5FA6793263735AD004D5C79 /* DesafioSafra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioSafra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FA6796263735AD004D5C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5FA679A263735AD004D5C79 /* JavaPopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaPopController.swift; sourceTree = "<group>"; };
@@ -86,9 +101,8 @@
 		A5FA67B7263735AE004D5C79 /* DesafioSafraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioSafraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FA67BB263735AE004D5C79 /* DesafioSafraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioSafraUITests.swift; sourceTree = "<group>"; };
 		A5FA67BD263735AE004D5C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9229522642D96726046D27F /* Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig"; path = "Target Support Files/Pods-DesafioSafra-DesafioSafraUITests/Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CF6A70E39984A7FD56C64732 /* Pods-DesafioSafraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafraTests.debug.xcconfig"; path = "Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F8357F81FA513B1B342A449C /* Pods_DesafioSafra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioSafra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84AF724220EF497290779F6 /* Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig"; path = "Target Support Files/Pods-DesafioSafra-DesafioSafraUITests/Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DA11BFF655D3E49B3B71D71B /* Pods_DesafioSafraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioSafraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41EA120E23C2C6B61DA0B46D /* Pods_DesafioSafra.framework in Frameworks */,
+				3DC382778B3C7DBFD923B1F5 /* Pods_DesafioSafra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11325F411F1274E1084031FF /* Pods_DesafioSafraTests.framework in Frameworks */,
+				9D2ED4B1D5161AACE230AA94 /* Pods_DesafioSafraTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				172C181E985569EF01054EF9 /* Pods_DesafioSafra_DesafioSafraUITests.framework in Frameworks */,
+				E07582938257F024E4352620 /* Pods_DesafioSafra_DesafioSafraUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,24 +136,14 @@
 		45708EDCE6DF340BFDB39973 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				854874D936C2D7D18352C480 /* Pods-DesafioSafra.debug.xcconfig */,
-				3E185C2D9CB63038F67EE86D /* Pods-DesafioSafra.release.xcconfig */,
-				43FD7E136F9847B44A68D17E /* Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig */,
-				A9229522642D96726046D27F /* Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig */,
-				CF6A70E39984A7FD56C64732 /* Pods-DesafioSafraTests.debug.xcconfig */,
-				144270F79E9BF546CFBDCF5B /* Pods-DesafioSafraTests.release.xcconfig */,
+				6364849FEC7B1A9340750E3D /* Pods-DesafioSafra.debug.xcconfig */,
+				898AD435214DAB70CC39FA24 /* Pods-DesafioSafra.release.xcconfig */,
+				93D32BC1EFF74609472CE946 /* Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig */,
+				C84AF724220EF497290779F6 /* Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig */,
+				1DCD2CBA65F15B224929731F /* Pods-DesafioSafraTests.debug.xcconfig */,
+				69B030B26DE70723EBB79466 /* Pods-DesafioSafraTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		5501EBACD6BE9811979F2D91 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F8357F81FA513B1B342A449C /* Pods_DesafioSafra.framework */,
-				9CAB09D8C15F87EB76357306 /* Pods_DesafioSafra_DesafioSafraUITests.framework */,
-				60FEC816CA49D9C77AEBB582 /* Pods_DesafioSafraTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		88DAA667263B3C040092D514 /* Web */ = {
@@ -153,10 +157,10 @@
 		88DE5A4D26389E950023D037 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				9E91AA52263C2DF90055DA80 /* Services */,
 				88DE5A5426389ED90023D037 /* Models */,
 				88DE5A5326389ED20023D037 /* ViewModels */,
 				88DE5A5226389ECC0023D037 /* View */,
-				88DE5A5026389EBA0023D037 /* Services */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -177,13 +181,6 @@
 				88DE5A722639D8EC0023D037 /* Extension */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		88DE5A5026389EBA0023D037 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		88DE5A5226389ECC0023D037 /* View */ = {
@@ -230,6 +227,7 @@
 			children = (
 				88DE5A732639D9080023D037 /* UIViewController+Extras.swift */,
 				88DE5A752639D93A0023D037 /* UITableViewController+Extras.swift */,
+				9E91AA63263CA1BB0055DA80 /* Utils.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -260,6 +258,51 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		9E91AA52263C2DF90055DA80 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9E91AA57263C2E5A0055DA80 /* GithubAPI */,
+				9E91AA53263C2E140055DA80 /* RequestManager.swift */,
+				9E91AA55263C2E220055DA80 /* AlamofireRequest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9E91AA57263C2E5A0055DA80 /* GithubAPI */ = {
+			isa = PBXGroup;
+			children = (
+				9E91AA60263C78490055DA80 /* Pulls */,
+				9E91AA59263C2E710055DA80 /* StarsRepositories */,
+				9E91AA58263C2E6B0055DA80 /* Users */,
+				9E91AA5E263C2EDC0055DA80 /* GithubAPISources.swift */,
+			);
+			path = GithubAPI;
+			sourceTree = "<group>";
+		};
+		9E91AA58263C2E6B0055DA80 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				9E91AA5A263C2E880055DA80 /* UsersAPI.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		9E91AA59263C2E710055DA80 /* StarsRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				9E91AA5C263C2EAD0055DA80 /* StarsRepositoriesAPI.swift */,
+			);
+			path = StarsRepositories;
+			sourceTree = "<group>";
+		};
+		9E91AA60263C78490055DA80 /* Pulls */ = {
+			isa = PBXGroup;
+			children = (
+				9E91AA61263C785E0055DA80 /* PullsApi.swift */,
+			);
+			path = Pulls;
+			sourceTree = "<group>";
+		};
 		A5FA678A263735AD004D5C79 = {
 			isa = PBXGroup;
 			children = (
@@ -268,7 +311,7 @@
 				A5FA67BA263735AE004D5C79 /* DesafioSafraUITests */,
 				A5FA6794263735AD004D5C79 /* Products */,
 				45708EDCE6DF340BFDB39973 /* Pods */,
-				5501EBACD6BE9811979F2D91 /* Frameworks */,
+				EC94877BA95DAAA2432C6AF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -314,6 +357,16 @@
 			path = DesafioSafraUITests;
 			sourceTree = "<group>";
 		};
+		EC94877BA95DAAA2432C6AF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95CEDC13FD9C334F8702AC85 /* Pods_DesafioSafra.framework */,
+				9122FD0F2BF8A43B8EF091CB /* Pods_DesafioSafra_DesafioSafraUITests.framework */,
+				DA11BFF655D3E49B3B71D71B /* Pods_DesafioSafraTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -321,11 +374,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5FA67C0263735AE004D5C79 /* Build configuration list for PBXNativeTarget "DesafioSafra" */;
 			buildPhases = (
-				0C085E7F962C94FFB889B0CB /* [CP] Check Pods Manifest.lock */,
+				CF6674D4E54E85CAA6D27D33 /* [CP] Check Pods Manifest.lock */,
 				A5FA678F263735AD004D5C79 /* Sources */,
 				A5FA6790263735AD004D5C79 /* Frameworks */,
 				A5FA6791263735AD004D5C79 /* Resources */,
-				EA79198A614CC2CF50923DA5 /* [CP] Embed Pods Frameworks */,
+				94CF92796B3B029390137C9F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,11 +393,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5FA67C3263735AE004D5C79 /* Build configuration list for PBXNativeTarget "DesafioSafraTests" */;
 			buildPhases = (
-				D540A8C9A110851811311EF4 /* [CP] Check Pods Manifest.lock */,
+				1CC66C45379C79DEF3112BD6 /* [CP] Check Pods Manifest.lock */,
 				A5FA67A8263735AE004D5C79 /* Sources */,
 				A5FA67A9263735AE004D5C79 /* Frameworks */,
 				A5FA67AA263735AE004D5C79 /* Resources */,
-				1CAAC82B9137A61CEE4C13E8 /* [CP] Embed Pods Frameworks */,
+				37263165B9535645FC807C02 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -360,11 +413,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5FA67C6263735AE004D5C79 /* Build configuration list for PBXNativeTarget "DesafioSafraUITests" */;
 			buildPhases = (
-				B331DC92C8BCFCC6C77CEE01 /* [CP] Check Pods Manifest.lock */,
+				429763AF7DA81A52CEA566D2 /* [CP] Check Pods Manifest.lock */,
 				A5FA67B3263735AE004D5C79 /* Sources */,
 				A5FA67B4263735AE004D5C79 /* Frameworks */,
 				A5FA67B5263735AE004D5C79 /* Resources */,
-				9273BF1BA13F65B00EC7666E /* [CP] Embed Pods Frameworks */,
+				138C0AB5DB50ED7B6FBBCFEE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -446,46 +499,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C085E7F962C94FFB889B0CB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DesafioSafra-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1CAAC82B9137A61CEE4C13E8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9273BF1BA13F65B00EC7666E /* [CP] Embed Pods Frameworks */ = {
+		138C0AB5DB50ED7B6FBBCFEE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -502,29 +516,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesafioSafra-DesafioSafraUITests/Pods-DesafioSafra-DesafioSafraUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B331DC92C8BCFCC6C77CEE01 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DesafioSafra-DesafioSafraUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D540A8C9A110851811311EF4 /* [CP] Check Pods Manifest.lock */ = {
+		1CC66C45379C79DEF3112BD6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -546,7 +538,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA79198A614CC2CF50923DA5 /* [CP] Embed Pods Frameworks */ = {
+		37263165B9535645FC807C02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesafioSafraTests/Pods-DesafioSafraTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		429763AF7DA81A52CEA566D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesafioSafra-DesafioSafraUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94CF92796B3B029390137C9F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -563,6 +594,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesafioSafra/Pods-DesafioSafra-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CF6674D4E54E85CAA6D27D33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesafioSafra-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -570,6 +623,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E91AA5D263C2EAD0055DA80 /* StarsRepositoriesAPI.swift in Sources */,
+				9E91AA62263C785E0055DA80 /* PullsApi.swift in Sources */,
 				88DE5A7F263B1A890023D037 /* PullRequestViewController.swift in Sources */,
 				88DE5A622638B3FD0023D037 /* JavaPopViewModel.swift in Sources */,
 				88DE5A742639D9080023D037 /* UIViewController+Extras.swift in Sources */,
@@ -579,12 +634,17 @@
 				88DE5A5C2638AAE40023D037 /* Items.swift in Sources */,
 				88DE5A762639D93A0023D037 /* UITableViewController+Extras.swift in Sources */,
 				88DE5A642638B4750023D037 /* User.swift in Sources */,
+				9E91AA56263C2E220055DA80 /* AlamofireRequest.swift in Sources */,
 				88DE5A6D2639C1C70023D037 /* PullRequest.swift in Sources */,
 				88DE5A6F2639C2C20023D037 /* PullRequestViewModel.swift in Sources */,
 				88DE5A5E2638AB030023D037 /* Owner.swift in Sources */,
 				88DAA669263B3C230092D514 /* WebViewController.swift in Sources */,
 				A5FA6797263735AD004D5C79 /* AppDelegate.swift in Sources */,
+				9E91AA64263CA1BB0055DA80 /* Utils.swift in Sources */,
+				9E91AA5F263C2EDC0055DA80 /* GithubAPISources.swift in Sources */,
 				88DE5A7D2639E59A0023D037 /* PullRequestTableViewCell.swift in Sources */,
+				9E91AA54263C2E140055DA80 /* RequestManager.swift in Sources */,
+				9E91AA5B263C2E880055DA80 /* UsersAPI.swift in Sources */,
 				88DE5A5A2638AAAD0023D037 /* JavaPop.swift in Sources */,
 				88DE5A662638B52F0023D037 /* Mock.swift in Sources */,
 			);
@@ -759,7 +819,7 @@
 		};
 		A5FA67C1263735AE004D5C79 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 854874D936C2D7D18352C480 /* Pods-DesafioSafra.debug.xcconfig */;
+			baseConfigurationReference = 6364849FEC7B1A9340750E3D /* Pods-DesafioSafra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -780,7 +840,7 @@
 		};
 		A5FA67C2263735AE004D5C79 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E185C2D9CB63038F67EE86D /* Pods-DesafioSafra.release.xcconfig */;
+			baseConfigurationReference = 898AD435214DAB70CC39FA24 /* Pods-DesafioSafra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -801,7 +861,7 @@
 		};
 		A5FA67C4263735AE004D5C79 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF6A70E39984A7FD56C64732 /* Pods-DesafioSafraTests.debug.xcconfig */;
+			baseConfigurationReference = 1DCD2CBA65F15B224929731F /* Pods-DesafioSafraTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -824,7 +884,7 @@
 		};
 		A5FA67C5263735AE004D5C79 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 144270F79E9BF546CFBDCF5B /* Pods-DesafioSafraTests.release.xcconfig */;
+			baseConfigurationReference = 69B030B26DE70723EBB79466 /* Pods-DesafioSafraTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -847,7 +907,7 @@
 		};
 		A5FA67C7263735AE004D5C79 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43FD7E136F9847B44A68D17E /* Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig */;
+			baseConfigurationReference = 93D32BC1EFF74609472CE946 /* Pods-DesafioSafra-DesafioSafraUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -868,7 +928,7 @@
 		};
 		A5FA67C8263735AE004D5C79 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9229522642D96726046D27F /* Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig */;
+			baseConfigurationReference = C84AF724220EF497290779F6 /* Pods-DesafioSafra-DesafioSafraUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;

@@ -26,14 +26,13 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - SDWebImage
-  trunk:
     - Alamofire
     - FreakingSimpleRoundImageView
     - LoadingPlaceholderView
     - Nimble
     - Quick
     - QuickLayout
+    - SDWebImage
     - SwiftDate
     - SwiftEntryKit
 

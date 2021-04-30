@@ -383,6 +383,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblClosed" destination="kEZ-uQ-Rg6" id="QmK-6S-4wK"/>
+                        <outlet property="lblOpened" destination="0qW-xe-mQG" id="GL5-5M-g7L"/>
                         <outlet property="tableView" destination="dpC-pV-K3b" id="2Hc-r3-R6p"/>
                     </connections>
                 </viewController>

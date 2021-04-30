@@ -10,13 +10,13 @@ Tel: (61) 99368-4628
 
 |  |  |
 |--|--|
-| <img src="https://github.com/rfcbf/" width="480" height="720" /> | <img src="https://github.com/rfcbf/" width="480" height="720" />
-| <img src="https://github.com/rfcbf/" width="480" height="720" /> | 
+| <img src="https://github.com/rfcbf/mobile-challenge/blob/Desafio-Safra/Imagens/iphone1.png" width="480" height="720" /> | <img src="https://github.com/rfcbf/mobile-challenge/blob/Desafio-Safra/Imagens/iphone2.png" width="480" height="720" />
+| <img src="https://github.com/rfcbf/mobile-challenge/blob/Desafio-Safra/Imagens/iphone1.png" width="480" height="720" /> | 
 
 |  |  |
 |--|--|
-| <img src="https://github.com/rfcbf/" width="480" height="720" /> | <img src="https://github.com/rfcbf/" width="480" height="720" />
-| <img src="https://github.com/rfcbf/" width="480" height="720" /> | 
+| <img src="https://github.com/rfcbf/mobile-challenge/blob/Desafio-Safra/Imagens/ipad1.png" width="480" height="720" /> | <img src="https://github.com/rfcbf/mobile-challenge/blob/Desafio-Safra/Imagens/ipad2.png" width="480" height="720" />
+| <img src="https://github.com/rfcbf/mobile-challenge/blob/Desafio-Safra/Imagens/ipad3.png" width="480" height="720" /> | 
 
 
 ## Instalação e Pré-requistos

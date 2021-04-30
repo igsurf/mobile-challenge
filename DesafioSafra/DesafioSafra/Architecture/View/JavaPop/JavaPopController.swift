@@ -128,8 +128,11 @@ class JavaPopController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("didSelectRowAt: \(indexPath.row)")
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PullRequestViewController") as? PullRequestViewController {
+
+            guard let item = viewModel?.items[indexPath.row] else { return }
             
-            viewController.urlString = viewModel?.items[indexPath.row].pullsURL
+            viewController.urlString = item.pullsURL
+            viewController.title = item.name
             if let navigator = navigationController {
                 navigator.pushViewController(viewController, animated: true)
             }

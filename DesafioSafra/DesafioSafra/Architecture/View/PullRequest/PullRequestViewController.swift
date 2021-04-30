@@ -21,7 +21,6 @@ class PullRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Nome Repositorio"
         self.lblOpened.text = "0 opened"
         self.lblClosed.text = "0 closed"
 

@@ -1,3 +1,72 @@
+# Desenvolvimento
+
+Foi desenvolvido um app de como desafio para a empresa Safra.
+
+Desenvolvido por: Renato Ferraz Castelo Branco Ferreira
+
+email: renato.ferraz@me.com
+
+Tel: (61) 99368-4628
+
+|  |  |
+|--|--|
+| <img src="https://github.com/rfcbf/" width="480" height="720" /> | <img src="https://github.com/rfcbf/" width="480" height="720" />
+| <img src="https://github.com/rfcbf/" width="480" height="720" /> | 
+
+|  |  |
+|--|--|
+| <img src="https://github.com/rfcbf/" width="480" height="720" /> | <img src="https://github.com/rfcbf/" width="480" height="720" />
+| <img src="https://github.com/rfcbf/" width="480" height="720" /> | 
+
+
+## Instalação e Pré-requistos
+
+1) Maquina com MacOS
+
+2) Xcode 12
+
+3) Baixar esse repositório
+
+5) Descompactar o projeto
+
+6) Abrir o terminal, ir até a pasta onde foi descompactado o projeto
+
+7) Executar pod install
+
+8) Abrir o arquivo DesafioSafra.xcworkspace
+
+9) Quando o projeto estiver aberto no Xcode, executar o app
+
+
+## O que foi feito?
+* Foi adicionado um icone ao app
+* Foi criada uma tela de Splash
+* Foi criada a tela principal retornando os repositórios de java ordenados conforme solicitado
+	* A table view dinamica carregado a cada 20 registros
+	* A imagem do usuário está sendo coloca em cache usando SDWebImage
+* Ao clicar em um repositorio, e visualizada uma nova tela com todos os pulls requests
+	* E feita a contagem de quantos Pulls requests estão aberto e fechados
+	* E visualizada descrição e titulo do pull request
+	* Dados do usuário que solicitou o pull request
+* Ao clicar em um pull request é apresentado uma nova tela visualizado uma webview com a pagina do pull request
+* AutoLayout
+* App Universal, Ipad | Iphone | Landscape | Portrait
+
+### O que não foi feito
+
+* Testes unitários
+* Testes funcionais
+
+## Bibliotecas usadas ( CocoaPods ) 
+
+* Alamofire -> https://github.com/Alamofire/Alamofire
+
+* SDWebImage -> https://github.com/SDWebImage/SDWebImage
+
+* Quick/Nimble -> https://github.com/Quick/Nimble
+
+------------
+
 # Desafio de programação mobile iOS
 
 A idéia deste desafio é nos permitir avaliar melhor as habilidades de candidatos à vagas de programador, de vários níveis.

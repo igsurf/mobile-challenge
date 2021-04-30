@@ -8,10 +8,6 @@ target 'DesafioSafra' do
   use_frameworks!
 
   # Pods for DesafioSafra
-  pod 'SwiftEntryKit', '1.2.3'
-  pod 'LoadingPlaceholderView'
-  pod 'FreakingSimpleRoundImageView'
-  pod 'SwiftDate'
   pod 'Alamofire', '~> 5.2'
   pod 'SDWebImage'
   
@@ -21,9 +17,6 @@ target 'DesafioSafra' do
     
     pod 'Quick'
     pod 'Nimble'
-    pod 'SwiftDate'
-    
-    pod 'FBModel', :git => 'https://github.com/Felip38rito/FBModel.git', :tag => '0.0.10'
 
   end
 

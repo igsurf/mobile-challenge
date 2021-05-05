@@ -12,6 +12,7 @@ class Services: ServicesProtocol {
 
     // MARK: - Private Properties
 
+    let teste = "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"
     private let service = SDKGithubServices.Services.shared
 
     // MARK: - Public Methods

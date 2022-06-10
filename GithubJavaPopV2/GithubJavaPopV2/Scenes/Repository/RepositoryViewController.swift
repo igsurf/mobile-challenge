@@ -11,14 +11,13 @@ class RepositoryViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var repositories: [Repository] = []
+    var model = RepositoryModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //title = "repositories"
-        repositories = mockRepository()
         tableView.dataSource = self
-        
+        model.delegate = self
+        model.fetchRepositories()
     }
 
 
@@ -30,15 +29,15 @@ extension RepositoryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repositories.count
+        return model.repositories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? RepositoryTableViewCell else {
             fatalError()
         }
-        let repositories = repositories[indexPath.row]
-        cell.prepare(model: repositories)
+        let repository = model.repositories[indexPath.row]
+        cell.prepare(model: repository)
         return cell
     }
     
@@ -54,14 +53,9 @@ extension RepositoryViewController {
     }
 }
 
-private func mockRepository() -> [Repository] {
-    return [ .fixture(),
-            .fixture(),
-            .fixture(),
-            .fixture(),
-             .fixture(),
-             .fixture(),
-             .fixture(),
-             .fixture(name: "joao", description: "kskjfhsi7tsegkfsge77trgao", stargazersCount: 23, forks: 23, owner: .fixture())
-    ]
+extension RepositoryViewController: RepositoryModelDelegate {
+    func didUpdateRepositories() {
+        tableView.reloadData()
+    }
 }
+

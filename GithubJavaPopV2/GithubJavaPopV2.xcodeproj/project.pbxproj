@@ -17,6 +17,7 @@
 		8CBCA2AD28526FA300DA81BD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCA2AC28526FA300DA81BD /* Repository.swift */; };
 		8CBCA2AF2852706700DA81BD /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCA2AE2852706700DA81BD /* Owner.swift */; };
 		8CBCA2B12852771000DA81BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCA2B02852771000DA81BD /* User.swift */; };
+		8CF1DDD92853C97F002BCF89 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF1DDD82853C97F002BCF89 /* RepositoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8CBCA2AC28526FA300DA81BD /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		8CBCA2AE2852706700DA81BD /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		8CBCA2B02852771000DA81BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8CF1DDD82853C97F002BCF89 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				8CBCA26F2852281600DA81BD /* RepositoryStoryboard.storyboard */,
 				8CBCA26D2852281600DA81BD /* RepositoryViewController.swift */,
+				8CF1DDD82853C97F002BCF89 /* RepositoryModel.swift */,
 				8CBCA2A928525A8700DA81BD /* RepositoryTableViewCell.swift */,
 			);
 			path = Repository;
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CBCA26E2852281600DA81BD /* RepositoryViewController.swift in Sources */,
+				8CF1DDD92853C97F002BCF89 /* RepositoryModel.swift in Sources */,
 				8CBCA2AF2852706700DA81BD /* Owner.swift in Sources */,
 				8CBCA26A2852281600DA81BD /* AppDelegate.swift in Sources */,
 				8CBCA2AD28526FA300DA81BD /* Repository.swift in Sources */,

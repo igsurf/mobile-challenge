@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct User: Codable {
-    var item: [Repository]
+struct RepositoryUser: Codable {
+    var items: [Repository]
 }

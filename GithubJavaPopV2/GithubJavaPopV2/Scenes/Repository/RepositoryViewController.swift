@@ -18,6 +18,7 @@ class RepositoryViewController: UIViewController {
         tableView.dataSource = self
         model.delegate = self
         model.fetchRepositories()
+        
     }
 
 
@@ -55,7 +56,10 @@ extension RepositoryViewController {
 
 extension RepositoryViewController: RepositoryModelDelegate {
     func didUpdateRepositories() {
-        tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
+       
     }
 }
 

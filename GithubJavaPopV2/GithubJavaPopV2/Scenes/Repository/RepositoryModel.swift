@@ -31,13 +31,9 @@ class RepositoryModel {
     
 }
 
+
 private func mockRepository() -> [Repository] {
     return [
-        .fixture(),
-        .fixture(),
-        .fixture(),
-        .fixture(),
-        .fixture(),
         .fixture(),
         .fixture(),
         .fixture(name: "joao", description: "kskjfhsi7tsegkfsge77trgao", stargazersCount: 23, forks: 23, owner: .fixture())

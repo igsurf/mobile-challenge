@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RepositoryTableViewCell: UITableViewCell {
 
@@ -16,6 +17,8 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
+    
+    var placeholder = UIImage(named: "placeholder.png")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +37,8 @@ class RepositoryTableViewCell: UITableViewCell {
         folksLabel?.text = String(model.forks)
         stargazersLabel?.text = String(model.stargazersCount)
         userNameLabel?.text = model.ownerLogin
-        avatarImageView?.image = nil
+        let url = URL(string: model.ownerAvatarUrl)
+        self.avatarImageView.kf.setImage(with: url, placeholder: placeholder)
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.size.height/2
     }
 }

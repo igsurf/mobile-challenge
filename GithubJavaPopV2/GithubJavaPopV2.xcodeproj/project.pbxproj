@@ -13,8 +13,12 @@
 		8CBCA2762852281700DA81BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBCA2742852281700DA81BD /* LaunchScreen.storyboard */; };
 		8CBCA2AD28526FA300DA81BD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCA2AC28526FA300DA81BD /* Repository.swift */; };
 		8CBCA2AF2852706700DA81BD /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCA2AE2852706700DA81BD /* Owner.swift */; };
-		8CBCA2B12852771000DA81BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCA2B02852771000DA81BD /* User.swift */; };
+		8CBCA2B12852771000DA81BD /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCA2B02852771000DA81BD /* Repositories.swift */; };
 		8CC769D12858BBEB008367B7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8CC769D02858BBEB008367B7 /* Kingfisher */; };
+		8CC769D42858CBCF008367B7 /* PullRequestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC769D32858CBCF008367B7 /* PullRequestStoryboard.storyboard */; };
+		8CC769D62858CC0B008367B7 /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC769D52858CC0B008367B7 /* PullRequestViewController.swift */; };
+		8CC769D82858D06B008367B7 /* PullRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC769D72858D06B008367B7 /* PullRequestTableViewCell.swift */; };
+		8CC769DA2858D4AB008367B7 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC769D92858D4AB008367B7 /* PullRequest.swift */; };
 		8CC9A9472857BBA1007BC96A /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC9A9462857BBA1007BC96A /* REST.swift */; };
 		8CC9A9492857BBA7007BC96A /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC9A9482857BBA7007BC96A /* RepositoryViewController.swift */; };
 		8CC9A94B2857BBAA007BC96A /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC9A94A2857BBAA007BC96A /* RepositoryTableViewCell.swift */; };
@@ -31,7 +35,11 @@
 		8CBCA2772852281700DA81BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CBCA2AC28526FA300DA81BD /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		8CBCA2AE2852706700DA81BD /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
-		8CBCA2B02852771000DA81BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8CBCA2B02852771000DA81BD /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		8CC769D32858CBCF008367B7 /* PullRequestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PullRequestStoryboard.storyboard; sourceTree = "<group>"; };
+		8CC769D52858CC0B008367B7 /* PullRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewController.swift; sourceTree = "<group>"; };
+		8CC769D72858D06B008367B7 /* PullRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestTableViewCell.swift; sourceTree = "<group>"; };
+		8CC769D92858D4AB008367B7 /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
 		8CC9A9462857BBA1007BC96A /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		8CC9A9482857BBA7007BC96A /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
 		8CC9A94A2857BBAA007BC96A /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -86,6 +94,7 @@
 		8CBCA2A628523DC300DA81BD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8CC769D22858CB9F008367B7 /* PullRequest */,
 				8CBCA2A728523DD500DA81BD /* Repository */,
 			);
 			path = Scenes;
@@ -106,10 +115,21 @@
 			isa = PBXGroup;
 			children = (
 				8CBCA2AC28526FA300DA81BD /* Repository.swift */,
-				8CBCA2B02852771000DA81BD /* User.swift */,
+				8CC769D92858D4AB008367B7 /* PullRequest.swift */,
+				8CBCA2B02852771000DA81BD /* Repositories.swift */,
 				8CBCA2AE2852706700DA81BD /* Owner.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8CC769D22858CB9F008367B7 /* PullRequest */ = {
+			isa = PBXGroup;
+			children = (
+				8CC769D32858CBCF008367B7 /* PullRequestStoryboard.storyboard */,
+				8CC769D72858D06B008367B7 /* PullRequestTableViewCell.swift */,
+				8CC769D52858CC0B008367B7 /* PullRequestViewController.swift */,
+			);
+			path = PullRequest;
 			sourceTree = "<group>";
 		};
 		8CC9A9452857BA99007BC96A /* Networking */ = {
@@ -183,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC769D42858CBCF008367B7 /* PullRequestStoryboard.storyboard in Resources */,
 				8CC9A94F2857CFBC007BC96A /* RepositoryStoryboard.storyboard in Resources */,
 				8CBCA2762852281700DA81BD /* LaunchScreen.storyboard in Resources */,
 				8CBCA2732852281700DA81BD /* Assets.xcassets in Resources */,
@@ -199,12 +220,15 @@
 				8CBCA2AF2852706700DA81BD /* Owner.swift in Sources */,
 				8CC9A94B2857BBAA007BC96A /* RepositoryTableViewCell.swift in Sources */,
 				8CC9A94D2857BBAD007BC96A /* RepositoryModel.swift in Sources */,
+				8CC769D82858D06B008367B7 /* PullRequestTableViewCell.swift in Sources */,
 				8CC9A9472857BBA1007BC96A /* REST.swift in Sources */,
 				8CC9A9492857BBA7007BC96A /* RepositoryViewController.swift in Sources */,
+				8CC769DA2858D4AB008367B7 /* PullRequest.swift in Sources */,
 				8CBCA26A2852281600DA81BD /* AppDelegate.swift in Sources */,
 				8CBCA2AD28526FA300DA81BD /* Repository.swift in Sources */,
 				8CBCA26C2852281600DA81BD /* SceneDelegate.swift in Sources */,
-				8CBCA2B12852771000DA81BD /* User.swift in Sources */,
+				8CBCA2B12852771000DA81BD /* Repositories.swift in Sources */,
+				8CC769D62858CC0B008367B7 /* PullRequestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

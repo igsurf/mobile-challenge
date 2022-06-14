@@ -12,7 +12,7 @@ struct REST {
     
     static private let basepath = "https://api.github.com"
     
-    static func loadRepository(onComplete: @escaping (RepositoryUser? ) -> Void) {
+    static func loadRepository(onComplete: @escaping (Repositories? ) -> Void) {
         let path = basepath + "/search/repositories?q=language:Java&sort=stars&page=1"
         
         guard let url = URL(string: path) else { return }
@@ -24,7 +24,7 @@ struct REST {
                     do {
                         let decode = JSONDecoder()
                         decode.keyDecodingStrategy = .convertFromSnakeCase
-                        let repository = try decode.decode(RepositoryUser.self, from: data)
+                        let repository = try decode.decode(Repositories.self, from: data)
                         onComplete(repository)
                     } catch {
                         print(error.localizedDescription)

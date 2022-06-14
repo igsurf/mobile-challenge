@@ -16,8 +16,9 @@ class PullRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Passandooooooo")
+        tableView.dataSource = self
+        model.fetchPullRequest()
 
-        // Do any additional setup after loading the view.
     }
     
     
@@ -34,7 +35,11 @@ extension PullRequestViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PullRequestTableViewCell else {
+            fatalError()
+        }
+        let pullRequest = model.pullRequests[indexPath.row]
+        cell.prepare(model: pullRequest)
         return cell
     }
     

@@ -11,7 +11,10 @@ class PullRequestModel {
     
     private(set) var pullRequests: [PullRequest] = []
     
-    
+    func fetchPullRequest() {
+        pullRequests = mockPullRequeste()
+        
+    }
 }
 
 private func mockPullRequeste() -> [PullRequest] {

@@ -27,7 +27,7 @@ extension PullRequest {
 
 extension PullRequest {
     static func fixture(
-        title: String = "Áte que enfim",
+        title: String = "Até que enfim",
         body: String = "Demorou mais chegou aqui minha filha.... Óh gloriasssss",
         user: Owner = Owner.fixture(),
         createdAt: String = "22 de junho de 2022"

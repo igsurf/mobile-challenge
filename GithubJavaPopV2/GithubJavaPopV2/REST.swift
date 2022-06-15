@@ -14,7 +14,6 @@ struct REST {
     
     static func loadRepository(onComplete: @escaping (Repositories? ) -> Void) {
         let path = basepath + "/search/repositories?q=language:Java&sort=stars&page=1"
-        
         guard let url = URL(string: path) else { return }
         let dataTask = URLSession.shared.dataTask(with: url) { (data: Data?,response: URLResponse?,error: Error?) in
             if error == nil {
@@ -37,6 +36,10 @@ struct REST {
             }
         }
         dataTask.resume()
+    }
+    
+    static func loadPullRequest(onComplete: @escaping ([PullRequest]?) -> Void) {
+        let path = basepath + 
     }
     
     

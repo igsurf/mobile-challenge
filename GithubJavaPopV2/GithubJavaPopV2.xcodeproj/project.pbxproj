@@ -105,10 +105,10 @@
 		8CBCA2A728523DD500DA81BD /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				8CC9A94E2857BBC2007BC96A /* RepositoryStoryboard.storyboard */,
 				8CC9A94C2857BBAD007BC96A /* RepositoryModel.swift */,
 				8CC9A94A2857BBAA007BC96A /* RepositoryTableViewCell.swift */,
 				8CC9A9482857BBA7007BC96A /* RepositoryViewController.swift */,
-				8CC9A94E2857BBC2007BC96A /* RepositoryStoryboard.storyboard */,
 			);
 			path = Repository;
 			sourceTree = "<group>";

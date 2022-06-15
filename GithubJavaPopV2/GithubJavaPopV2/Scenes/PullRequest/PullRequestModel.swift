@@ -7,12 +7,29 @@
 
 import Foundation
 
+protocol PullRequestModalDelegate: AnyObject {
+    func didupdatePullRequests()
+}
+
 class PullRequestModel {
     
     private(set) var pullRequests: [PullRequest] = []
+    let owner: String
+    let repository: String
     
-    func fetchPullRequest() {
-        pullRequests = mockPullRequeste()
+    init(owner: String, repository: String) {
+        self.owner = owner
+        self.repository = repository
+    }
+    
+    weak var delegate: PullRequestModalDelegate?
+    
+    func fetchPullRequests() {
+        //pullRequests = mockPullRequeste()
+        REST.loadPullRequest(owner: owner, repository: repository) { [weak self] (pullRequests) in
+            self?.pullRequests = pullRequests ?? []
+            self?.delegate?.didupdatePullRequests()
+        }
         
     }
 }

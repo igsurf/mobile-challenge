@@ -15,10 +15,10 @@ struct REST {
     static func loadRepository(onComplete: @escaping (Repositories? ) -> Void) {
         let path = basepath + "/search/repositories?q=language:Java&sort=stars&page=1"
         guard let url = URL(string: path) else { return }
-        let dataTask = URLSession.shared.dataTask(with: url) { (data: Data?,response: URLResponse?,error: Error?) in
+        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
             if error == nil {
                 guard let response = response as? HTTPURLResponse else { return }
-                if response.statusCode == 200 {
+                if response.statusCode >= 200 && response.statusCode < 300 {
                     guard let data = data else { return }
                     do {
                         let decode = JSONDecoder()
@@ -38,9 +38,31 @@ struct REST {
         dataTask.resume()
     }
     
-    static func loadPullRequest(onComplete: @escaping ([PullRequest]?) -> Void) {
-        let path = basepath + 
+    static func loadPullRequest(owner: String, repository: String, onComplete: @escaping ([PullRequest]?) -> Void) {
+        let path = basepath + "/repos/" + owner + "/" + repository + "/pulls"
+        guard let url = URL(string: path) else { return }
+        let datatask = URLSession.shared.dataTask(with: url) { data, response, error in
+            if error == nil {
+                guard let response = response as? HTTPURLResponse else { return }
+                if response.statusCode == 200 {
+                    guard let data = data else { return }
+                    let decoder = JSONDecoder()
+                    do{
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let pullRequest = try decoder.decode([PullRequest].self, from: data)
+                        onComplete(pullRequest)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                } else {
+                    print("Algum status inválido pelo servidor!!")
+                }
+            } else {
+                print(error!)
+            }
+        }
+        datatask.resume()
     }
-    
+
     
 }

@@ -17,7 +17,7 @@ class PullRequestViewController: UIViewController {
         super.viewDidLoad()
         print("Passandooooooo")
         tableView.dataSource = self
-        model.fetchPullRequest()
+        model.fetchPullRequests()
 
     }
     

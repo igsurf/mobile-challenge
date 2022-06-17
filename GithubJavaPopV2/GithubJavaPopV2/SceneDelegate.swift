@@ -16,8 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
  
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        //window?.rootViewController = respositoriesScene()  //-> Comeca pela screen Repository
-        window?.rootViewController = pullRequestScene()   //-> Comeca pela screen PullRequeste (somente teste)
+        window?.rootViewController = respositoriesScene()  //-> Comeca pela screen Repository
+        //window?.rootViewController = pullRequestScene()   //-> Comeca pela screen PullRequeste (somente teste)
         window?.makeKeyAndVisible()
     }
 
@@ -55,11 +55,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return navigator
     }
     
-    func pullRequestScene() -> UIViewController {
-        let viewController = PullRequestViewController.create(owner: "Snailclimb", repository: "JavaGuide")
-        let navigator = UINavigationController(rootViewController: viewController)
-        return navigator
-    }
+//    func pullRequestScene() -> UIViewController {
+//        let viewController = PullRequestViewController.create(owner: "Snailclimb", repository: "JavaGuide")
+//        let navigator = UINavigationController(rootViewController: viewController)
+//        return navigator
+//    }
     
 }
 

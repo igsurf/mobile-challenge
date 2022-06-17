@@ -16,12 +16,10 @@ class RepositoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         model.delegate = self
         model.fetchRepositories()
-        
     }
- 
-
 }
 
 extension RepositoryViewController: UITableViewDataSource {
@@ -41,7 +39,6 @@ extension RepositoryViewController: UITableViewDataSource {
         cell.prepare(model: repository)
         return cell
     }
-    
 }
 
 extension RepositoryViewController {
@@ -63,3 +60,10 @@ extension RepositoryViewController: RepositoryModelDelegate {
     }
 }
 
+extension RepositoryViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repository = model.repositories[indexPath.row]
+        let pullRequestViewController = PullRequestViewController.create(owner: repository.ownerLogin, repository: repository.name)
+        navigationController?.pushViewController(pullRequestViewController, animated: true)
+    }
+}

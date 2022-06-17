@@ -12,6 +12,7 @@ class PullRequestViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var model: PullRequestModel?
+    static let identifier = "PullRequestViewController"
     var pullRequests: [PullRequest] {
         return model?.pullRequests ?? []
     }
@@ -45,7 +46,10 @@ extension PullRequestViewController: UITableViewDataSource {
 
 extension PullRequestViewController: PullRequestModalDelegate {
     func didupdatePullRequests() {
-        tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
+        
     }
 }
 

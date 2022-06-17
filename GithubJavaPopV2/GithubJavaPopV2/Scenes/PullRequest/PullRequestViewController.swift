@@ -11,18 +11,17 @@ class PullRequestViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var model = PullRequestModel()
+    var model: PullRequestModel?
+    var pullRequests: [PullRequest] {
+        return model?.pullRequests ?? []
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Passandooooooo")
         tableView.dataSource = self
-        model.fetchPullRequests()
-
-    }
-    
-    
-    
+        model?.fetchPullRequests()
+        
+    }    
 }
 
 extension PullRequestViewController: UITableViewDataSource {
@@ -31,27 +30,36 @@ extension PullRequestViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        model.pullRequests.count
+        pullRequests.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PullRequestTableViewCell else {
             fatalError()
         }
-        let pullRequest = model.pullRequests[indexPath.row]
+        let pullRequest = pullRequests[indexPath.row]
         cell.prepare(model: pullRequest)
         return cell
     }
-    
 }
 
+extension PullRequestViewController: PullRequestModalDelegate {
+    func didupdatePullRequests() {
+        tableView.reloadData()
+    }
+}
 
 extension PullRequestViewController {
-    static func create() -> PullRequestViewController {
+    static func create(owner: String, repository: String) -> PullRequestViewController {
         let storyboard = UIStoryboard(name: "PullRequestStoryboard", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "PullRequestViewController") as? PullRequestViewController else {
             fatalError()
         }
+        
+        let model = PullRequestModel(owner: owner, repository: repository)
+        viewController.model = model
+        model.delegate = viewController
         return viewController
     }
 }
+

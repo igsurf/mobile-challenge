@@ -46,8 +46,8 @@ struct REST {
                 guard let response = response as? HTTPURLResponse else { return }
                 if response.statusCode == 200 {
                     guard let data = data else { return }
-                    let decoder = JSONDecoder()
                     do{
+                        let decoder = JSONDecoder()
                         decoder.keyDecodingStrategy = .convertFromSnakeCase
                         let pullRequest = try decoder.decode([PullRequest].self, from: data)
                         onComplete(pullRequest)

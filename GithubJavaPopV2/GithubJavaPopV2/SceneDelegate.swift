@@ -56,7 +56,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func pullRequestScene() -> UIViewController {
-        let viewController = PullRequestViewController.create()
+        let viewController = PullRequestViewController.create(owner: "Snailclimb", repository: "JavaGuide")
         let navigator = UINavigationController(rootViewController: viewController)
         return navigator
     }

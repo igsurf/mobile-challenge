@@ -10,7 +10,7 @@ import Foundation
 
 struct PullRequest: Codable {
     var title: String
-    var body: String
+    var body: String?
     var user: Owner
     var createdAt: String
 }

@@ -35,6 +35,7 @@ class PullRequestTableViewCell: UITableViewCell {
         createdLabel.text = model.createdAt
         let url = URL(string: model.userAvatar)
         self.avatarImage.kf.setImage(with: url, placeholder: placeholder)
+        avatarImage.layer.cornerRadius = avatarImage.frame.size.height/2
     }
     
 }

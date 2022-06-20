@@ -37,7 +37,7 @@ class PullRequestModel {
         }
     }
 }
-
+#if DEBUG
 private func mockPullRequeste() -> [PullRequest] {
     return [
         .fixture(),
@@ -49,3 +49,4 @@ private func mockPullRequeste() -> [PullRequest] {
         .fixture()
     ]
 }
+#endif

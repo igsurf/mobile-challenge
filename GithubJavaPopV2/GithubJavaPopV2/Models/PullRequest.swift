@@ -9,10 +9,11 @@ import Foundation
 
 
 struct PullRequest: Codable {
-    var title: String
-    var body: String?
-    var user: Owner
-    var createdAt: String
+    let title: String
+    let body: String?
+    let user: Owner
+    let createdAt: String
+    let htmlUrl: String
 }
 
 extension PullRequest {
@@ -25,6 +26,7 @@ extension PullRequest {
     }
 }
 
+#if DEBUG
 extension PullRequest {
     static func fixture(
         title: String = "Até que enfim",
@@ -36,8 +38,8 @@ extension PullRequest {
             title: title,
             body: body,
             user: user,
-            createdAt: createdAt
+            createdAt: createdAt, htmlUrl: ""
         )
     }
 }
-
+#endif

@@ -20,3 +20,12 @@ class RepositoryViewController: UIViewController {
 
 }
 
+extension RepositoryViewController {
+    static func create() -> RepositoryViewController {
+        let storyboard = UIStoryboard.init(name: "RepositoryStoryboard", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "RepositoryViewController") as? RepositoryViewController else {
+            fatalError()
+        }
+        return viewController
+    }
+}

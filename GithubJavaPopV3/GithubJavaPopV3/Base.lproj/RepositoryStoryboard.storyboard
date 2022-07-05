@@ -40,26 +40,29 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="htu-7a-6Nt">
-                                                    <rect key="frame" x="36" y="110.5" width="157" height="20.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htu-7a-6Nt">
+                                                    <rect key="frame" x="36" y="110.5" width="145.5" height="20.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuningfork" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Dz0-qs-0ZI">
                                                             <rect key="frame" x="0.0" y="0.0" width="22" height="20.5"/>
                                                             <color key="tintColor" red="0.92678740530303028" green="0.68663388088196231" blue="0.13459775892499073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVn-f1-WUU">
-                                                            <rect key="frame" x="32" y="0.0" width="41.5" height="20.5"/>
+                                                            <rect key="frame" x="22" y="0.0" width="60" height="20.5"/>
                                                             <color key="tintColor" red="0.92678740530303028" green="0.68663388088196231" blue="0.13459775892499073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="lwx-aI-ciz"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" systemColor="systemYellowColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0E8-bA-riK">
-                                                            <rect key="frame" x="83.5" y="-0.5" width="22" height="20.5"/>
+                                                            <rect key="frame" x="82" y="-0.5" width="22" height="20.5"/>
                                                             <color key="tintColor" red="0.92678740530303028" green="0.68663388088196231" blue="0.13459775892499073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9io-hW-eYa">
-                                                            <rect key="frame" x="115.5" y="0.0" width="41.5" height="20.5"/>
+                                                            <rect key="frame" x="104" y="0.0" width="41.5" height="20.5"/>
                                                             <color key="tintColor" red="0.92678740530303028" green="0.68663388088196231" blue="0.13459775892499073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" systemColor="systemYellowColor"/>

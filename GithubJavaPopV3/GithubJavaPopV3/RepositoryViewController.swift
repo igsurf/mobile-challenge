@@ -21,10 +21,13 @@ class RepositoryViewController: UIViewController {
     	"Kelly",
     	"SUH"
     ]
+    
+    var model = RepositoryModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        model.fetchRepositories()
     }
 
 
@@ -47,13 +50,17 @@ extension RepositoryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return model.repositories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "")
-        cell.textLabel?.text = names[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? RepositoryTableViewCell else {
+            fatalError()
+        }
+        //let cell = UITableViewCell(style: .default, reuseIdentifier: "")
+        //cell.textLabel?.text = names[indexPath.row]
+        let repository = model.repositories[indexPath.row]
+        cell.prepare(model: repository)
         return cell
     }
 }

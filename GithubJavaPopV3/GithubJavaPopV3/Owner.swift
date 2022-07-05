@@ -12,3 +12,14 @@ struct Owner: Codable {
     let login: String
 }
 
+extension Owner {
+    static func fixture(
+        avatarUrl: String = "alhfiuablwebdlgew.png",
+        login: String = "SuCris"
+    ) -> Owner {
+        Owner(
+            avatarUrl: avatarUrl,
+            login: login
+        )
+    }
+}

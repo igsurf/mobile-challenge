@@ -32,8 +32,8 @@ class RepositoryTableViewCell: UITableViewCell {
     func prepare(model: Repository) {
         nameLabel.text = model.name
         descriptionLabel.text = model.description
-        folksLabel.text = model.forks
-        stargazersLabel.text = model.stargazersCount
+        folksLabel.text = String(model.forks)
+        stargazersLabel.text = String(model.stargazersCount)
         userNameLabel.text = model.ownerLogin  //lei de demeter
         avatarImageView.image = UIImage.init(named: placeholder)
     }

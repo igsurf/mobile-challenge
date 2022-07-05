@@ -17,6 +17,7 @@
 		8C94256C28737C3F004F077F /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94256B28737C3F004F077F /* RepositoryTableViewCell.swift */; };
 		8C94256F28737F24004F077F /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94256E28737F24004F077F /* Owner.swift */; };
 		8C94257128738313004F077F /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94257028738313004F077F /* Repositories.swift */; };
+		8CD129ED28748CAB00069250 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD129EC28748CAB00069250 /* RepositoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8C94256B28737C3F004F077F /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		8C94256E28737F24004F077F /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		8C94257028738313004F077F /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		8CD129EC28748CAB00069250 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				8C94255B28736C3D004F077F /* RepositoryStoryboard.storyboard */,
 				8C94256B28737C3F004F077F /* RepositoryTableViewCell.swift */,
 				8C94255928736C3D004F077F /* RepositoryViewController.swift */,
+				8CD129EC28748CAB00069250 /* RepositoryModel.swift */,
 			);
 			name = Repository;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C94255A28736C3D004F077F /* RepositoryViewController.swift in Sources */,
+				8CD129ED28748CAB00069250 /* RepositoryModel.swift in Sources */,
 				8C94256F28737F24004F077F /* Owner.swift in Sources */,
 				8C94256A28737332004F077F /* Repository.swift in Sources */,
 				8C94255628736C3D004F077F /* AppDelegate.swift in Sources */,

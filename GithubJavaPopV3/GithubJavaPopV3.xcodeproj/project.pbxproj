@@ -18,6 +18,7 @@
 		8C94256F28737F24004F077F /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94256E28737F24004F077F /* Owner.swift */; };
 		8C94257128738313004F077F /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94257028738313004F077F /* Repositories.swift */; };
 		8CD129ED28748CAB00069250 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD129EC28748CAB00069250 /* RepositoryModel.swift */; };
+		8CD129EF2874C01D00069250 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD129EE2874C01D00069250 /* REST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8C94256E28737F24004F077F /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		8C94257028738313004F077F /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		8CD129EC28748CAB00069250 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		8CD129EE2874C01D00069250 /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +70,9 @@
 			children = (
 				8C94255528736C3D004F077F /* AppDelegate.swift */,
 				8C94255728736C3D004F077F /* SceneDelegate.swift */,
-				8C94256E28737F24004F077F /* Owner.swift */,
-				8C94256928737332004F077F /* Repository.swift */,
-				8C94257028738313004F077F /* Repositories.swift */,
+				8CD129EE2874C01D00069250 /* REST.swift */,
 				8C94256D28737E3D004F077F /* Repository */,
+				8CD129F02874C16900069250 /* Model */,
 				8C94255E28736C3E004F077F /* Assets.xcassets */,
 				8C94256028736C3E004F077F /* LaunchScreen.storyboard */,
 				8C94256328736C3E004F077F /* Info.plist */,
@@ -88,6 +89,16 @@
 				8CD129EC28748CAB00069250 /* RepositoryModel.swift */,
 			);
 			name = Repository;
+			sourceTree = "<group>";
+		};
+		8CD129F02874C16900069250 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C94256E28737F24004F077F /* Owner.swift */,
+				8C94256928737332004F077F /* Repository.swift */,
+				8C94257028738313004F077F /* Repositories.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 				8CD129ED28748CAB00069250 /* RepositoryModel.swift in Sources */,
 				8C94256F28737F24004F077F /* Owner.swift in Sources */,
 				8C94256A28737332004F077F /* Repository.swift in Sources */,
+				8CD129EF2874C01D00069250 /* REST.swift in Sources */,
 				8C94255628736C3D004F077F /* AppDelegate.swift in Sources */,
 				8C94256C28737C3F004F077F /* RepositoryTableViewCell.swift in Sources */,
 				8C94255828736C3D004F077F /* SceneDelegate.swift in Sources */,

@@ -21,22 +21,22 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="dt7-8w-ibF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="dt7-8w-ibF" customClass="PullRequestTableViewCell" customModule="GithubJavaPopV3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dt7-8w-ibF" id="RZq-fu-Pwo" customClass="PullRequestTableViewCell" customModule="GithubJavaPopV3" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dt7-8w-ibF" id="RZq-fu-Pwo">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjQ-pk-ZYg">
-                                                    <rect key="frame" x="36" y="15" width="342" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="15" width="342" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                     <color key="textColor" systemColor="systemPurpleColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRU-xu-dFx">
-                                                    <rect key="frame" x="36" y="40" width="342" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <rect key="frame" x="36" y="43" width="342" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.92678740530000003" green="0.68663388089999999" blue="0.1345977589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -78,14 +78,14 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="QjQ-pk-ZYg" secondAttribute="trailing" constant="16" id="zKB-rb-hge"/>
                                                 <constraint firstItem="zMk-Iw-ylN" firstAttribute="bottom" secondItem="RZq-fu-Pwo" secondAttribute="bottomMargin" constant="8" id="zfP-EU-syu"/>
                                             </constraints>
-                                            <connections>
-                                                <outlet property="avatarImageView" destination="zMk-Iw-ylN" id="Bkl-BI-i3f"/>
-                                                <outlet property="bodyLabel" destination="wRU-xu-dFx" id="PCO-d3-Tm2"/>
-                                                <outlet property="createdAtLabel" destination="00A-Cs-Kjk" id="hcR-4y-AON"/>
-                                                <outlet property="loginLabel" destination="Dgl-Ab-AGa" id="BK0-Lo-vIA"/>
-                                                <outlet property="titleLabel" destination="QjQ-pk-ZYg" id="ewt-EJ-ffg"/>
-                                            </connections>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="zMk-Iw-ylN" id="rDz-7q-53K"/>
+                                            <outlet property="bodyLabel" destination="wRU-xu-dFx" id="CMm-mh-Pj1"/>
+                                            <outlet property="createdAtLabel" destination="00A-Cs-Kjk" id="B8x-Kq-Meq"/>
+                                            <outlet property="loginLabel" destination="Dgl-Ab-AGa" id="lwH-5o-tv1"/>
+                                            <outlet property="titleLabel" destination="QjQ-pk-ZYg" id="fDI-6T-wPP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

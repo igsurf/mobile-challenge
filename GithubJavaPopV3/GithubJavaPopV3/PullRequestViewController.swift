@@ -19,9 +19,12 @@ class PullRequestViewController: UIViewController {
     "Natan"
     ]
     
+    var model = PullRequestModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        model.fetchPullRequest()
     }
     
 }
@@ -33,12 +36,17 @@ extension PullRequestViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return model.pulls.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = names[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PullRequestTableViewCell else {
+            fatalError()
+        }
+//        let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
+//        cell.textLabel?.text = names[indexPath.row]
+        let pulls = model.pulls[indexPath.row]
+        cell.prepare(model: pulls)
         return cell
     }
     

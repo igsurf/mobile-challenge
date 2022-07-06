@@ -25,6 +25,7 @@ extension Repository {
     }
 }
 
+#if DEBUG
 extension Repository {
     static func fixture(
         name: String = "Suelen Cristina",
@@ -36,3 +37,4 @@ extension Repository {
         Repository(name: name, description: description, stargazersCount: stargazersCount, forks: forks, owner: owner)
     }
 }
+#endif

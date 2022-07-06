@@ -51,7 +51,7 @@
                                                             <rect key="frame" x="22" y="0.0" width="60" height="20.5"/>
                                                             <color key="tintColor" systemColor="systemYellowColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="60" id="lwx-aI-ciz"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="lwx-aI-ciz"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                             <color key="textColor" red="0.92678740530000003" green="0.68663388089999999" blue="0.1345977589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

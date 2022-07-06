@@ -26,6 +26,7 @@ extension PullRequest {
     }
 }
 
+#if DEBUG
 extension PullRequest {
     static func fixture(
         title: String = "Eu te amo tanto!",
@@ -40,3 +41,4 @@ extension PullRequest {
                 htmlUrl: "")
     }
 }
+#endif

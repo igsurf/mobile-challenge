@@ -15,10 +15,11 @@ class PullRequestTableViewCell: UITableViewCell {
     @IBOutlet weak var createdAtLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     
+    var placeholder = UIImage(named: "placeholder2.png")
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,7 +32,9 @@ class PullRequestTableViewCell: UITableViewCell {
         bodyLabel.text = model.body
         loginLabel.text = model.userLogin
         createdAtLabel.text = model.createdAt
-        avatarImageView.image = nil
+        avatarImageView.image = placeholder
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.size.height/2
+        
     }
     
 }

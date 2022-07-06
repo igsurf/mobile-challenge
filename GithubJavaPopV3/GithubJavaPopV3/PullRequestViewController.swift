@@ -44,3 +44,12 @@ extension PullRequestViewController: UITableViewDataSource {
     
 }
 
+extension PullRequestViewController {
+    static func create() -> PullRequestViewController {
+        let storyboard = UIStoryboard.init(name: "PullRequestStoryboard", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "PullRequestViewController") as? PullRequestViewController else {
+            fatalError()
+        }
+        return vc
+    }
+}

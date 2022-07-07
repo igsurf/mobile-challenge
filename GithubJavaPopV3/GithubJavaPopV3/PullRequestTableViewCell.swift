@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PullRequestTableViewCell: UITableViewCell {
 
@@ -32,7 +33,8 @@ class PullRequestTableViewCell: UITableViewCell {
         bodyLabel.text = model.body
         loginLabel.text = model.userLogin
         createdAtLabel.text = model.createdAt
-        avatarImageView.image = placeholder
+        let url = URL(string: model.userAvatar)
+        self.avatarImageView.kf.setImage(with: url, placeholder: placeholder)
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.height/2
         
     }

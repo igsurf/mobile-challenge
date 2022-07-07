@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        //window?.rootViewController = respositoriesScene()
-        window?.rootViewController = pullRequestScene()
+        window?.rootViewController = respositoriesScene()
+        //window?.rootViewController = pullRequestScene()
         window?.makeKeyAndVisible()
     }
 
@@ -48,17 +48,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
     
-//    func respositoriesScene() -> UIViewController {
-//        let viewController = RepositoryViewController.create()
-//        let navigator = UINavigationController(rootViewController: viewController)
-//        return navigator
-//    }
-    
-    func pullRequestScene() -> UIViewController {
-        let viewController = PullRequestViewController.create()
+    func respositoriesScene() -> UIViewController {
+        let viewController = RepositoryViewController.create()
         let navigator = UINavigationController(rootViewController: viewController)
         return navigator
     }
+    
+//    func pullRequestScene() -> UIViewController {
+//        let viewController = PullRequestViewController.create()
+//        let navigator = UINavigationController(rootViewController: viewController)
+//        return navigator
+//    }
 
 
 }

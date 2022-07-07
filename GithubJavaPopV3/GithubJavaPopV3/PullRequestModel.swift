@@ -10,7 +10,7 @@ import Foundation
 
 class PullRequestModel {
     private(set) var pulls: [PullRequest]
-    
+
     init() {
         pulls = []
     }
@@ -20,11 +20,14 @@ class PullRequestModel {
     }
 }
 
+#if DEBUG
 private func mockPullRequest() -> [PullRequest] {
     return [
         .fixture(),
         .fixture(),
+        .fixture(),
+        .fixture(),
         .fixture()
-        ]
-    
+    ]
 }
+#endif

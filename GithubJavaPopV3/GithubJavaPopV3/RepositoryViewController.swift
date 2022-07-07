@@ -27,6 +27,7 @@ class RepositoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         model.fetchRepositories()
     }
 
@@ -63,4 +64,13 @@ extension RepositoryViewController: UITableViewDataSource {
         cell.prepare(model: repository)
         return cell
     }
+}
+
+extension RepositoryViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //let repository = model.repositories[indexPath.row]
+        let pullRequestViewController = PullRequestViewController.create()
+        navigationController?.pushViewController(pullRequestViewController, animated: true)
+    }
+    
 }

@@ -22,6 +22,7 @@ class RepositoryModel {
     
 }
 
+#if DEBUG
 private func mockRepository() -> [Repository] {
     return [
         .fixture(),
@@ -29,3 +30,4 @@ private func mockRepository() -> [Repository] {
         .fixture(name: "Fabricio Robrigues Santos", description: "Geralmente são pessoas solícitas, que gostam de ajudar os outros e reunir os amigos. Seu senso de justiça também é bastante aflorado. As pessoas com ascendente em Libra podem ser um pouco narcisistas. Sua visão romantizada da vida costuma ser mais marcante, do que a de pessoas com sol no signo de Libra", stargazersCount: 23, forks: 656, owner: Owner.fixture(avatarUrl: "placeholder.png", login: "Dede.EXE"))
         ]
 }
+#endif

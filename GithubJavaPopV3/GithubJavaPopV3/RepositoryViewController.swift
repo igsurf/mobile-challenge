@@ -28,6 +28,7 @@ class RepositoryViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        model.delegate = self
         model.fetchRepositories()
     }
 
@@ -45,7 +46,6 @@ extension RepositoryViewController {
 }
 
 extension RepositoryViewController: UITableViewDataSource {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -72,5 +72,12 @@ extension RepositoryViewController: UITableViewDelegate {
         let pullRequestViewController = PullRequestViewController.create()
         navigationController?.pushViewController(pullRequestViewController, animated: true)
     }
-    
+}
+
+extension RepositoryViewController: RepositoryModelDelegate {
+    func didUpdateRepositories() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
 }

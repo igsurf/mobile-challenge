@@ -131,32 +131,32 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Github JavaPop V3" id="DtC-vc-eZk"/>
+                    <navigationItem key="navigationItem" title="Github JavaPop V3" largeTitleDisplayMode="always" id="DtC-vc-eZk"/>
                     <connections>
                         <outlet property="tableView" destination="0Wg-qm-dBw" id="Pgr-5I-Rf7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+            <point key="canvasLocation" x="709" y="98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cF2-O1-Eif">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Rk-09-6Rj" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="8Rk-09-6Rj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1Ab-mB-Gue">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.92678740530000003" green="0.68663388089999999" blue="0.1345977589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
-                            <color key="textColor" red="0.92678740530000003" green="0.68663388089999999" blue="0.1345977589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <offsetWrapper key="textShadowOffset" horizontal="2" vertical="1"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xmn-kn-Ile">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k3Z-kc-TDt"/>
                     </connections>

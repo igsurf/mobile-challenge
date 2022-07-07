@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class PullRequestViewController: UIViewController {
 
@@ -24,6 +25,7 @@ class PullRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         model.fetchPullRequest()
     }
     
@@ -59,5 +61,16 @@ extension PullRequestViewController {
             fatalError()
         }
         return vc
+    }
+}
+
+extension PullRequestViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let URL = URL(string: model.pulls[indexPath.row].htmlUrl) else {
+            return
+        }
+        let pullRequestViewController = SFSafariViewController(url: URL)
+               navigationController?.pushViewController(pullRequestViewController, animated: true)
+               print(model.pulls[indexPath.row].htmlUrl)
     }
 }

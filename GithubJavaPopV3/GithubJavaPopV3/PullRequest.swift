@@ -39,7 +39,7 @@ extension PullRequest {
             user: user,
             body: body,
             createdAt: createdAt,
-            htmlUrl: ""
+            htmlUrl: "https://www.google.com.br/?client=safari&channel=iphone_bm"
         )
     }
 }

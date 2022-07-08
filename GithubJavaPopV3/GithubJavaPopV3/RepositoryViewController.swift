@@ -10,18 +10,7 @@ import UIKit
 class RepositoryViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var names: [String] = [
-    	"Ana",
-    	"Julia",
-    	"Paula",
-    	"Vania",
-    	"Livia",
-    	"CArla",
-    	"Kelly",
-    	"SUH"
-    ]
-    
+        
     var model = RepositoryModel()
 
     override func viewDidLoad() {
@@ -31,8 +20,6 @@ class RepositoryViewController: UIViewController {
         model.delegate = self
         model.fetchRepositories()
     }
-
-
 }
 
 extension RepositoryViewController {
@@ -79,5 +66,9 @@ extension RepositoryViewController: RepositoryModelDelegate {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
+    }
+    
+    func didErrorRepositories() {
+        print("Error!!")
     }
 }

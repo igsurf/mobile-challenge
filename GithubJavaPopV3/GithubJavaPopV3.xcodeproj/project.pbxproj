@@ -19,6 +19,8 @@
 		8C94257128738313004F077F /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94257028738313004F077F /* Repositories.swift */; };
 		8CB7397A28787CC0004251A4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7397928787CC0004251A4 /* Network.swift */; };
 		8CB7397C2878804C004251A4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7397B2878804C004251A4 /* Request.swift */; };
+		8CB7397F2878BE83004251A4 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7397E2878BE83004251A4 /* RepositoryService.swift */; };
+		8CB739822878C7A0004251A4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB739812878C7A0004251A4 /* Config.swift */; };
 		8CC940A42875BBCB00996F12 /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC940A32875BBCB00996F12 /* PullRequestViewController.swift */; };
 		8CC940A62875BBE500996F12 /* PullRequestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC940A52875BBE500996F12 /* PullRequestStoryboard.storyboard */; };
 		8CC940A8287609AF00996F12 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC940A7287609AF00996F12 /* PullRequest.swift */; };
@@ -44,6 +46,8 @@
 		8C94257028738313004F077F /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		8CB7397928787CC0004251A4 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		8CB7397B2878804C004251A4 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		8CB7397E2878BE83004251A4 /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
+		8CB739812878C7A0004251A4 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8CC940A32875BBCB00996F12 /* PullRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewController.swift; sourceTree = "<group>"; };
 		8CC940A52875BBE500996F12 /* PullRequestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PullRequestStoryboard.storyboard; sourceTree = "<group>"; };
 		8CC940A7287609AF00996F12 /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
@@ -84,9 +88,11 @@
 		8C94255428736C3D004F077F /* GithubJavaPopV3 */ = {
 			isa = PBXGroup;
 			children = (
+				8CB739802878C78B004251A4 /* Config */,
 				8C94255528736C3D004F077F /* AppDelegate.swift */,
 				8C94255728736C3D004F077F /* SceneDelegate.swift */,
 				8CD129EE2874C01D00069250 /* REST.swift */,
+				8CB7397D2878BE4E004251A4 /* Services */,
 				8CB7397728787C3C004251A4 /* Networking */,
 				8CD129F02874C16900069250 /* Model */,
 				8C94256D28737E3D004F077F /* Repository */,
@@ -116,6 +122,22 @@
 				8CB7397B2878804C004251A4 /* Request.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		8CB7397D2878BE4E004251A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8CB7397E2878BE83004251A4 /* RepositoryService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		8CB739802878C78B004251A4 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8CB739812878C7A0004251A4 /* Config.swift */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 		8CC940A22875BAD300996F12 /* PullRequest */ = {
@@ -221,6 +243,8 @@
 				8C94255A28736C3D004F077F /* RepositoryViewController.swift in Sources */,
 				8CD129ED28748CAB00069250 /* RepositoryModel.swift in Sources */,
 				8C94256F28737F24004F077F /* Owner.swift in Sources */,
+				8CB7397F2878BE83004251A4 /* RepositoryService.swift in Sources */,
+				8CB739822878C7A0004251A4 /* Config.swift in Sources */,
 				8C94256A28737332004F077F /* Repository.swift in Sources */,
 				8CD129EF2874C01D00069250 /* REST.swift in Sources */,
 				8C94255628736C3D004F077F /* AppDelegate.swift in Sources */,

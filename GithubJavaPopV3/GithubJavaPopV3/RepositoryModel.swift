@@ -9,15 +9,18 @@ import Foundation
 
 protocol RepositoryModelDelegate:AnyObject {
     func didUpdateRepositories()
+    func didErrorRepositories()
 }
 
 class RepositoryModel {
     
     private(set) var repositories: [Repository]
     weak var delegate: RepositoryModelDelegate?
+    private let service: RepositoryService
     
-    init() {
+    init(service: RepositoryService = RepositoryService()) {
         repositories = []
+        self.service = service
     }
     
     func fetchRepositories() {
@@ -26,28 +29,13 @@ class RepositoryModel {
 //            self?.repositories = repositories?.items ?? []
 //            self?.delegate?.didUpdateRepositories()
 //        }
-        let request =  Request.init(
-            baseURL: "https://api.github.com",
-            path: "/search/repositories?q=language:Java&sort=stars&page=1",
-            method: RequestMethod.get
-        )
-        Network.shared.requestData(using: request) { [ weak self ] data in
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let repository = try decoder.decode(Repositories.self, from: data)
-                self?.repositories = repository.items
-                self?.delegate?.didUpdateRepositories()
-            } catch {
-                print(error.localizedDescription)
-            }
-            print("Sucesso")
+        service.fetchRepositories { [weak self] repositories in
+            self?.repositories = repositories.items
+            self?.delegate?.didUpdateRepositories()
         } onError: { error in
-            print("Error")
+            self.delegate?.didErrorRepositories()
         }
 
-        
-        
     }
     
 }

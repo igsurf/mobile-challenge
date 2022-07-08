@@ -22,10 +22,32 @@ class RepositoryModel {
     
     func fetchRepositories() {
         //repositories = mockRepository()
-        REST.loadRepositories { [weak self ] (repositories) in
-            self?.repositories = repositories?.items ?? []
-            self?.delegate?.didUpdateRepositories()
+//        REST.loadRepositories { [weak self ] (repositories) in
+//            self?.repositories = repositories?.items ?? []
+//            self?.delegate?.didUpdateRepositories()
+//        }
+        let request =  Request.init(
+            baseURL: "https://api.github.com",
+            path: "/search/repositories?q=language:Java&sort=stars&page=1",
+            method: RequestMethod.get
+        )
+        Network.shared.requestData(using: request) { [ weak self ] data in
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let repository = try decoder.decode(Repositories.self, from: data)
+                self?.repositories = repository.items
+                self?.delegate?.didUpdateRepositories()
+            } catch {
+                print(error.localizedDescription)
+            }
+            print("Sucesso")
+        } onError: { error in
+            print("Error")
         }
+
+        
+        
     }
     
 }

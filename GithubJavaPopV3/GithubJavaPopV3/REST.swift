@@ -16,7 +16,7 @@ struct REST {
         let datatask = URLSession.shared.dataTask(with: url) { data, response, error in
             if error == nil {
                 guard let response = response as? HTTPURLResponse else { return }
-                if response.statusCode >= 200 && response.statusCode <= 300 {
+                if response.statusCode >= 200 && response.statusCode < 300 {
                     guard let data = data else { return }
                     do {
                         let decoder = JSONDecoder()

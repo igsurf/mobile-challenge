@@ -1,39 +1,40 @@
 //
-//  ServiceRepository.swift
+//  PullRequestService.swift
 //  GithubJavaPopV3
 //
-//  Created by Suh on 08/07/22.
+//  Created by Suh on 11/07/22.
 //
 
 import Foundation
 
-class RepositoryService {
-    private let network: Network
+class PullRequestService {
+    private var network: Network
     
     init(network: Network = Network.shared) {
         self.network = network
     }
     
-    func fetchRepositories(
-        onComplete: @escaping (Repositories) -> Void,
+    func fetchPullRequest(
+        repository: String,
+        owner: String,
+        onComplete: @escaping ([PullRequest]?) -> Void,
         onError: @escaping (Error) -> Void
     ) {
-        let request =  Request.init(
+        let request = Request.init(
             baseURL: Config.baseURL,
-            path: "search/repositories?q=language:Java&sort=stars&page=1",
-            method: RequestMethod.get
-        )
+            path: "repos/" + owner + "/" + repository + "/pulls",
+            method: RequestMethod.get)
         
         network.requestData(using: request) { data in
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let repository = try decoder.decode(Repositories.self, from: data)
-                onComplete(repository)
+                let pullRequest = try decoder.decode([PullRequest].self, from: data)
+                onComplete(pullRequest)
             } catch {
                 onError(error)
             }
-
+            
         } onError: { error in
             onError(error)
         }

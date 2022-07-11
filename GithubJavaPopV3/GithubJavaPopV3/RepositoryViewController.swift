@@ -55,8 +55,8 @@ extension RepositoryViewController: UITableViewDataSource {
 
 extension RepositoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let repository = model.repositories[indexPath.row]
-        let pullRequestViewController = PullRequestViewController.create()
+        let repository = model.repositories[indexPath.row]
+        let pullRequestViewController = PullRequestViewController.create(repository: repository.name, owner: repository.ownerLogin)
         navigationController?.pushViewController(pullRequestViewController, animated: true)
     }
 }

@@ -9,7 +9,6 @@ import Foundation
 
 
 struct Config {
-    static let baseURL = "https://api.github.com"
-    
-    
+    static let baseURL = "https://api.github.com/"
+        
 }

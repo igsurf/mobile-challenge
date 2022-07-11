@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C942041287C51BE00754538 /* PullRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C942040287C51BE00754538 /* PullRequestService.swift */; };
 		8C94255628736C3D004F077F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94255528736C3D004F077F /* AppDelegate.swift */; };
 		8C94255828736C3D004F077F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94255728736C3D004F077F /* SceneDelegate.swift */; };
 		8C94255A28736C3D004F077F /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94255928736C3D004F077F /* RepositoryViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C942040287C51BE00754538 /* PullRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestService.swift; sourceTree = "<group>"; };
 		8C94255228736C3D004F077F /* GithubJavaPopV3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubJavaPopV3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C94255528736C3D004F077F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C94255728736C3D004F077F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,10 +90,10 @@
 		8C94255428736C3D004F077F /* GithubJavaPopV3 */ = {
 			isa = PBXGroup;
 			children = (
-				8CB739802878C78B004251A4 /* Config */,
 				8C94255528736C3D004F077F /* AppDelegate.swift */,
 				8C94255728736C3D004F077F /* SceneDelegate.swift */,
 				8CD129EE2874C01D00069250 /* REST.swift */,
+				8CB739802878C78B004251A4 /* Config */,
 				8CB7397D2878BE4E004251A4 /* Services */,
 				8CB7397728787C3C004251A4 /* Networking */,
 				8CD129F02874C16900069250 /* Model */,
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				8CB7397E2878BE83004251A4 /* RepositoryService.swift */,
+				8C942040287C51BE00754538 /* PullRequestService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				8CB7397C2878804C004251A4 /* Request.swift in Sources */,
 				8CC940AA287610E200996F12 /* PullRequestTableViewCell.swift in Sources */,
 				8CC940A8287609AF00996F12 /* PullRequest.swift in Sources */,
+				8C942041287C51BE00754538 /* PullRequestService.swift in Sources */,
 				8C94256C28737C3F004F077F /* RepositoryTableViewCell.swift in Sources */,
 				8C94255828736C3D004F077F /* SceneDelegate.swift in Sources */,
 				8C94257128738313004F077F /* Repositories.swift in Sources */,

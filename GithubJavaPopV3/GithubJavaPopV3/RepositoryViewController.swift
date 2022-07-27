@@ -14,13 +14,20 @@ class RepositoryViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     var model: RepositoryModel?
+    var repositories: [Repository] {
+        model?.repositories ?? []
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        showLoading()
         tableView.dataSource = self
         tableView.delegate = self
-        model?.fetchRepositories()
+        fetch()
+    }
+    
+    private func fetch() {
+        self.showLoading()
+        self.model?.fetchRepositories()
     }
     
     private func showLoading() {
@@ -55,16 +62,14 @@ extension RepositoryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model?.repositories.count ?? 0
+        return repositories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? RepositoryTableViewCell else {
             fatalError()
         }
-        guard let repository = model?.repositories[indexPath.row] else {
-            return UITableViewCell(style: .default, reuseIdentifier: nil)
-        }
+        let repository = repositories[indexPath.row]
         cell.prepare(model: repository)
         return cell
     }
@@ -72,10 +77,17 @@ extension RepositoryViewController: UITableViewDataSource {
 
 extension RepositoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let repository = model?.repositories[indexPath.row] else { return }
+        let repository = repositories[indexPath.row]
         let pullRequestViewController = PullRequestViewController.create(repository: repository.name, owner: repository.ownerLogin)
         navigationController?.pushViewController(pullRequestViewController, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if repositories.count - 1 == indexPath.row {
+            self.fetch()
+        }
+    }
+    
 }
 
 extension RepositoryViewController: RepositoryModelDelegate {

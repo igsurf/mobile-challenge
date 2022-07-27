@@ -20,7 +20,6 @@ class RepositoryViewController: UIViewController {
         showLoading()
         tableView.dataSource = self
         tableView.delegate = self
-        //model?.delegate = self
         model?.fetchRepositories()
     }
     
@@ -33,7 +32,6 @@ class RepositoryViewController: UIViewController {
         self.loadingIndicator.stopAnimating()
         self.viewLoading.isHidden = true
     }
-    
     
 }
 
@@ -64,8 +62,6 @@ extension RepositoryViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? RepositoryTableViewCell else {
             fatalError()
         }
-        //let cell = UITableViewCell(style: .default, reuseIdentifier: "")
-        //cell.textLabel?.text = names[indexPath.row]
         guard let repository = model?.repositories[indexPath.row] else {
             return UITableViewCell(style: .default, reuseIdentifier: nil)
         }

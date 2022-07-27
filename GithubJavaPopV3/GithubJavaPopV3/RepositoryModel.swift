@@ -24,11 +24,6 @@ class RepositoryModel {
     }
     
     func fetchRepositories() {
-        //repositories = mockRepository()
-//        REST.loadRepositories { [weak self ] (repositories) in
-//            self?.repositories = repositories?.items ?? []
-//            self?.delegate?.didUpdateRepositories()
-//        }
         service.fetchRepositories { [weak self] repositories in
             self?.repositories = repositories.items
             self?.delegate?.didUpdateRepositories()

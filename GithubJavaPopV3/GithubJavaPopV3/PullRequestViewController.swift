@@ -40,8 +40,6 @@ extension PullRequestViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PullRequestTableViewCell else {
             fatalError()
         }
-//        let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
-//        cell.textLabel?.text = names[indexPath.row]
         let pulls = pulls[indexPath.row]
         cell.prepare(model: pulls)
         return cell

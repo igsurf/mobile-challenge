@@ -22,12 +22,10 @@ class RepositoryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
     }
 
     func prepare(model: Repository) {
@@ -40,5 +38,4 @@ class RepositoryTableViewCell: UITableViewCell {
         self.avatarImageView.kf.setImage(with: url, placeholder: placeholder)
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.height/2
     }
-    
 }

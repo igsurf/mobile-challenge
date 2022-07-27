@@ -20,12 +20,10 @@ class PullRequestTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     func prepare(model: PullRequest) {
@@ -36,8 +34,6 @@ class PullRequestTableViewCell: UITableViewCell {
         let url = URL(string: model.userAvatar)
         self.avatarImageView.kf.setImage(with: url, placeholder: placeholder)
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.height/2
-        
-    }
-    
+    }    
 }
 

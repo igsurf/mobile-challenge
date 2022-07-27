@@ -18,7 +18,6 @@ class Network {
     }
     
     static private var instance: Network?
-    
     //Alternative
     //static let shared = Network()
     

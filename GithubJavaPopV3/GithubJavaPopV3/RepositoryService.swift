@@ -15,12 +15,13 @@ class RepositoryService {
     }
     
     func fetchRepositories(
+        page: Int,
         onComplete: @escaping (Repositories) -> Void,
         onError: @escaping (Error) -> Void
     ) {
         let request =  Request.init(
             baseURL: Config.baseURL,
-            path: "search/repositories?q=language:Java&sort=stars&page=1",
+            path: "search/repositories?q=language:Java&sort=stars&page=\(page)" ,
             method: RequestMethod.get
         )
         

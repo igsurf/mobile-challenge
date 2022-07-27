@@ -17,6 +17,7 @@ class RepositoryModel {
     private(set) var repositories: [Repository]
     weak var delegate: RepositoryModelDelegate?
     private let service: RepositoryService
+    private var page: Int = 0
     
     init(service: RepositoryService = RepositoryService()) {
         repositories = []
@@ -24,12 +25,17 @@ class RepositoryModel {
     }
     
     func fetchRepositories() {
-        service.fetchRepositories { [weak self] repositories in
-            self?.repositories = repositories.items
-            self?.delegate?.didUpdateRepositories()
-        } onError: { error in
-            self.delegate?.didErrorRepositories()
-        }
+        page += 1
+        service.fetchRepositories (
+            page: page,
+            onComplete: { [weak self] repositories in
+                self?.repositories.append(contentsOf: repositories.items)
+                self?.delegate?.didUpdateRepositories()
+            },
+            onError: { error in
+                self.delegate?.didErrorRepositories()
+            }
+        )
 
     }
     

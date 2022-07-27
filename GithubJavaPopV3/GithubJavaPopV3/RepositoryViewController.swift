@@ -20,10 +20,14 @@ class RepositoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        showLoading()
         tableView.dataSource = self
         tableView.delegate = self
-        model?.fetchRepositories()
+        fetch()
+    }
+    
+    private func fetch() {
+        self.showLoading()
+        self.model?.fetchRepositories()
     }
     
     private func showLoading() {
@@ -77,6 +81,13 @@ extension RepositoryViewController: UITableViewDelegate {
         let pullRequestViewController = PullRequestViewController.create(repository: repository.name, owner: repository.ownerLogin)
         navigationController?.pushViewController(pullRequestViewController, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if repositories.count - 1 == indexPath.row {
+            self.fetch()
+        }
+    }
+    
 }
 
 extension RepositoryViewController: RepositoryModelDelegate {

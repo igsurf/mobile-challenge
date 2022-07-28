@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 class RepositoryService {
     private let network: Network
@@ -25,19 +26,12 @@ class RepositoryService {
             method: RequestMethod.get
         )
         
-        network.requestData(using: request) { result in
+        network.request(request: request, returning: Repositories.self) { result in
             switch result {
-            case .success(let data):
-                do {
-                    let decoder = JSONDecoder()
-                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let repository = try decoder.decode(Repositories.self, from: data)
-                    onComplete(repository)
-                } catch {
-                    onError(error)
-                }
             case .failure(let error):
                 onError(error)
+            case .success(let repositories):
+                onComplete(repositories ?? Repositories(items: []))
             }
         }
     }

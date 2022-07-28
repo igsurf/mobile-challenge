@@ -74,7 +74,7 @@ extension PullRequestViewController: PullRequestModelDelegate {
     
     func didErrorPulls() {
         DispatchQueue.main.async { [weak self] in
-            self?.showLoading()
+            self?.hideLoad()
             print("Error!! Erro de load Pulls")
         }
     }
@@ -100,8 +100,14 @@ extension PullRequestViewController: UITableViewDelegate {
         }
         let pullRequestViewController = SFSafariViewController(url: URL)
                navigationController?.pushViewController(pullRequestViewController, animated: true)
-               print(pulls[indexPath.row].htmlUrl)
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if pulls.count - 1 == indexPath.row {
+            self.fetch()
+        }
+    }
+    
 }
 
 

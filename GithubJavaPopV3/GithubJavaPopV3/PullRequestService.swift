@@ -15,6 +15,7 @@ class PullRequestService {
     }
     
     func fetchPullRequest(
+        page: Int,
         repository: String,
         owner: String,
         onComplete: @escaping ([PullRequest]?) -> Void,
@@ -22,7 +23,7 @@ class PullRequestService {
     ) {
         let request = Request.init(
             baseURL: Config.baseURL,
-            path: "repos/" + owner + "/" + repository + "/pulls",
+            path: "repos/\(owner)/\(repository)/pulls?\(page)",
             method: RequestMethod.get
         )
         

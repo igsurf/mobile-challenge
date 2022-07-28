@@ -15,9 +15,12 @@ protocol PullRequestModelDelegate: AnyObject {
 class PullRequestModel {
     private(set) var pulls: [PullRequest]
     private var service: PullRequestService
-    var repository: String
-    var owner: String
+    private var repository: String
+    private var owner: String
     weak var delegate: PullRequestModelDelegate?
+    private var page: Int = 0
+    private var canLoad: Bool = true
+    private var canGetMoreData: Bool = true
     
     init(service: PullRequestService = PullRequestService(), repository: String, owner: String) {
         pulls = []
@@ -27,15 +30,29 @@ class PullRequestModel {
     }
     
     func fetchPullRequest() {
-        //pulls = mockPullRequest()
+        guard canLoad, canGetMoreData else {
+            return
+        }
+        
+        canLoad = false
+        page += 1
+        
         service.fetchPullRequest(
+            page: page,
             repository: repository,
             owner: owner
-        ) { pulls in
-            self.pulls = pulls ?? []
-            self.delegate?.didUpdatePulls()
-        } onError: { error in
-            self.delegate?.didErrorPulls()
+        ) { [weak self] pulls in
+            self?.canLoad = true
+            self?.canGetMoreData = false
+            
+            if let pulls = pulls, pulls.isEmpty == false {
+                self?.pulls += pulls
+                self?.delegate?.didUpdatePulls()
+                self?.canGetMoreData = true
+            }
+        } onError: { [weak self] error in
+            self?.canLoad = true
+            self?.delegate?.didErrorPulls()
         }
 
         

@@ -89,11 +89,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ykK-NY-1UD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="H7G-8F-Ac4">
+                                        <rect key="frame" x="173" y="419" width="68" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.19337241137883576" green="0.069096960265507101" blue="0.27028094427754179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2384832291928253" green="0.085216221352504715" blue="0.3333333432674408" alpha="0.3863048427152318" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="indicatorLoading" destination="H7G-8F-Ac4" id="VpM-ic-SzO"/>
+                        <outlet property="loadingView" destination="ykK-NY-1UD" id="KRU-Ll-zgj"/>
                         <outlet property="tableView" destination="QZ3-sX-T8V" id="njZ-4s-1WO"/>
                     </connections>
                 </viewController>

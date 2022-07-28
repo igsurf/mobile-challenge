@@ -34,7 +34,6 @@ class PullRequestModel {
         ) { pulls in
             self.pulls = pulls ?? []
             self.delegate?.didUpdatePulls()
-                        
         } onError: { error in
             self.delegate?.didErrorPulls()
         }

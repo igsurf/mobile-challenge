@@ -23,7 +23,8 @@ class PullRequestService {
         let request = Request.init(
             baseURL: Config.baseURL,
             path: "repos/" + owner + "/" + repository + "/pulls",
-            method: RequestMethod.get)
+            method: RequestMethod.get
+        )
         
         network.request(request: request, returning: [PullRequest].self) { result in
             switch result {
@@ -34,5 +35,4 @@ class PullRequestService {
             }
         }
     }
-    
 }

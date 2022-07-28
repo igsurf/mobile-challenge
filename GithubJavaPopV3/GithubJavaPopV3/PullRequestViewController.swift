@@ -11,6 +11,8 @@ import SafariServices
 class PullRequestViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var indicatorLoading: UIActivityIndicatorView!
     
     var model: PullRequestModel?
     var pulls: [PullRequest] {
@@ -21,7 +23,22 @@ class PullRequestViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        model?.fetchPullRequest()
+        fetch()
+    }
+    
+    private func fetch() {
+        showLoading()
+        self.model?.fetchPullRequest()
+    }
+    
+    private func showLoading() {
+        indicatorLoading.startAnimating()
+        loadingView.isHidden = false
+    }
+    
+    private func hideLoad() {
+        indicatorLoading.stopAnimating()
+        loadingView.isHidden = true
     }
     
 }
@@ -51,11 +68,15 @@ extension PullRequestViewController: PullRequestModelDelegate {
     func didUpdatePulls() {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
+            self?.hideLoad()
         }
     }
     
     func didErrorPulls() {
-        print("Error!!!")
+        DispatchQueue.main.async { [weak self] in
+            self?.showLoading()
+            print("Error!! Erro de load Pulls")
+        }
     }
 }
 

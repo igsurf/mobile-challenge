@@ -25,18 +25,20 @@ class RepositoryService {
             method: RequestMethod.get
         )
         
-        network.requestData(using: request) { data in
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let repository = try decoder.decode(Repositories.self, from: data)
-                onComplete(repository)
-            } catch {
+        network.requestData(using: request) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let repository = try decoder.decode(Repositories.self, from: data)
+                    onComplete(repository)
+                } catch {
+                    onError(error)
+                }
+            case .failure(let error):
                 onError(error)
             }
-
-        } onError: { error in
-            onError(error)
         }
     }
     

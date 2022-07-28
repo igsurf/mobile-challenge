@@ -25,18 +25,20 @@ class PullRequestService {
             path: "repos/" + owner + "/" + repository + "/pulls",
             method: RequestMethod.get)
         
-        network.requestData(using: request) { data in
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let pullRequest = try decoder.decode([PullRequest].self, from: data)
-                onComplete(pullRequest)
-            } catch {
+        network.requestData(using: request) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let pullRequest = try decoder.decode([PullRequest].self, from: data)
+                    onComplete(pullRequest)
+                } catch {
+                    onError(error)
+                }
+            case .failure(let error):
                 onError(error)
             }
-            
-        } onError: { error in
-            onError(error)
         }
     }
     

@@ -28,7 +28,6 @@ class Network {
     func requestData(
         using request: RequestProtocol,
         onComplete: @escaping (Result<Data, Error>) -> Void
-        //onError: @escaping (Error) -> Void
     ) {
         guard let url = URL(string: request.baseURL + request.path) else { return }
         var urlRequest = URLRequest(url: url)
@@ -63,6 +62,28 @@ class Network {
             
         }
         datatask.resume()
+    }
+    
+    func request<T: Decodable>(
+        request: RequestProtocol,
+        returning type: T.Type,
+        onComplete: @escaping (Result<T?, Error>) -> Void
+    ) {
+        requestData(using: request) { result in
+            switch result {
+            case .failure(let error):
+                onComplete(.failure(error))
+            case .success(let data):
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let object = try decoder.decode(type, from: data)
+                    onComplete(.success(object))
+                } catch {
+                    onComplete(.failure(error))
+                }
+            }
+        }
     }
 
 }

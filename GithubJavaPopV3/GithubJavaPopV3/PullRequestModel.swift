@@ -21,22 +21,22 @@ class PullRequestModel {
     private var page: Int = 0
     private var canLoad: Bool = true
     private var canGetMoreData: Bool = true
-    
+
     init(service: PullRequestService = PullRequestService(), repository: String, owner: String) {
         pulls = []
         self.service = service
         self.repository = repository
         self.owner = owner
     }
-    
+
     func fetchPullRequest() {
         guard canLoad, canGetMoreData else {
             return
         }
-        
+
         canLoad = false
         page += 1
-        
+
         service.fetchPullRequest(
             page: page,
             repository: repository,
@@ -44,18 +44,16 @@ class PullRequestModel {
         ) { [weak self] pulls in
             self?.canLoad = true
             self?.canGetMoreData = false
-            
+
             if let pulls = pulls, pulls.isEmpty == false {
                 self?.pulls += pulls
                 self?.delegate?.didUpdatePulls()
                 self?.canGetMoreData = true
             }
-        } onError: { [weak self] error in
+        } onError: { [weak self] _ in // error
             self?.canLoad = true
             self?.delegate?.didErrorPulls()
         }
-
-        
     }
 }
 

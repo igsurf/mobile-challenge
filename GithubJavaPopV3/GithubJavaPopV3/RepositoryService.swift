@@ -10,11 +10,11 @@ import AVFoundation
 
 class RepositoryService {
     private let network: Network
-    
+
     init(network: Network = Network.shared) {
         self.network = network
     }
-    
+
     func fetchRepositories(
         page: Int,
         onComplete: @escaping (Repositories) -> Void,
@@ -25,7 +25,7 @@ class RepositoryService {
             path: "search/repositories?q=language:Java&sort=stars&page=\(page)" ,
             method: RequestMethod.get
         )
-        
+
         network.request(request: request, returning: Repositories.self) { result in
             switch result {
             case .failure(let error):
@@ -35,5 +35,5 @@ class RepositoryService {
             }
         }
     }
-    
+
 }

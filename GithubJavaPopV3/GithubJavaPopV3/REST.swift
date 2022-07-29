@@ -9,7 +9,7 @@ import Foundation
 
 struct REST {
     static private let base = "https://api.github.com"
-    
+
     static func loadRepositories(onComplete: @escaping (Repositories?) -> Void) {
         let path = base + "/search/repositories?q=language:Java&sort=stars&page=1"
         guard let url = URL(string: path) else { return}

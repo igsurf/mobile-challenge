@@ -19,6 +19,7 @@ class RepositoryViewController: UIViewController {
     var repositories: [Repository] {
         model?.repositories ?? []
     }
+    weak var coordinator: RepositoryCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,11 +9,11 @@ import Foundation
 
 class PullRequestService {
     private var network: Network
-    
+
     init(network: Network = Network.shared) {
         self.network = network
     }
-    
+
     func fetchPullRequest(
         page: Int,
         repository: String,
@@ -26,7 +26,7 @@ class PullRequestService {
             path: "repos/\(owner)/\(repository)/pulls?\(page)",
             method: RequestMethod.get
         )
-        
+
         network.request(request: request, returning: [PullRequest].self) { result in
             switch result {
             case .failure(let error):

@@ -5,6 +5,8 @@
 //  Created by Suh on 04/07/22.
 //
 
+// swiftlint:disable line_length
+
 import Foundation
 
 struct Repository: Codable {
@@ -19,7 +21,7 @@ extension Repository {
     var ownerAvatarUrl: String {
         owner.avatarUrl
     }
-    
+
     var ownerLogin: String {
         owner.login
     }

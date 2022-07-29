@@ -5,6 +5,8 @@
 //  Created by Suh on 06/07/22.
 //
 
+// swiftlint:disable line_length
+
 import Foundation
 
 struct PullRequest: Codable {
@@ -13,14 +15,14 @@ struct PullRequest: Codable {
     var body: String?
     var createdAt: String
     var htmlUrl: String
-    
+
 }
 
 extension PullRequest {
     var userLogin: String {
         user.login
     }
-    
+
     var userAvatar: String {
         user.avatarUrl
     }

@@ -13,6 +13,7 @@ import UIKit
 class RepositoryCoordinator: Coordinator {
     var navigationController: UINavigationController
     private var viewController: RepositoryViewController?
+    private var pullRequestCoordinator: PullRequestCoordinator?
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -41,9 +42,8 @@ class RepositoryCoordinator: Coordinator {
 
 extension RepositoryCoordinator: RepositoryViewControllerDelegate {
     func showPullRequest(repository: String, owner: String) {
-        print(repository, owner)
-        let pullRequestViewController = PullRequestViewController.create(repository: repository, owner: owner)
-        navigationController.pushViewController(pullRequestViewController, animated: true)
+        let pullRequestCoordinator = PullRequestCoordinator(repository: repository, owner: owner, navigationController: navigationController)
+        pullRequestCoordinator.start()
+        self.pullRequestCoordinator = pullRequestCoordinator
     }
-
 }

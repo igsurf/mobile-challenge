@@ -10,6 +10,10 @@
 import UIKit
 import SafariServices
 
+protocol PullRequestViewControllerDelegate: AnyObject {
+    func showPullRequestDetails(urlString: String)
+}
+
 class PullRequestViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -17,6 +21,8 @@ class PullRequestViewController: UIViewController {
     @IBOutlet weak var indicatorLoading: UIActivityIndicatorView!
 
     var model: PullRequestModel?
+    weak var delegate: PullRequestViewControllerDelegate?
+
     var pulls: [PullRequest] {
         return model?.pulls ?? []
     }
@@ -98,11 +104,8 @@ extension PullRequestViewController {
 
 extension PullRequestViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let URL = URL(string: pulls[indexPath.row].htmlUrl) else {
-            return
-        }
-        let pullRequestViewController = SFSafariViewController(url: URL)
-               navigationController?.pushViewController(pullRequestViewController, animated: true)
+        let URL = pulls[indexPath.row].htmlUrl
+        delegate?.showPullRequestDetails(urlString: URL)
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

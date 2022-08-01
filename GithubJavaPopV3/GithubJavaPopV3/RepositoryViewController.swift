@@ -9,6 +9,10 @@
 
 import UIKit
 
+protocol RepositoryViewControllerDelegate: AnyObject {
+    func showPullRequest(repository: String, owner: String)
+}
+
 class RepositoryViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -19,7 +23,8 @@ class RepositoryViewController: UIViewController {
     var repositories: [Repository] {
         model?.repositories ?? []
     }
-    weak var coordinator: RepositoryCoordinator?
+
+    weak var delegate: RepositoryViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,27 +41,15 @@ class RepositoryViewController: UIViewController {
     private func showLoading() {
         self.loadingIndicator.startAnimating()
         self.viewLoading.isHidden = false
+        view.bringSubviewToFront(viewLoading)
     }
 
     private func hideLoading() {
         self.loadingIndicator.stopAnimating()
         self.viewLoading.isHidden = true
+        view.sendSubviewToBack(viewLoading)
     }
 
-}
-
-extension RepositoryViewController {
-    static func create() -> RepositoryViewController {
-        let storyboard = UIStoryboard.init(name: "RepositoryStoryboard", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "RepositoryViewController") as? RepositoryViewController else {
-            fatalError()
-        }
-
-        let model = RepositoryModel()
-        model.delegate = viewController
-        viewController.model = model
-        return viewController
-    }
 }
 
 extension RepositoryViewController: UITableViewDataSource {
@@ -81,8 +74,8 @@ extension RepositoryViewController: UITableViewDataSource {
 extension RepositoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let repository = repositories[indexPath.row]
-        let pullRequestViewController = PullRequestViewController.create(repository: repository.name, owner: repository.ownerLogin)
-        navigationController?.pushViewController(pullRequestViewController, animated: true)
+        delegate?.showPullRequest(repository: repository.name, owner: repository.ownerLogin)
+
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

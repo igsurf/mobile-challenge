@@ -12,13 +12,15 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var coordinator: AppCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: scene)
-        window?.rootViewController = respositoriesScene()
-        // window?.rootViewController = pullRequestScene()
-        window?.makeKeyAndVisible()
+        let window = UIWindow(windowScene: scene)
+        let navigationController = UINavigationController()
+        coordinator = AppCoordinator(window: window, navigationController: navigationController)
+        coordinator?.start()
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -41,11 +43,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     }
 
-    func respositoriesScene() -> UIViewController {
-        let viewController = RepositoryViewController.create()
-        let navigator = UINavigationController(rootViewController: viewController)
-        return navigator
-    }
+//    func respositoriesScene() -> UIViewController {
+//        let viewController = RepositoryViewController.create()
+//        let navigator = UINavigationController(rootViewController: viewController)
+//        return navigator
+//    }
 
 //    func pullRequestScene() -> UIViewController {
 //        let viewController = PullRequestViewController.create()

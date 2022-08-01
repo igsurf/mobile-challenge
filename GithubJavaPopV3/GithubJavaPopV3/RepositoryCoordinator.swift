@@ -33,8 +33,17 @@ class RepositoryCoordinator: Coordinator {
         let model = RepositoryModel()
         model.delegate = viewController
         viewController.model = model
-        viewController.coordinator = self
+        viewController.delegate = self
         return viewController
+    }
+
+}
+
+extension RepositoryCoordinator: RepositoryViewControllerDelegate {
+    func showPullRequest(repository: String, owner: String) {
+        print(repository, owner)
+        let pullRequestViewController = PullRequestViewController.create(repository: repository, owner: owner)
+        navigationController.pushViewController(pullRequestViewController, animated: true)
     }
 
 }

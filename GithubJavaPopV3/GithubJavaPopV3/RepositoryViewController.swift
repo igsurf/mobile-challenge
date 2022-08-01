@@ -9,6 +9,10 @@
 
 import UIKit
 
+protocol RepositoryViewControllerDelegate: AnyObject {
+    func showPullRequest(repository: String, owner: String)
+}
+
 class RepositoryViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -20,7 +24,7 @@ class RepositoryViewController: UIViewController {
         model?.repositories ?? []
     }
 
-    weak var coordinator: RepositoryCoordinator?
+    weak var delegate: RepositoryViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,8 +74,8 @@ extension RepositoryViewController: UITableViewDataSource {
 extension RepositoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let repository = repositories[indexPath.row]
-        let pullRequestViewController = PullRequestViewController.create(repository: repository.name, owner: repository.ownerLogin)
-        navigationController?.pushViewController(pullRequestViewController, animated: true)
+        delegate?.showPullRequest(repository: repository.name, owner: repository.ownerLogin)
+
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

@@ -11,6 +11,7 @@ import UIKit
 class AppCoordinator: Coordinator {
     var navigationController: UINavigationController
     let window: UIWindow
+    var childCoordinator: Coordinator?
 
     init(window: UIWindow, navigationController: UINavigationController) {
         self.window = window
@@ -26,8 +27,9 @@ class AppCoordinator: Coordinator {
     }
 
     fileprivate func startRepository(_ navigationController: UINavigationController) {
-//        let repositoryCoordinator = RepositoryCoordinator(navigationController: navigationController)
-//        repositoryCoordinator.start()
+        let repositoryCoordinator = RepositoryCoordinator(navigationController: navigationController)
+        repositoryCoordinator.start()
+        self.childCoordinator = repositoryCoordinator
     }
 
 }

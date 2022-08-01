@@ -19,6 +19,7 @@ class RepositoryViewController: UIViewController {
     var repositories: [Repository] {
         model?.repositories ?? []
     }
+
     weak var coordinator: RepositoryCoordinator?
 
     override func viewDidLoad() {
@@ -36,27 +37,15 @@ class RepositoryViewController: UIViewController {
     private func showLoading() {
         self.loadingIndicator.startAnimating()
         self.viewLoading.isHidden = false
+        view.bringSubviewToFront(viewLoading)
     }
 
     private func hideLoading() {
         self.loadingIndicator.stopAnimating()
         self.viewLoading.isHidden = true
+        view.sendSubviewToBack(viewLoading)
     }
 
-}
-
-extension RepositoryViewController {
-    static func create() -> RepositoryViewController {
-        let storyboard = UIStoryboard.init(name: "RepositoryStoryboard", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "RepositoryViewController") as? RepositoryViewController else {
-            fatalError()
-        }
-
-        let model = RepositoryModel()
-        model.delegate = viewController
-        viewController.model = model
-        return viewController
-    }
 }
 
 extension RepositoryViewController: UITableViewDataSource {
